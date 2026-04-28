@@ -1,298 +1,2059 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJ2SRMDTCN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-FJ2SRMDTCN');
-    </script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【非公式】ティンターパンの魅力解説</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Noto+Serif+JP:wght@600;900&family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            safelist: [
-                'text-iori', 'bg-iori', 'border-iori',
-                'text-hana', 'bg-hana', 'border-hana',
-                'text-maika', 'bg-maika', 'border-maika'
-            ],
-            theme: {
-                extend: {
-                    colors: {
-                        iori: '#9333ea', 
-                        hana: '#FF8C00', 
-                        maika: '#0ea5e9',
-                        deep: '#0a0a0a',
-                        canvas: '#fcfcfc',
-                        gold: '#C5A059'
-                    },
-                    fontFamily: {
-                        serif: ['"Noto Serif JP"', 'serif'],
-                        display: ['"Playfair Display"', 'serif'],
-                        sans: ['"Noto Sans JP"', 'sans-serif'],
-                    }
-                }
-            }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>【非公式】Tinterpan 10人沼ガイド | =LOVEファンページ</title>
+  <meta name="description" content="元のTinterpanらしい熱量を受け継ぎながら、=LOVE現メンバー10人の魅力を公式動画への導線でたどる非公式ファンページ。" />
+  <meta name="theme-color" content="#f9769f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Playfair+Display:ital,wght@1,700;1,900&family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#9333ea",
+            deep: "#251b21",
+            canvas: "#fffafb",
+            gold: "#D0A45B"
+          },
+          fontFamily: {
+            serif: ['"Kaisei Decol"', '"Noto Serif JP"', 'serif'],
+            display: ['"Playfair Display"', '"Kaisei Decol"', 'serif'],
+            sans: ['"Zen Maru Gothic"', '"Noto Sans JP"', 'sans-serif']
+          }
         }
-    </script>
-    <style>
-        body { background-color: #fcfcfc; color: #0a0a0a; font-family: 'Noto Sans JP', sans-serif; line-height: 1.8; overflow-x: hidden; }
-        .glass-nav { background: rgba(252, 252, 252, 0.95); backdrop-filter: blur(25px); }
-        .dual-bg { background: linear-gradient(90deg, rgba(147,51,234,0.02) 0%, rgba(255,140,0,0.02) 100%); }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-in { animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        .thumb-sharp { image-rendering: -webkit-optimize-contrast; }
-        
-        /* スクロールバーのカスタマイズ */
-        ::-webkit-scrollbar { width: 5px; height: 5px; }
-        ::-webkit-scrollbar-thumb { background: #121212; border-radius: 10px; }
-        
-        /* 特定要素のスクロールバー非表示用クラス */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-        .signature-link { transition: all 0.5s ease; position: relative; }
-        .signature-link:hover { color: #FF8C00; text-shadow: 0 0 20px rgba(255, 140, 0, 0.2); }
-    </style>
+      }
+    };
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: clamp(14px, 0.9vw + 10px, 17px);
+    }
+
+    body {
+      margin: 0;
+      color: #2d2429;
+      font-family: "Zen Maru Gothic", "Noto Sans JP", system-ui, sans-serif;
+      line-height: 1.8;
+      background: #fffafb;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    :root {
+      --text-soft-xs: clamp(0.68rem, 0.62rem + 0.18vw, 0.78rem);
+      --text-soft-sm: clamp(0.84rem, 0.78rem + 0.22vw, 0.96rem);
+      --text-soft-base: clamp(0.95rem, 0.88rem + 0.28vw, 1.08rem);
+      --text-soft-lg: clamp(1.12rem, 0.98rem + 0.52vw, 1.38rem);
+      --site-pink: #f9769f;
+      --site-rose: #fb4968;
+      --site-gold: #d0a45b;
+      --ink: #2d2429;
+    }
+
+    .fluid-copy {
+      font-size: var(--text-soft-base);
+    }
+
+    .fluid-caption {
+      font-size: var(--text-soft-sm);
+    }
+
+    .fluid-label {
+      font-size: var(--text-soft-xs);
+    }
+
+    .readable-ja {
+      line-break: strict;
+      word-break: normal;
+      overflow-wrap: break-word;
+      text-wrap: pretty;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      padding-bottom: 0;
+    }
+
+    .glass-nav {
+      background: rgba(255, 250, 252, 0.94);
+      border-bottom: 1px solid rgba(249, 118, 159, 0.16);
+      backdrop-filter: blur(25px);
+      box-shadow: 0 10px 36px rgba(249, 118, 159, 0.08);
+    }
+
+    .dual-bg {
+      background:
+        linear-gradient(90deg, rgba(249, 118, 159, 0.035) 0%, rgba(208, 164, 91, 0.035) 100%),
+        #fffafb;
+    }
+
+    .filter-panel {
+      border: 1px solid rgba(249, 118, 159, 0.16);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 55px rgba(249, 118, 159, 0.08);
+    }
+
+    .filter-control {
+      border: 1px solid rgba(249, 118, 159, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 250, 252, 0.95);
+      outline: none;
+      padding-inline: 0.75rem;
+    }
+
+    .filter-control:focus {
+      border-color: #f9769f;
+      box-shadow: 0 0 0 3px rgba(249, 118, 159, 0.14);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid rgba(249, 118, 159, 0.35);
+      outline-offset: 3px;
+    }
+
+    .member-dot {
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.85);
+    }
+
+    .thumb-sharp {
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .official-home {
+      background:
+        radial-gradient(circle at 70% 18%, rgba(255, 255, 255, 0.9), transparent 24rem),
+        radial-gradient(circle at 13% 82%, rgba(251, 73, 104, 0.16), transparent 30rem),
+        linear-gradient(135deg, rgba(249, 118, 159, 0.2), rgba(255, 239, 246, 0.92) 42%, transparent 70%),
+        linear-gradient(315deg, rgba(208, 164, 91, 0.14), transparent 48%),
+        #fffafb;
+    }
+
+    .official-home::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(249, 118, 159, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(249, 118, 159, 0.08) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, #000 0%, transparent 72%);
+    }
+
+    .official-home::after {
+      content: "";
+      position: fixed;
+      inset: auto -10vw -28vh auto;
+      width: 52vw;
+      min-width: 420px;
+      aspect-ratio: 1;
+      pointer-events: none;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle, rgba(249, 118, 159, 0.18), transparent 62%),
+        conic-gradient(from 160deg, rgba(249, 118, 159, 0.18), rgba(208, 164, 91, 0.16), rgba(255, 255, 255, 0), rgba(249, 118, 159, 0.18));
+      filter: blur(12px);
+      opacity: 0.72;
+    }
+
+    .fit-title {
+      display: block;
+      max-width: 100%;
+      white-space: nowrap;
+      line-height: 1.16;
+      letter-spacing: 0;
+      overflow: visible;
+      text-overflow: clip;
+      font-size: var(--fit-fallback);
+      padding-block: 0.06em;
+    }
+
+    .home-member-card {
+      position: relative;
+      isolation: isolate;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 14px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 252, 0.76)),
+        rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px);
+      transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.42s ease, border-color 0.42s ease, background 0.42s ease;
+      box-shadow: 0 20px 60px rgba(249, 118, 159, 0.11), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .home-member-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      border-radius: inherit;
+      background:
+        linear-gradient(120deg, rgba(255, 255, 255, 0.85), rgba(249, 118, 159, 0.28), rgba(208, 164, 91, 0.16), rgba(255, 255, 255, 0.76));
+      opacity: 0.56;
+      transition: opacity 0.35s ease;
+    }
+
+    .home-member-card::after {
+      content: attr(data-index);
+      position: absolute;
+      right: 1rem;
+      bottom: 0.72rem;
+      z-index: -1;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(3.2rem, 7vw, 5.8rem);
+      font-style: italic;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(249, 118, 159, 0.075);
+      transition: transform 0.42s ease, color 0.42s ease;
+    }
+
+    .home-member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 88px rgba(249, 118, 159, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+      border-color: rgba(249, 118, 159, 0.5);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .home-member-card:hover::before {
+      opacity: 1;
+    }
+
+    .home-member-card:hover::after {
+      transform: translate3d(-0.2rem, -0.18rem, 0);
+      color: rgba(249, 118, 159, 0.13);
+    }
+
+    .precision-line {
+      position: relative;
+    }
+
+    .precision-line::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 -0.45rem 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(249, 118, 159, 0.55), transparent);
+    }
+
+    .member-hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 18px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 250, 252, 0.8)),
+        rgba(255, 255, 255, 0.78);
+      box-shadow: 0 30px 90px rgba(45, 36, 41, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
+
+    .member-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image:
+        linear-gradient(rgba(249, 118, 159, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(249, 118, 159, 0.08) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(90deg, #000, transparent 72%);
+    }
+
+    .member-hero::after {
+      content: "";
+      position: absolute;
+      inset: -30% -20% auto auto;
+      z-index: -1;
+      width: min(42rem, 82vw);
+      aspect-ratio: 1;
+      border-radius: 999px;
+      background: radial-gradient(circle, var(--hero-soft, rgba(249, 118, 159, 0.2)), transparent 62%);
+      filter: blur(10px);
+      opacity: 0.9;
+    }
+
+    .stat-tile {
+      border: 1px solid rgba(249, 118, 159, 0.12);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
+    }
+
+    .group-social-link {
+      border: 1px solid rgba(249, 118, 159, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 10px 28px rgba(249, 118, 159, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.82);
+      transition: transform 0.32s ease, border-color 0.32s ease, background 0.32s ease, color 0.32s ease;
+    }
+
+    .group-social-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(249, 118, 159, 0.48);
+      background: #2d2429;
+      color: #fff;
+    }
+
+    .video-card {
+      border: 1px solid rgba(249, 118, 159, 0.12);
+      border-radius: 12px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.84), rgba(255, 250, 252, 0.68)),
+        rgba(255, 255, 255, 0.66);
+      padding: 0.75rem;
+      box-shadow: 0 14px 42px rgba(45, 36, 41, 0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(249, 118, 159, 0.28);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 28px 74px rgba(45, 36, 41, 0.12);
+    }
+
+    .play-badge {
+      position: absolute;
+      inset: 50% auto auto 50%;
+      display: grid;
+      width: 3.15rem;
+      height: 3.15rem;
+      place-items: center;
+      border-radius: 999px;
+      color: white;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.86);
+      transition: opacity 0.32s ease, transform 0.32s ease;
+      box-shadow: 0 18px 48px rgba(45, 36, 41, 0.26);
+    }
+
+    .video-card:hover .play-badge {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .soft-chip {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(249, 118, 159, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 250, 252, 0.88);
+      padding: 0.28rem 0.58rem;
+      color: #8f6f7c;
+    }
+
+    .section-card {
+      border: 1px solid rgba(249, 118, 159, 0.16);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 22px 65px rgba(45, 36, 41, 0.09);
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .thumb {
+      image-rendering: -webkit-optimize-contrast;
+      background: #e4e4e7;
+    }
+
+    @keyframes shimmer {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(100%);
+      }
+    }
+
+    .thumb-shimmer {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent),
+        linear-gradient(135deg, #f8d7e2, #fffafb);
+      transform: translateX(-100%);
+      animation: shimmer 1.25s ease-in-out infinite;
+      transition: opacity 0.35s ease;
+    }
+
+    .thumb.is-loaded .thumb-shimmer {
+      opacity: 0;
+      animation-play-state: paused;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pageEnter {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.992);
+        filter: blur(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+      }
+    }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes navDrop {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.42s ease-out both;
+    }
+
+    .animate-in,
+    .page-transition {
+      animation: pageEnter 0.46s cubic-bezier(0.16, 1, 0.3, 1) both;
+      will-change: opacity, transform, filter;
+    }
+
+    .glass-nav {
+      animation: navDrop 0.42s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .page-card {
+      opacity: 0;
+      animation: cardReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: var(--stagger, 0ms);
+    }
+
+    ::view-transition-old(root) {
+      animation: fadeUp 0.22s ease reverse both;
+    }
+
+    ::view-transition-new(root) {
+      animation: pageEnter 0.46s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .app-shell {
+        padding-bottom: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div id="root"></div>
+  <div id="root"></div>
 
-    <script type="text/babel">
-        const { useState, useEffect } = React;
+  <script type="text/babel">
+    const { useEffect, useLayoutEffect, useMemo, useRef, useState } = React;
 
-        // IGアカウントを修正（のん乃追加時に ig: null 等で対応可能に設計）
-        const MEMBERS = [
-            { id: 'iori', name: '野口 衣織', en: 'Iori Noguchi', color: 'text-iori', bg: 'bg-iori', border: 'border-iori', ig: 'noguchi_iori_', x: 'noguchi_iori', birth: '2000.04.26', place: '茨城県', emoji: '🌱' },
-            { id: 'hana', name: '大場 花菜', en: 'Hana Oba', color: 'text-hana', bg: 'bg-hana', border: 'border-hana', ig: 'oba_hana_', x: 'hana_oba', birth: '2000.02.04', place: '埼玉県', emoji: '💮' },
-            { id: 'maika', name: '佐々木 舞香', en: 'Maika Sasaki', color: 'text-maika', bg: 'bg-maika', border: 'border-maika', ig: 'maika_sasaki_', x: 'sasaki_maika', birth: '2000.01.21', place: '愛知県', emoji: '🦑' }
-        ];
+    const MEMBERS = [
+      {
+        id: "emiri",
+        name: "大谷 映美里",
+        en: "Emiri Otani",
+        short: "Emiri",
+        hexColor: "#8b5cf6",
+        softColor: "#faf5ff",
+        colorName: "白×紫",
+        colorStops: ["#ffffff", "#8b5cf6"],
+        blood: "O型",
+        sign: "うお座",
+        height: "155cm",
+        birth: "1998/3/15",
+        place: "東京都",
+        hobby: "メイクやファッションを楽しむこと、ラーメン巡り",
+        skill: "ジョッキ持ち",
+        qualification: "",
+        profile: "メイク、ファッション、ラーメンまで自分の“好き”をちゃんと形にして、ステージの可愛さにも生活感のある熱にもつなげてしまう人。ファンが口をそろえるのは、ただ整っているだけではない“研究された可愛さ”と、ふとした瞬間に見える芯の強さ。画面に映るたび、日常の温度を少し上げてくれる。",
+        catchcopy: "かわいいを研究し、かわいいの先まで連れていく人。",
+        notes: ["ビジュアル", "かわいい", "表情管理"],
+        socials: [
+          { label: "X", url: "https://twitter.com/otani_emiri" },
+          { label: "Instagram", url: "https://www.instagram.com/otani_emiri/" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_emiri" },
+          { label: "個人YouTube", url: "https://www.youtube.com/channel/UCGxaJ2y2Le9jST3Me2aMPrw" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_EMIRI_OTANI" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/otani_emiri" }
+        ]
+      },
+      {
+        id: "hana",
+        name: "大場 花菜",
+        en: "Hana Oba",
+        short: "Hana",
+        hexColor: "#f97316",
+        softColor: "#fff7ed",
+        colorName: "オレンジ×青",
+        colorStops: ["#f97316", "#3b82f6"],
+        blood: "A型",
+        sign: "みずがめ座",
+        height: "160cm",
+        birth: "2000/2/4",
+        place: "埼玉県",
+        hobby: "舞台・ミュージカル観劇、レトロ、動物の赤ちゃんをみること",
+        skill: "イラスト、書道",
+        qualification: "",
+        profile: "舞台とミュージカルを観てきた目、イラストで細部を拾う手、書道で鍛えた線の強さ。その全部が表情や所作に出ている。“花菜ちゃんがいると空気が明るくなる”安心感の奥に、役を掴む瞬間の鋭さがある。ハッピーを配る太陽であり、物語を作り込む職人でもある。",
+        catchcopy: "笑顔で入口を開き、演技と所作で深く連れていく人。",
+        notes: ["シアトリカル", "ハッピー", "表現力"],
+        socials: [
+          { label: "X", url: "https://twitter.com/hana_oba" },
+          { label: "Instagram", url: "https://instagram.com/oba_hana_?igshid=NTc4MTIwNjQ2YQ==" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_hana_" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_HANA_OBA" },
+          { label: "Ameba", url: "https://ameblo.jp/equal-oba/" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/oba_hana" }
+        ]
+      },
+      {
+        id: "risa",
+        name: "音嶋 莉沙",
+        en: "Risa Otoshima",
+        short: "Risa",
+        hexColor: "#db2777",
+        softColor: "#ecfeff",
+        colorName: "濃いピンク×水色",
+        colorStops: ["#db2777", "#38bdf8"],
+        blood: "B型",
+        sign: "しし座",
+        height: "160cm",
+        birth: "1998/8/11",
+        place: "福岡県",
+        hobby: "人間観察、コスメを集めること、食べ歩き",
+        skill: "フラフープ、ファンの方の名前を覚える、福岡愛を語る",
+        qualification: "",
+        profile: "人をよく見て、名前を覚えて、地元の福岡愛までまっすぐ語れる。その観察力と距離の近さが、ステージでのやわらかな目線にも表れている。莉沙ちゃんの魅力は、派手に叫ばなくても確かに残る余韻。しなやかなダンスと上品な笑顔が、気づけば何度も思い出したくなる温度を置いていく。",
+        catchcopy: "人を見つめるやさしさが、余韻になる人。",
+        notes: ["透明感", "所作", "ユニット"],
+        socials: [
+          { label: "X", url: "https://twitter.com/otoshima_risa" },
+          { label: "Instagram", url: "https://www.instagram.com/otoshima_risa/" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_risa_" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_RISA_OTOSHIMA" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/otoshima_risa" }
+        ]
+      },
+      {
+        id: "kiara",
+        name: "齋藤 樹愛羅",
+        en: "Kiara Saito",
+        short: "Kiara",
+        hexColor: "#f9a8d4",
+        softColor: "#fff1f2",
+        colorName: "薄ピンク",
+        colorStops: ["#f9a8d4", "#f472b6"],
+        blood: "B型",
+        sign: "いて座",
+        height: "156.2cm",
+        birth: "2004/11/26",
+        place: "栃木県",
+        hobby: "ゲーム、カラオケに行く、メイク動画など見て真似する",
+        skill: "立ちブリッチ、秒数を頭の中で測る、ドラえもんとまさおくんのモノマネ",
+        qualification: "",
+        profile: "ゲームもカラオケもメイク研究も、好きなものを吸収してすぐ自分の表現に変えていく速度がすごい。“今日も更新してきた”と感じさせる成長が、ファンの胸を何度も熱くする。弾ける可愛さの中に負けん気と集中力が見えて、ステージの端にいても目で追ってしまう。",
+        catchcopy: "かわいいを更新し続ける、進化のスピードスター。",
+        notes: ["かわいい", "成長", "沼入口"],
+        socials: [
+          { label: "X", url: "https://twitter.com/saitou_kiara" },
+          { label: "Instagram", url: "https://www.instagram.com/saito_kiara_/" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_kiara" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_KIARA_SAITO" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/saito_kiara" }
+        ]
+      },
+      {
+        id: "maika",
+        name: "佐々木 舞香",
+        en: "Maika Sasaki",
+        short: "Maika",
+        hexColor: "#94a3b8",
+        softColor: "#f8fafc",
+        colorName: "白",
+        colorStops: ["#ffffff", "#e5e7eb"],
+        blood: "A型",
+        sign: "みずがめ座",
+        height: "157cm",
+        birth: "2000/1/21",
+        place: "愛知県",
+        hobby: "寝ること",
+        skill: "絡まったネックレス絶対解ける",
+        qualification: "",
+        profile: "公式プロフィールの趣味が“寝ること”なのも、特技が“絡まったネックレス絶対解ける”なのも、舞香ちゃんらしい余白がある。けれど歌が始まると、その余白が一気に物語になる。透明で芯のある声、可憐さと鋭さを行き来する目線。ファンが“声を聴いた瞬間に景色が変わる”と言いたくなる理由がここにある。",
+        catchcopy: "静けさの奥から、物語を始める声。",
+        notes: ["歌", "透明感", "表現力"],
+        socials: [
+          { label: "X", url: "https://twitter.com/sasaki_maika" },
+          { label: "Instagram", url: "https://www.instagram.com/maika_sasaki_/" },
+          { label: "YouTube（あんまい）", url: "https://www.youtube.com/channel/UCYIlZwRiBzkoixtuWqltIvw" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_MAIKA_SASAKI" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/sasaki_maika" }
+        ]
+      },
+      {
+        id: "hitomi",
+        name: "髙松 瞳",
+        en: "Hitomi Takamatsu",
+        short: "Hitomi",
+        hexColor: "#ef4444",
+        softColor: "#fff1f2",
+        colorName: "赤",
+        colorStops: ["#ef4444", "#f87171"],
+        blood: "AB型",
+        sign: "やぎ座",
+        height: "163cm",
+        birth: "2001/1/19",
+        place: "東京都",
+        hobby: "映画、ドラマ鑑賞",
+        skill: "バトントワリング",
+        qualification: "",
+        profile: "映画やドラマを観る感受性、バトントワリングで身につけた体の軸。その両方が、センターに立った瞬間の説得力につながっている。“瞳ちゃんが笑うと会場が明るくなる”という言葉が似合う、まっすぐな輝き。王道の眩しさと、戻ってきた強さを背負った笑顔には、何度でも信じたくなる力がある。",
+        catchcopy: "真ん中に立つだけで、景色を明るくする人。",
+        notes: ["センター", "王道", "ライブ"],
+        socials: [
+          { label: "X", url: "https://twitter.com/takamatsuhitomi" },
+          { label: "Instagram", url: "https://www.instagram.com/takamatsu__hitomi/" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_HITOMI_TAKAMATSU" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/takamatsu_hitomi" }
+        ]
+      },
+      {
+        id: "shoko",
+        name: "瀧脇 笙古",
+        en: "Shoko Takiwaki",
+        short: "Shoko",
+        hexColor: "#f59e0b",
+        softColor: "#fffbeb",
+        colorName: "黄色×オレンジ",
+        colorStops: ["#facc15", "#fb923c"],
+        blood: "O型",
+        sign: "かに座",
+        height: "158cm",
+        birth: "2001/7/9",
+        place: "神奈川県",
+        hobby: "料理、ヘアアレンジ、横浜散策、カフェ巡り",
+        skill: "マラソン",
+        qualification: "",
+        profile: "料理、ヘアアレンジ、横浜散策、カフェ巡り。日々を丁寧に楽しむ感覚と、マラソンで積み重ねる粘り強さが、笙古ちゃんの魅力を形づくっている。派手な一撃よりも、誠実な積み重ねで胸を打つ人。凛とした立ち姿と丁寧な歌が、あとからじわじわ効いてくる。",
+        catchcopy: "丁寧な日々と努力が、静かに光る人。",
+        notes: ["歌", "誠実", "ライブ"],
+        socials: [
+          { label: "X", url: "https://twitter.com/shoko_takiwaki" },
+          { label: "Instagram", url: "https://www.instagram.com/takiwaki_shoko_/" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_SHOKO_TAKIWAKI" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/takiwaki_shoko" }
+        ]
+      },
+      {
+        id: "iori",
+        name: "野口 衣織",
+        en: "Iori Noguchi",
+        short: "Iori",
+        hexColor: "#9333ea",
+        softColor: "#faf5ff",
+        colorName: "紫",
+        colorStops: ["#9333ea", "#a855f7"],
+        blood: "O型",
+        sign: "おうし座",
+        height: "161cm",
+        birth: "2000/4/26",
+        place: "茨城県",
+        hobby: "アニメ漫画ゲーム。動画鑑賞",
+        skill: "特にない！！",
+        qualification: "",
+        profile: "アニメ、漫画、ゲーム、動画鑑賞。物語を浴びてきた人の表現は、やっぱり情報量が違う。公式プロフィールの特技欄に“特にない！！”と書いてしまう潔さまで含めて、衣織ちゃんは強い。“表情だけで一本の作品になる”と言いたくなる視線と声で、可愛い、かっこいい、怖い、切ないを一瞬で切り替える。",
+        catchcopy: "物語を浴びて、物語になる表現者。",
+        notes: ["歌", "憑依", "表現力"],
+        socials: [
+          { label: "X", url: "https://twitter.com/noguchi_iori" },
+          { label: "Instagram", url: "https://www.instagram.com/noguchi_iori_/" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_IORI_NOGUCHI" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/noguchi_iori" }
+        ]
+      },
+      {
+        id: "sana",
+        name: "諸橋 沙夏",
+        en: "Sana Morohashi",
+        short: "Sana",
+        hexColor: "#16a34a",
+        softColor: "#f0fdf4",
+        colorName: "緑",
+        colorStops: ["#16a34a", "#4ade80"],
+        blood: "B型",
+        sign: "しし座",
+        height: "158cm",
+        birth: "1996/8/3",
+        place: "福島県",
+        hobby: "映画鑑賞",
+        skill: "フラダンス、タヒチアンダンス",
+        qualification: "水泳泳力検定2級",
+        profile: "映画を観る人の余白、フラダンスとタヒチアンダンスで育った体のしなやかさ、そして歌に宿る艶。沙夏ちゃんの魅力は“大人っぽい”だけでは足りない。余裕の中に熱があり、ひとフレーズで曲の空気を深く染める。ファンが何度も戻ってくるのは、その声に心を預けたくなるから。",
+        catchcopy: "声の温度としなやかさで、曲を深く染める人。",
+        notes: ["歌", "大人", "ユニット"],
+        socials: [
+          { label: "X", url: "https://twitter.com/morohashi_sana" },
+          { label: "Instagram", url: "https://instagram.com/morohashi_sana/" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_SANA_MOROHASHI" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/morohashi_sana" }
+        ]
+      },
+      {
+        id: "anna",
+        name: "山本 杏奈",
+        en: "Anna Yamamoto",
+        short: "Anna",
+        hexColor: "#eab308",
+        softColor: "#fefce8",
+        colorName: "黄色×青",
+        colorStops: ["#eab308", "#3b82f6"],
+        blood: "A型",
+        sign: "いて座",
+        height: "149.5cm",
+        birth: "1997/11/30",
+        place: "広島県",
+        hobby: "スポーツ観戦（野球、サッカー、バレー）ダンス、料理",
+        skill: "目分量料理",
+        qualification: "",
+        profile: "スポーツ観戦、ダンス、料理。好きなものがそのまま、杏奈ちゃんの“見る力”“動く力”“支える力”になっている。目分量料理という言葉からも伝わる生活力と勘の良さ。“杏奈がいるから大丈夫”と思わせる安心感と、小さな体から放たれるダンスの切れ味が、グループの真ん中をやさしく支えている。",
+        catchcopy: "見る力、動く力、支える力でグループを包む人。",
+        notes: ["リーダー", "ダンス", "安心感"],
+        socials: [
+          { label: "X", url: "https://twitter.com/yamamoto_anna_" },
+          { label: "Instagram", url: "https://instagram.com/yamamoto_anna_/" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_anna" },
+          { label: "YouTube（あんまい）", url: "https://www.youtube.com/channel/UCYIlZwRiBzkoixtuWqltIvw" },
+          { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_ANNA_YAMAMOTO" },
+          { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
+          { label: "公式プロフィール", url: "https://equal-love.jp/feature/yamamoto_anna" }
+        ]
+      }
+    ];
 
-        const VIDEO_DATA = [
-            // 野口衣織 Selection
-            { id: 1, member: 'iori', type: "MV", title: "呪って呪って", url: "cyRZGtNx_a4", comment: "冷徹な眼光と魂を宿した指先の表現。イコラブが持つ表現力の深淵を定義し直した衝撃作である。" },
-            { id: 2, member: 'iori', type: "Live", title: "狂想カタストロフィ（有明アリーナ）", url: "bovO70Ml0gE", comment: "孤独を芸術へ。アリーナの真ん中で独り舞う姿は、アイドルの枠を超えた一つの伝説だ。" },
-            { id: 3, member: 'iori', type: "MV", title: "手遅れcaution", url: "w0N0TiOlAY0", comment: "憑依型パフォーマーとしての名を世に知らしめた原点。一瞬で空気を掌握する気迫は必見である。" },
-            { id: 4, member: 'iori', type: "MV", title: "拝啓 貴方様", url: "PFBhWKdjBTQ", comment: "昭和歌謡の哀愁を纏うソロ。唯一無二の歌唱力と、引きずり込まれるような妖艶な世界だ。" },
-            { id: 5, member: 'iori', type: "Live", title: "だからとて（代々木第一体育館）", url: "khSDmjXGjkE", comment: "切なさを叫ぶ。生歌ならではの熱量が魂を揺さぶり、聴く者を衣織沼へ深く引き摺り込む。" },
-            { id: 6, member: 'iori', type: "MV", title: "君と私の歌", url: "juImxVpogRY", comment: "ファンへの愛を綴るセンター曲。力強さと優しさが溶け合う、彼女が持つ王道の輝きである。" },
-            { id: 7, member: 'iori', type: "MV", title: "Be Selfish", url: "suf7S4AKdmY", comment: "自分らしさの肯定。凛とした佇まいと強いメッセージ性を描き出す現代的な美の象徴だ。" },
-            { id: 8, member: 'iori', type: "Live", title: "呪って呪って (有明アリーナ)", url: "T8zqbIvO_9M", comment: "会場全体を圧倒する覇気。ライブでこそ輝く、野生的なまでの気迫が堪能できる。" },
-            { id: 9, member: 'iori', type: "Focus", title: "絶対アイドル辞めないで", url: "olmZqgAYUTk", comment: "全編にわたって絵になる、究極のアイドルとしての姿を捉えた名映像である。" },
-            { id: 10, member: 'iori', type: "Cover", title: "うっせぇわ", url: "rMT4X8zR7qY", comment: "変幻自在な声の魔術師としての真骨頂。一度聴けば逃げられない圧倒的な歌唱だ。" },
-            { id: 11, member: 'iori', type: "Live", title: "手遅れcaution (横浜アリーナ)", url: "uMpEyaRmiy8", comment: "伝説の落ちサビ。一瞬の静寂が生む圧倒的カタルシスは、生歌の強さを物語る。" },
-            { id: 12, member: 'iori', type: "Dance", title: "Queens", url: "Pyts1pc0u1A", comment: "覇者の風格を纏う。ダンスのキレと重圧感のある視線が、観る者を世界観へ引き込む。" },
-            { id: 13, member: 'iori', type: "MV", title: "虹の素", url: "qoPqgiQVhok", comment: "歌声がぶつかり合い、溶け合うエモーショナルな旋律。いかりんぐの絆が結実した一曲だ。" },
-            { id: 14, member: 'iori', type: "Live", title: "記憶のどこかで", url: "FCti36ZBQBU", comment: "初期の名曲から溢れる情熱。成長し続ける彼女のパフォーマンスの歴史を感じるステージである。" },
-            { id: 15, member: 'iori', type: "Dance", title: "惑星ループ", url: "28P2ZI-aweU", comment: "ギャップの極致。クールな彼女が見せる至高の可愛さに撃ち抜かれる名場面だ。" },
+    const GROUP_SOCIALS = [
+      { label: "Official Site", url: "https://equal-love.jp/" },
+      { label: "YouTube", url: "https://www.youtube.com/channel/UCv7VutirxDn3RWIJXI68n_A" },
+      { label: "X", url: "https://twitter.com/equal_love_12" },
+      { label: "Instagram", url: "https://www.instagram.com/equal_love.official/" },
+      { label: "TikTok", url: "https://www.tiktok.com/@equal_love_12" }
+    ];
 
-            // 大場花菜 Selection
-            { id: 16, member: 'hana', type: "MV", title: "笑顔のレシピ", url: "LKwERkGBiog", comment: "リーダー山本杏奈の初センターを祝し、全員の絆を歌い上げた聖域。花菜の慈愛に満ちた表情が光る。" },
-            { id: 17, member: 'hana', type: "MV", title: "ラブロケ", url: "u_Y91a-uILM", comment: "宇宙的可愛さの炸裂。ポップな色彩と表情管理が完璧にマッチしたクリエイティブな一曲だ。" },
-            { id: 18, member: 'hana', type: "MV", title: "Sweetest girl", url: "poF7fpHzGvQ", comment: "女子力の魔法。おしゃれを愛する感性が息づく、ガーリーで愛らしい世界観である。" },
-            { id: 19, member: 'hana', type: "MV", title: "お姫様にしてよ！", url: "oCb89c0MDVk", comment: "全女子への応援歌。シアトリカルな演技力が光り、コメディエンヌの才能も堪能できる。" },
-            { id: 20, member: 'hana', type: "MV", title: "Poison Girl", url: "2l7yxbJ2Eqc", comment: "甘美な毒。大人びた表現で見せるアーティストとしての新たな一面。指先の所作が美しい。" },
-            { id: 21, member: 'hana', type: "MV", title: "狂想カタストロフィ", url: "RG_B3gfOzLo", comment: "シアトリカルの深淵。一曲の中で一人の人生を演じきる。宝塚への愛が昇華された極みだ。" },
-            { id: 22, member: 'hana', type: "Live", title: "祝祭 (さいたまスーパーアリーナ)", url: "497KgIJTgSs", comment: "執事姿での名演。舞台人としての本領発揮。ファンを虜にした圧巻の役作りをその目に。" },
-            { id: 23, member: 'hana', type: "Live", title: "ナツマトペ (さいたまスーパーアリーナ)", url: "J5M3vX9ioIU", comment: "会場を幸せにするハッピーオーラ。太陽のような彼女がいるだけで、景色が輝き出す。" },
-            { id: 24, member: 'hana', type: "Focus", title: "とくべチュ、して", url: "PnNYR8DjF_Y", comment: "最新のはなまる。一瞬のウィンクも見逃せない、可愛さの過剰摂取注意報である。" },
-            { id: 25, member: 'hana', type: "Dance", title: "呪って呪って (Practice)", url: "K-3LQ9A2ecY", comment: "正確無比なリズム感。身体の止めと流しが描くシルエットの美しさは職人技だ。" },
-            { id: 26, member: 'hana', type: "Dance", title: "この空がトリガー", url: "ENs8yzQe7uk", comment: "指先まで神経が通った流麗なダンス。曲の物語を全身で読み解く、真の表現者の姿である。" },
-            { id: 27, member: 'hana', type: "Live", title: "ラブクリエイト", url: "Ez3V5ipHdsI", comment: "多幸感の結晶。オレンジの海が最も似合う、メンバーとファンを愛する彼女の素顔だ。" },
-            { id: 28, member: 'hana', type: "Live", title: "超特急逃走中（代々木第一体育館）", url: "NjQPFUVKMCQ", comment: "全力のエンターテインメント。疾走感の中で光る最高の笑顔。観る者の心も晴れ渡る。" },
-            { id: 29, member: 'hana', type: "MV", title: "ドライブデート都内", url: "Y3aRUM8ebKE", comment: "お洒落なセンスと日常を彩る可愛さが詰まった一作。都内の景色に溶け込む姿が美しい。" },
-            { id: 30, member: 'hana', type: "MV", title: "ズッ友案件", url: "L7QUReMgJBY", comment: "ムードメーカーとしての温かさ。最高のハッピーを共有する、多幸感溢れる名曲だ。" },
+    const VIDEO_LIBRARY = {
+      "norotte": { title: "呪って呪って", youtubeId: "cyRZGtNx_a4", type: "MV", tags: ["表現力", "ダーク", "沼入口"], date: "2024" },
+      "kyoso-ariake": { title: "狂想カタストロフィ（有明アリーナ）", youtubeId: "bovO70Ml0gE", type: "Live", tags: ["ライブ", "表現力"], date: "2024" },
+      "teokure": { title: "手遅れcaution", youtubeId: "w0N0TiOlAY0", type: "MV", tags: ["表現力", "初期", "沼入口"], date: "2018" },
+      "haikei": { title: "拝啓 貴方様", youtubeId: "PFBhWKdjBTQ", type: "Solo", tags: ["歌", "ソロ", "表現力"], date: "2023" },
+      "dakaratote": { title: "だからとて（代々木第一体育館）", youtubeId: "khSDmjXGjkE", type: "Live", tags: ["歌", "ライブ"], date: "2023" },
+      "kimi-watashi": { title: "君と私の歌", youtubeId: "juImxVpogRY", type: "MV", tags: ["歌", "王道"], date: "2020" },
+      "be-selfish": { title: "Be Selfish", youtubeId: "suf7S4AKdmY", type: "MV", tags: ["王道", "ダンス", "沼入口"], date: "2022" },
+      "norotte-live": { title: "呪って呪って（有明アリーナ）", youtubeId: "T8zqbIvO_9M", type: "Live", tags: ["ライブ", "ダーク"], date: "2024" },
+      "zettai-focus": { title: "絶対アイドル辞めないで", youtubeId: "olmZqgAYUTk", type: "Focus", tags: ["かわいい", "沼入口"], date: "2024" },
+      "usseewa": { title: "うっせぇわ", youtubeId: "rMT4X8zR7qY", type: "Cover", tags: ["歌", "表現力"], date: "2021" },
+      "teokure-live": { title: "手遅れcaution（横浜アリーナ）", youtubeId: "uMpEyaRmiy8", type: "Live", tags: ["ライブ", "表現力"], date: "2022" },
+      "queens": { title: "Queens", youtubeId: "Pyts1pc0u1A", type: "Dance", tags: ["ダンス", "表現力"], date: "2023" },
+      "niji-no-moto": { title: "虹の素", youtubeId: "qoPqgiQVhok", type: "Unit", tags: ["歌", "ユニット"], date: "2022" },
+      "kioku": { title: "記憶のどこかで", youtubeId: "FCti36ZBQBU", type: "Live", tags: ["歌", "初期"], date: "2020" },
+      "wakusei": { title: "惑星ループ", youtubeId: "28P2ZI-aweU", type: "Dance", tags: ["かわいい", "ダンス"], date: "2020" },
+      "egao-recipe": { title: "笑顔のレシピ", youtubeId: "LKwERkGBiog", type: "MV", tags: ["ハッピー", "王道"], date: "2024" },
+      "love-rocket": { title: "ラブロケ", youtubeId: "u_Y91a-uILM", type: "MV", tags: ["かわいい", "ハッピー"], date: "2021" },
+      "sweetest-girl": { title: "Sweetest girl", youtubeId: "poF7fpHzGvQ", type: "MV", tags: ["かわいい", "ユニット"], date: "2021" },
+      "princess": { title: "お姫様にしてよ！", youtubeId: "oCb89c0MDVk", type: "MV", tags: ["かわいい", "表現力"], date: "2022" },
+      "poison-girl": { title: "Poison Girl", youtubeId: "2l7yxbJ2Eqc", type: "MV", tags: ["大人", "表現力"], date: "2022" },
+      "kyoso": { title: "狂想カタストロフィ", youtubeId: "RG_B3gfOzLo", type: "MV", tags: ["表現力", "ダーク"], date: "2024" },
+      "shukusai": { title: "祝祭（さいたまスーパーアリーナ）", youtubeId: "497KgIJTgSs", type: "Live", tags: ["ライブ", "表現力"], date: "2023" },
+      "natsumatope-live": { title: "ナツマトペ（さいたまスーパーアリーナ）", youtubeId: "J5M3vX9ioIU", type: "Live", tags: ["ライブ", "ハッピー"], date: "2023" },
+      "tokubechu": { title: "とくべチュ、して", youtubeId: "PnNYR8DjF_Y", type: "Focus", tags: ["かわいい", "沼入口"], date: "2025" },
+      "norotte-practice": { title: "呪って呪って（Practice）", youtubeId: "K-3LQ9A2ecY", type: "Dance", tags: ["ダンス", "表現力"], date: "2024" },
+      "trigger-dance": { title: "この空がトリガー（Dance）", youtubeId: "ENs8yzQe7uk", type: "Dance", tags: ["ダンス", "王道"], date: "2023" },
+      "love-create": { title: "ラブクリエイト", youtubeId: "Ez3V5ipHdsI", type: "Live", tags: ["ハッピー", "ライブ"], date: "2023" },
+      "chotokkyu": { title: "超特急逃走中", youtubeId: "NjQPFUVKMCQ", type: "Live", tags: ["ライブ", "ハッピー"], date: "2023" },
+      "drive-date": { title: "ドライブデート都内", youtubeId: "Y3aRUM8ebKE", type: "MV", tags: ["かわいい", "日常"], date: "2022" },
+      "zuttomo": { title: "ズッ友案件", youtubeId: "L7QUReMgJBY", type: "MV", tags: ["ハッピー", "友情"], date: "2022" },
+      "ano-con": { title: "あの子コンプレックス", youtubeId: "Mdsq8dUNvrI", type: "MV", tags: ["歌", "切ない", "沼入口"], date: "2022" },
+      "trigger": { title: "この空がトリガー", youtubeId: "20QJax8CwQo", type: "MV", tags: ["王道", "歌"], date: "2023" },
+      "mayonaka": { title: "真夜中マーメイド", youtubeId: "qzFBzJ2KWwY", type: "Solo", tags: ["歌", "ソロ"], date: "2023" },
+      "darebare": { title: "誰にもバレずに", youtubeId: "E4PVynHrfp8", type: "MV", tags: ["切ない", "表現力"], date: "2023" },
+      "shukipi": { title: "しゅきぴ", youtubeId: "hTu7a1kRXYQ", type: "Live", tags: ["かわいい", "ライブ"], date: "2020" },
+      "zurui": { title: "ズルいよ ズルいね", youtubeId: "J5eTB_0SEeg", type: "Live", tags: ["歌", "切ない"], date: "2019" },
+      "natsumatsuri": { title: "夏祭り恋慕う", youtubeId: "8VBDO8ZQyDo", type: "Live", tags: ["切ない", "ライブ"], date: "2021" },
+      "shirankedo": { title: "知らんけど", youtubeId: "IplzPaWoFXo", type: "Unit", tags: ["大人", "ユニット"], date: "2022" },
+      "zettai": { title: "絶対アイドル辞めないで", youtubeId: "17NBPoc78oM", type: "MV", tags: ["アイドル", "沼入口"], date: "2024" },
+      "seishun": { title: "青春サブリミナル", youtubeId: "8id6i_QeNJM", type: "MV", tags: ["王道", "青春"], date: "2020" },
+      "natsumatope-focus": { title: "ナツマトペ", youtubeId: "BIP7OiyBitE", type: "Focus", tags: ["夏", "かわいい"], date: "2023" },
+      "cameo": { title: "CAMEO", youtubeId: "iEYwHScdJFQ", type: "MV", tags: ["大人", "ダンス"], date: "2020" },
+      "diamond-lily": { title: "探せ ダイヤモンドリリー", youtubeId: "Mq_wPiAJO7Q", type: "Live", tags: ["ライブ", "王道"], date: "2019" },
+      "want-you": { title: "Want you! Want you!", youtubeId: "Bot92Nn-ozk", type: "MV", tags: ["初期", "かわいい"], date: "2018" },
+      "ship": { title: "今、この船に乗れ！", youtubeId: "canxm5HHHQc", type: "MV", tags: ["初期", "青春"], date: "2018" },
+      "ai-kachitore": { title: "愛を勝ち取れ！", youtubeId: "SrqqHpWIN9M", type: "MV", tags: ["初期", "ライブ感"], date: "2018" },
+      "kiara-help": { title: "樹愛羅、助けに来たぞ", youtubeId: "Qg9344QHJDU", type: "MV", tags: ["かわいい", "初期"], date: "2018" },
+      "bekagai": { title: "部活中に目が合うなって思ってたんだ", youtubeId: "vJIPN_iZnIU", type: "MV", tags: ["青春", "初期"], date: "2018" },
+      "game-bu": { title: "イコラブゲーム部", youtubeId: "Bco8bY9r_H4", type: "Variety", tags: ["バラエティ", "素顔"], date: "2024" },
+      "karaoke": { title: "カラオケ企画", youtubeId: "G_GgDi2vCMQ", type: "Variety", tags: ["歌", "素顔"], date: "2023" }
+    };
 
-            // 佐々木舞香 Selection
-            { id: 31, member: 'maika', type: "MV", title: "あの子コンプレックス", url: "Mdsq8dUNvrI", comment: "切なさを体現する美声だ。憂いを帯びた表情が楽曲の哀愁を極限まで引き立てる一曲である。" },
-            { id: 32, member: 'maika', type: "MV", title: "この空がトリガー", url: "20QJax8CwQo", comment: "透明感溢れる王道センター。圧倒的なビジュアル力と歌声が完璧に調和している。" },
-            { id: 33, member: 'maika', type: "Live", title: "真夜中マーメイド", url: "qzFBzJ2KWwY", comment: "歌声の透明感が際立つソロ曲だ。観る者を深い没入感へ誘う彼女の真骨頂である。" },
-            { id: 34, member: 'maika', type: "MV", title: "誰にもバレずに", url: "E4PVynHrfp8", comment: "シリアスな世界観。静かな葛藤と強さを描き出す、彼女にしか成し得ない表現だ。" },
-            { id: 35, member: 'maika', type: "Live", title: "しゅきぴ", url: "hTu7a1kRXYQ", comment: "「舞香のしゅきぴは世界一」とファンが口を揃える伝説の映像だ。コロコロ変わる表情と、あざと可愛さの暴力に誰もがひれ伏すしかない。" },
-            { id: 36, member: 'maika', type: "Live", title: "ズルいよ ズルいね", url: "J5eTB_0SEeg", comment: "「この切ない表情で沼落ちした」という声が後を絶たない。雨に濡れた瞳と、悲痛なまでに美しい歌声が観る者の心を抉る。" },
-            { id: 37, member: 'maika', type: "Live", title: "夏祭り恋慕う", url: "8VBDO8ZQyDo", comment: "「舞香ちゃん×夏祭りは大正義」とファンを唸らせる。夏の終わりの儚さを一身に背負ったような彼女の空気感は、もはや一つの芸術作品である。" },
-            { id: 38, member: 'maika', type: "MV", title: "知らんけど", url: "IplzPaWoFXo", comment: "ユニット曲での大人びたアプローチ。マイクスタンドを駆使した余裕のあるパフォーマンスだ。" },
-            { id: 39, member: 'maika', type: "MV", title: "虹の素", url: "qoPqgiQVhok", comment: "「いかりんぐのハモりは奇跡」と称される至高のデュエット。野口衣織の熱と対極にある、冷たくも激しい佐々木の歌声が魂を揺さぶる。" },
-            { id: 40, member: 'maika', type: "MV", title: "絶対アイドル辞めないで", url: "17NBPoc78oM", comment: "アイドルとしての覚悟。彼女が歌う一節一節に、揺るぎない矜持が宿っている。" },
-            { id: 41, member: 'maika', type: "MV", title: "青春サブリミナル", url: "8id6i_QeNJM", comment: "グループの王道。爽やかな風を纏うような彼女の歌声が、楽曲をさらに高みへ導く。" },
-            { id: 42, member: 'maika', type: "Focus", title: "ナツマトペ", url: "BIP7OiyBitE", comment: "弾ける夏のヒロインだ。普段の落ち着きとは違う、底抜けに明るい笑顔が眩しい。" },
-            { id: 43, member: 'maika', type: "MV", title: "Be Selfish", url: "suf7S4AKdmY", comment: "自己肯定のメッセージ。凛とした立ち姿が、現代の女性の力強さを体現している。" },
-            { id: 44, member: 'maika', type: "MV", title: "CAMEO", url: "iEYwHScdJFQ", comment: "ダークで挑戦的な表現だ。彼女が放つ鋭い視線が、楽曲の危うい魅力を加速させる。" },
-            { id: 45, member: 'maika', type: "Live", title: "探せ ダイヤモンドリリー", url: "Mq_wPiAJO7Q", comment: "「ダイリリの舞香はいつも泣きそうなほど綺麗だ」と語り草になる名演。可憐さと力強さが交差する、初期からの揺るぎない表現力である。" }
-        ];
+    const PICKS_BY_MEMBER = {
+      iori: ["norotte", "kyoso-ariake", "teokure", "haikei", "dakaratote", "kimi-watashi", "be-selfish", "norotte-live", "zettai-focus", "usseewa", "teokure-live", "queens", "niji-no-moto", "kioku", "wakusei"],
+      hana: ["egao-recipe", "love-rocket", "sweetest-girl", "princess", "poison-girl", "kyoso", "shukusai", "natsumatope-live", "tokubechu", "norotte-practice", "trigger-dance", "love-create", "chotokkyu", "drive-date", "zuttomo"],
+      maika: ["ano-con", "trigger", "mayonaka", "darebare", "shukipi", "zurui", "natsumatsuri", "shirankedo", "niji-no-moto", "zettai", "seishun", "natsumatope-focus", "be-selfish", "cameo", "diamond-lily"],
+      emiri: ["sweetest-girl", "princess", "love-rocket", "zuttomo", "drive-date", "want-you", "cameo", "seishun", "trigger", "natsumatope-focus", "tokubechu", "egao-recipe", "zettai", "be-selfish", "chotokkyu"],
+      risa: ["natsumatsuri", "poison-girl", "shirankedo", "zurui", "ano-con", "cameo", "natsumatope-live", "drive-date", "egao-recipe", "niji-no-moto", "trigger", "tokubechu", "want-you", "chotokkyu", "teokure"],
+      kiara: ["kiara-help", "tokubechu", "princess", "love-rocket", "natsumatope-focus", "zuttomo", "chotokkyu", "seishun", "cameo", "trigger", "want-you", "teokure", "egao-recipe", "poison-girl", "zettai"],
+      hitomi: ["want-you", "diamond-lily", "teokure", "seishun", "trigger", "natsumatope-live", "be-selfish", "zettai", "cameo", "egao-recipe", "chotokkyu", "zurui", "ano-con", "norotte", "tokubechu"],
+      shoko: ["sweetest-girl", "love-rocket", "drive-date", "trigger", "egao-recipe", "cameo", "teokure", "seishun", "want-you", "chotokkyu", "tokubechu", "be-selfish", "natsumatsuri", "zuttomo", "poison-girl"],
+      sana: ["niji-no-moto", "zurui", "ano-con", "shirankedo", "cameo", "poison-girl", "natsumatsuri", "teokure", "seishun", "want-you", "chotokkyu", "drive-date", "egao-recipe", "tokubechu", "be-selfish"],
+      anna: ["egao-recipe", "seishun", "trigger", "want-you", "teokure", "chotokkyu", "drive-date", "love-create", "cameo", "natsumatope-live", "zuttomo", "be-selfish", "tokubechu", "ship", "ai-kachitore"]
+    };
 
-        const HighResThumbnail = ({ videoId, title }) => {
-            const [imgSrc, setImgSrc] = useState(`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`);
-            return (
-                <div className="relative aspect-video overflow-hidden bg-zinc-200">
-                    <img src={imgSrc} alt={title} loading="lazy" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 thumb-sharp"
-                        onError={() => { if (!imgSrc.includes('hqdefault')) setSrc(`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`); }} />
-                </div>
-            );
+    const ORIGINAL_TINTERPAN_COMMENTS = {
+      iori: [
+        "冷徹な眼光と魂を宿した指先の表現。イコラブが持つ表現力の深淵を定義し直した衝撃作である。",
+        "孤独を芸術へ。アリーナの真ん中で独り舞う姿は、アイドルの枠を超えた一つの伝説だ。",
+        "憑依型パフォーマーとしての名を世に知らしめた原点。一瞬で空気を掌握する気迫は必見である。",
+        "昭和歌謡の哀愁を纏うソロ。唯一無二の歌唱力と、引きずり込まれるような妖艶な世界だ。",
+        "切なさを叫ぶ。生歌ならではの熱量が魂を揺さぶり、聴く者を衣織沼へ深く引き摺り込む。",
+        "ファンへの愛を綴るセンター曲。力強さと優しさが溶け合う、彼女が持つ王道の輝きである。",
+        "自分らしさの肯定。凛とした佇まいと強いメッセージ性を描き出す現代的な美の象徴だ。",
+        "会場全体を圧倒する覇気。ライブでこそ輝く、野生的なまでの気迫が堪能できる。",
+        "全編にわたって絵になる、究極のアイドルとしての姿を捉えた名映像である。",
+        "変幻自在な声の魔術師としての真骨頂。一度聴けば逃げられない圧倒的な歌唱だ。",
+        "伝説の落ちサビ。一瞬の静寂が生む圧倒的カタルシスは、生歌の強さを物語る。",
+        "覇者の風格を纏う。ダンスのキレと重圧感のある視線が、観る者を世界観へ引き込む。",
+        "歌声がぶつかり合い、溶け合うエモーショナルな旋律。いかりんぐの絆が結実した一曲だ。",
+        "初期の名曲から溢れる情熱。成長し続ける彼女のパフォーマンスの歴史を感じるステージである。",
+        "ギャップの極致。クールな彼女が見せる至高の可愛さに撃ち抜かれる名場面だ。"
+      ],
+      hana: [
+        "リーダー山本杏奈の初センターを祝し、全員の絆を歌い上げた聖域。花菜の慈愛に満ちた表情が光る。",
+        "宇宙的可愛さの炸裂。ポップな色彩と表情管理が完璧にマッチしたクリエイティブな一曲だ。",
+        "女子力の魔法。おしゃれを愛する感性が息づく、ガーリーで愛らしい世界観である。",
+        "全女子への応援歌。シアトリカルな演技力が光り、コメディエンヌの才能も堪能できる。",
+        "甘美な毒。大人びた表現で見せるアーティストとしての新たな一面。指先の所作が美しい。",
+        "シアトリカルの深淵。一曲の中で一人の人生を演じきる。宝塚への愛が昇華された極みだ。",
+        "執事姿での名演。舞台人としての本領発揮。ファンを虜にした圧巻の役作りをその目に。",
+        "会場を幸せにするハッピーオーラ。太陽のような彼女がいるだけで、景色が輝き出す。",
+        "最新のはなまる。一瞬のウィンクも見逃せない、可愛さの過剰摂取注意報である。",
+        "正確無比なリズム感。身体の止めと流しが描くシルエットの美しさは職人技だ。",
+        "指先まで神経が通った流麗なダンス。曲の物語を全身で読み解く、真の表現者の姿である。",
+        "多幸感の結晶。オレンジの海が最も似合う、メンバーとファンを愛する彼女の素顔だ。",
+        "全力のエンターテインメント。疾走感の中で光る最高の笑顔。観る者の心も晴れ渡る。",
+        "お洒落なセンスと日常を彩る可愛さが詰まった一作。都内の景色に溶け込む姿が美しい。",
+        "ムードメーカーとしての温かさ。最高のハッピーを共有する、多幸感溢れる名曲だ。"
+      ],
+      maika: [
+        "切なさを体現する美声だ。憂いを帯びた表情が楽曲の哀愁を極限まで引き立てる一曲である。",
+        "透明感溢れる王道センター。圧倒的なビジュアル力と歌声が完璧に調和している。",
+        "歌声の透明感が際立つソロ曲だ。観る者を深い没入感へ誘う彼女の真骨頂である。",
+        "シリアスな世界観。静かな葛藤と強さを描き出す、彼女にしか成し得ない表現だ。",
+        "「舞香のしゅきぴは世界一」とファンが口を揃える伝説の映像だ。コロコロ変わる表情と、あざと可愛さの暴力に誰もがひれ伏すしかない。",
+        "「この切ない表情で沼落ちした」という声が後を絶たない。雨に濡れた瞳と、悲痛なまでに美しい歌声が観る者の心を抉る。",
+        "「舞香ちゃん×夏祭りは大正義」とファンを唸らせる。夏の終わりの儚さを一身に背負ったような彼女の空気感は、もはや一つの芸術作品である。",
+        "ユニット曲での大人びたアプローチ。マイクスタンドを駆使した余裕のあるパフォーマンスだ。",
+        "「いかりんぐのハモりは奇跡」と称される至高のデュエット。野口衣織の熱と対極にある、冷たくも激しい佐々木の歌声が魂を揺さぶる。",
+        "アイドルとしての覚悟。彼女が歌う一節一節に、揺るぎない矜持が宿っている。",
+        "グループの王道。爽やかな風を纏うような彼女の歌声が、楽曲をさらに高みへ導く。",
+        "弾ける夏のヒロインだ。普段の落ち着きとは違う、底抜けに明るい笑顔が眩しい。",
+        "自己肯定のメッセージ。凛とした立ち姿が、現代の女性の力強さを体現している。",
+        "ダークで挑戦的な表現だ。彼女が放つ鋭い視線が、楽曲の危うい魅力を加速させる。",
+        "「ダイリリの舞香はいつも泣きそうなほど綺麗だ」と語り草になる名演。可憐さと力強さが交差する、初期からの揺るぎない表現力である。"
+      ]
+    };
+
+    const MEMBER_TONE = {
+      emiri: ["表情の角度までかわいい。まずここで、映美里ちゃんのヒロイン力に降参したい。", "甘さが画面をぱっと明るくする。かわいいの強度がずっと高い。", "衣装も表情も抜かりなし。見返すほど小さな仕草が効いてくる。"],
+      hana: ["花菜ちゃんの表情が、曲の温度を一段上げてくれる。幸せの作り方がうまい。", "明るいだけじゃない、役をつかむ力が見える一本。気づくと目で追っている。", "楽しいの中に職人技がある。細部まで愛が通っていて、見終わると元気が残る。"],
+      risa: ["莉沙ちゃんのしなやかさが曲に余韻を残す。やわらかいのに芯がある。", "一瞬の目線と所作がきれい。透明感の入口として置いておきたい一本。", "前に出すぎず、でも確かに残る。莉沙ちゃんの魅力がじわっと効く。"],
+      kiara: ["樹愛羅ちゃんのかわいいは瞬発力がすごい。気づいたら何度も巻き戻している。", "明るさの中に成長の熱が見える。今の樹愛羅ちゃんを追いたくなる。", "キュートの芯が強い。表情が切り替わるたび、沼がもう一段深くなる。"],
+      maika: ["舞香ちゃんの声が入るだけで、曲の景色がすっと変わる。透明なのに強い。", "目線の温度と歌の説得力。静かな一撃で心を持っていく一本。", "可憐さと鋭さの同居がずるい。舞香ちゃんの余韻に浸れる。"],
+      hitomi: ["瞳ちゃんが真ん中に立つと、景色が一気に開ける。王道の眩しさを浴びたい。", "笑顔の強さがそのまま推進力になる。初見にもまっすぐ届く一本。", "センター感だけじゃない、曲を支える体幹まで見てほしい。"],
+      shoko: ["笙古ちゃんの誠実なパフォーマンスが胸に残る。積み重ねの強さが見える。", "凛とした立ち姿がきれい。派手さより深く残るタイプの魅力。", "歌も表情も丁寧。見終わったあとに、もう一回確認したくなる。"],
+      iori: ["衣織ちゃんの目線が曲の奥へ連れていく。表現の圧に、一度浴びたら戻れない。", "声の色がくるくる変わる。かわいいも怖いも切ないも、全部持っている。", "一瞬で空気を支配するタイプの表現者。ここから沼が始まる。"],
+      sana: ["沙夏ちゃんの声が入ると空気が大人になる。余裕と熱のバランスがずるい。", "表情に余白があるから、曲の奥行きがぐっと増す。歌にも注目したい。", "艶のある歌と視線の強さ。気づくと世界観の深いところにいる。"],
+      anna: ["杏奈ちゃんの安心感が、グループ全体の輪郭をきゅっと整える。", "小さな体から出るダンスの説得力。リーダーの強さが伝わる一本。", "明るく支えるだけじゃない。パフォーマンスの芯がちゃんと熱い。"]
+    };
+
+    const SOURCE_LABEL = "公式YouTube / 公式公開動画";
+    const STORAGE_KEY = "equal_love_watched_v1";
+
+    const VIDEO_TARGET_PER_MEMBER = 60;
+    const ALL_VIDEO_KEYS = Object.keys(VIDEO_LIBRARY);
+    const WATCH_ANGLES = [
+      { label: "表情に注目", tag: "表情", copy: "表情の切り替わりを追うと、同じ曲でもぐっと立体的に見える。" },
+      { label: "歌声に注目", tag: "歌", copy: "声が入る瞬間と抜ける瞬間を意識すると、曲の温度差がよく分かる。" },
+      { label: "ダンスに注目", tag: "ダンス", copy: "足元と指先を追うと、画面の端までちゃんと作品になっている。" },
+      { label: "ライブ感に注目", tag: "ライブ", copy: "客席との呼吸まで含めて観ると、映像以上の熱が伝わってくる。" },
+      { label: "関係性に注目", tag: "関係性", copy: "メンバー同士の目線や距離感に、その人らしい優しさがにじむ。" },
+      { label: "衣装と所作に注目", tag: "所作", copy: "衣装の見せ方、立ち姿、手の置き方に個性が出る。" },
+      { label: "初見向け", tag: "沼入口", copy: "初めて観るなら、曲全体の中でどこに目が戻るかを楽しみたい。" },
+      { label: "成長を追う", tag: "成長", copy: "少し前の映像と並べると、表情や声の変化がちゃんと見えてくる。" },
+      { label: "可愛さに注目", tag: "かわいい", copy: "一瞬の笑顔や照れが強い。短いカットほど見逃せない。" },
+      { label: "世界観に注目", tag: "世界観", copy: "曲の主人公としてどう立っているかを見ると、表現の深さが伝わる。" }
+    ];
+
+    function expandedPicksFor(memberId) {
+      const priority = PICKS_BY_MEMBER[memberId] || [];
+      const remaining = ALL_VIDEO_KEYS.filter((key) => !priority.includes(key));
+      const ordered = [...priority, ...remaining];
+      const picks = [];
+      while (picks.length < VIDEO_TARGET_PER_MEMBER) {
+        picks.push(ordered[picks.length % ordered.length]);
+      }
+      return picks;
+    }
+
+    function buildVideoComment(member, source, index) {
+      const original = ORIGINAL_TINTERPAN_COMMENTS[member.id]?.[index];
+      if (original) return original;
+      const tone = MEMBER_TONE[member.id][index % MEMBER_TONE[member.id].length];
+      const angle = WATCH_ANGLES[index % WATCH_ANGLES.length];
+      return `${tone} ${angle.copy}`;
+    }
+
+    const VIDEO_DATA = MEMBERS.flatMap((member) =>
+      expandedPicksFor(member.id).map((videoKey, index) => {
+        const source = VIDEO_LIBRARY[videoKey];
+        const repeatRound = Math.floor(index / ALL_VIDEO_KEYS.length);
+        const angle = WATCH_ANGLES[index % WATCH_ANGLES.length];
+        return {
+          id: `${member.id}-${index + 1}`,
+          memberId: member.id,
+          member: member.id,
+          libraryKey: videoKey,
+          title: repeatRound ? `${source.title}（${angle.label}）` : source.title,
+          youtubeId: source.youtubeId,
+          url: `https://www.youtube.com/watch?v=${source.youtubeId}`,
+          type: source.type,
+          tags: Array.from(new Set([...source.tags, angle.tag, "公式動画"])),
+          date: source.date,
+          watchPoint: angle.label,
+          comment: buildVideoComment(member, source, index),
+          sourceLabel: SOURCE_LABEL
+        };
+      })
+    );
+
+    const FEATURED_IDS = ["hitomi-1", "iori-1", "maika-1", "hana-1", "kiara-1"];
+    const TYPES = ["すべて", ...Array.from(new Set(VIDEO_DATA.map((video) => video.type)))];
+    const TAGS = ["すべて", ...Array.from(new Set(VIDEO_DATA.flatMap((video) => video.tags))).sort()];
+    const MEMBER_BY_ID = Object.fromEntries(MEMBERS.map((member) => [member.id, member]));
+    const VIDEO_BY_ID = Object.fromEntries(VIDEO_DATA.map((video) => [video.id, video]));
+
+    function memberGradient(member, deg = 90) {
+      return `linear-gradient(${deg}deg, ${(member.colorStops || [member.hexColor, member.hexColor]).join(", ")})`;
+    }
+
+    function iconPath(name) {
+      const paths = {
+        search: "M21 21l-4.35-4.35m1.35-5.15a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z",
+        reset: "M3 12a9 9 0 019-9 9 9 0 016.36 2.64M21 12a9 9 0 01-9 9 9 9 0 01-6.36-2.64M3 4v5h5M21 20v-5h-5",
+        play: "M8 5v14l11-7z",
+        check: "M5 13l4 4L19 7",
+        filter: "M4 6h16M7 12h10M10 18h4",
+        users: "M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75",
+        heart: "M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78",
+        external: "M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
+      };
+      return paths[name];
+    }
+
+    function Icon({ name, className = "h-4 w-4" }) {
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill={name === "play" ? "currentColor" : "none"} stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d={iconPath(name)} />
+        </svg>
+      );
+    }
+
+    function FitTitle({ text, className = "", max = 128, min = 28, as: Tag = "span", style = {} }) {
+      const ref = useRef(null);
+      const [measuredSize, setMeasuredSize] = useState(null);
+      const vw = Math.max(4.2, Math.min(11, 132 / Math.max(text.length, 1)));
+
+      useLayoutEffect(() => {
+        const element = ref.current;
+        if (!element) return;
+
+        const fit = () => {
+          const parentWidth = element.parentElement?.clientWidth || element.clientWidth;
+          if (!parentWidth) return;
+
+          const computed = window.getComputedStyle(element);
+          const probe = document.createElement("span");
+          probe.textContent = text;
+          probe.style.position = "absolute";
+          probe.style.visibility = "hidden";
+          probe.style.whiteSpace = "nowrap";
+          probe.style.fontFamily = computed.fontFamily;
+          probe.style.fontWeight = computed.fontWeight;
+          probe.style.fontStyle = computed.fontStyle;
+          probe.style.letterSpacing = computed.letterSpacing;
+          probe.style.fontSize = `${max}px`;
+          document.body.appendChild(probe);
+
+          const width = probe.scrollWidth || 1;
+          probe.remove();
+
+          const nextSize = Math.max(min, Math.min(max, Math.floor(max * (parentWidth - 2) / width)));
+          setMeasuredSize((current) => current === nextSize ? current : nextSize);
         };
 
-        const App = () => {
-            const [member, setMember] = useState('iori'); 
-            const [page, setPage] = useState('works');
-            
-            // バロメーター用の独立ステート
-            const [watchedIori, setWatchedIori] = useState(() => JSON.parse(localStorage.getItem('watched_iori_v5') || '[]'));
-            const [watchedHana, setWatchedHana] = useState(() => JSON.parse(localStorage.getItem('watched_hana_v5') || '[]'));
-            const [watchedMaika, setWatchedMaika] = useState(() => JSON.parse(localStorage.getItem('watched_maika_v5') || '[]'));
+        fit();
+        const observer = new ResizeObserver(fit);
+        observer.observe(element.parentElement || element);
+        window.addEventListener("resize", fit);
+        return () => {
+          observer.disconnect();
+          window.removeEventListener("resize", fit);
+        };
+      }, [text, max, min, className]);
 
-            useEffect(() => {
-                localStorage.setItem('watched_iori_v5', JSON.stringify(watchedIori));
-                localStorage.setItem('watched_hana_v5', JSON.stringify(watchedHana));
-                localStorage.setItem('watched_maika_v5', JSON.stringify(watchedMaika));
-            }, [watchedIori, watchedHana, watchedMaika]);
+      return (
+        <Tag
+          ref={ref}
+          className={`fit-title ${className}`}
+          style={{
+            ...style,
+            "--fit-fallback": `clamp(${min}px, ${vw}vw, ${max}px)`,
+            fontSize: measuredSize ? `${measuredSize}px` : style.fontSize
+          }}
+          title={text}
+        >
+          {text}
+        </Tag>
+      );
+    }
 
-            const current = MEMBERS.find(m => m.id === member);
-            const videos = VIDEO_DATA.filter(v => v.member === member);
-            
-            // 現在のメンバーの進捗を計算
-            let currentWatched = [];
-            if (member === 'iori') currentWatched = watchedIori;
-            if (member === 'hana') currentWatched = watchedHana;
-            if (member === 'maika') currentWatched = watchedMaika;
-            const score = Math.round((currentWatched.length / videos.length) * 100);
+    function runUiTransition(update) {
+      if (document.startViewTransition && ReactDOM.flushSync) {
+        document.startViewTransition(() => ReactDOM.flushSync(update));
+        return;
+      }
+      update();
+    }
 
-            const toggle = (id) => {
-                if (member === 'iori') {
-                    setWatchedIori(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
-                } else if (member === 'hana') {
-                    setWatchedHana(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
-                } else if (member === 'maika') {
-                    setWatchedMaika(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
-                }
-            };
+    function loadWatchedIds() {
+      const next = safeJson(localStorage.getItem(STORAGE_KEY), null);
+      if (Array.isArray(next)) {
+        return next;
+      }
 
+      const legacyPairs = [
+        ["watched_iori_v5", "iori"],
+        ["watched_hana_v5", "hana"],
+        ["watched_maika_v5", "maika"]
+      ];
+
+      const migrated = new Set();
+      legacyPairs.forEach(([key, memberId]) => {
+        safeJson(localStorage.getItem(key), []).forEach((legacyId) => {
+          const offset = memberId === "iori" ? 0 : memberId === "hana" ? 15 : 30;
+          const localIndex = Number(legacyId) - offset;
+          if (Number.isInteger(localIndex) && localIndex >= 1 && localIndex <= 15) {
+            migrated.add(`${memberId}-${localIndex}`);
+          }
+        });
+      });
+      return Array.from(migrated);
+    }
+
+    function safeJson(value, fallback) {
+      try {
+        return value ? JSON.parse(value) : fallback;
+      } catch {
+        return fallback;
+      }
+    }
+
+    function memberProgress(memberId, watchedIds) {
+      const total = VIDEO_DATA.filter((video) => video.memberId === memberId).length;
+      const watched = VIDEO_DATA.filter((video) => video.memberId === memberId && watchedIds.includes(video.id)).length;
+      return { total, watched, percent: total ? Math.round((watched / total) * 100) : 0 };
+    }
+
+    function Thumbnail({ video }) {
+      const [src, setSrc] = useState(`https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg`);
+      const [loaded, setLoaded] = useState(false);
+      useEffect(() => {
+        setLoaded(false);
+        setSrc(`https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg`);
+      }, [video.youtubeId]);
+      return (
+        <div className={`thumb relative aspect-video overflow-hidden rounded-[8px] bg-zinc-200 shadow-[0_18px_42px_rgba(45,36,41,0.10)] ${loaded ? "is-loaded" : ""}`}>
+          <span className="thumb-shimmer" aria-hidden="true"></span>
+          <img
+            src={src}
+            alt={`${video.title}のサムネイル`}
+            loading="lazy"
+            className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0"}`}
+            onLoad={() => setLoaded(true)}
+            onError={() => {
+              if (!src.includes("hqdefault")) {
+                setSrc(`https://i.ytimg.com/vi/${video.youtubeId}/hqdefault.jpg`);
+              }
+            }}
+          />
+        </div>
+      );
+    }
+
+    function TopNav({ activePage, setActivePage, watchedIds }) {
+      const allPercent = Math.round((watchedIds.length / VIDEO_DATA.length) * 100);
+      return (
+        <header className="top-glass fixed inset-x-0 top-0 z-50">
+          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+            <button onClick={() => setActivePage("home")} className="flex min-w-0 items-center gap-3 text-left" aria-label="トップへ戻る">
+              <span className="grid h-11 w-11 flex-none place-items-center rounded-full bg-primary text-lg font-black text-white shadow-lg shadow-purple-200">=L</span>
+              <span className="min-w-0">
+                <span className="block truncate font-rounded text-[15px] font-extrabold leading-tight text-purple-950 md:text-lg">Tinterpan 10人沼ガイド</span>
+                <span className="block truncate text-[10px] font-bold tracking-wide text-gray-500">10人の沼入口</span>
+              </span>
+            </button>
+
+            <nav className="hidden items-center gap-2 md:flex" aria-label="ページナビゲーション">
+              {[
+                ["home", "沼ガイド"],
+                ["archive", "動画索引"],
+                ["profile", "プロフィール"]
+              ].map(([page, label]) => (
+                <button
+                  key={page}
+                  onClick={() => setActivePage(page)}
+                  className={`rounded-full px-4 py-2 text-sm font-black transition ${activePage === page ? "bg-primary text-white shadow-md" : "text-gray-500 hover:bg-purple-50 hover:text-purple-900"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </nav>
+
+            <div className="hidden min-w-[170px] items-center gap-3 rounded-full bg-purple-50 px-4 py-2 md:flex">
+              <Icon name="heart" className="h-4 w-4 text-primary" />
+              <div className="min-w-0 flex-1">
+                <div className="h-1.5 overflow-hidden rounded-full bg-white">
+                  <div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${allPercent}%` }}></div>
+                </div>
+                <p className="mt-1 text-[10px] font-black text-purple-900">{watchedIds.length}/{VIDEO_DATA.length} watched</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      );
+    }
+
+    function BottomNav({ activePage, setActivePage }) {
+      const items = [
+        ["home", "沼ガイド", "heart"],
+        ["archive", "動画", "play"],
+        ["profile", "メンバー", "users"]
+      ];
+      return (
+        <nav className="fixed inset-x-3 bottom-3 z-50 md:hidden" aria-label="モバイルナビゲーション">
+          <div className="bottom-glass grid grid-cols-3 rounded-full p-1">
+            {items.map(([page, label, icon]) => (
+              <button
+                key={page}
+                onClick={() => setActivePage(page)}
+                className={`flex items-center justify-center gap-1.5 rounded-full py-3 text-xs font-black transition ${activePage === page ? "bg-primary text-white" : "text-gray-500"}`}
+              >
+                <Icon name={icon} className="h-4 w-4" />
+                {label}
+              </button>
+            ))}
+          </div>
+        </nav>
+      );
+    }
+
+    function Hero({ setActivePage }) {
+      return (
+        <section className="fade-up grid gap-5 pt-24 md:grid-cols-[1.05fr_0.95fr] md:items-stretch md:pt-28">
+          <div className="soft-card overflow-hidden p-5 md:p-8">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5 text-xs font-black text-purple-900">
+              <Icon name="heart" className="h-3.5 w-3.5 text-primary" />
+              10人ぶんの入口、ここに集めました
+            </div>
+            <h1 className="font-rounded text-3xl font-extrabold leading-tight text-purple-950 md:text-5xl">
+              「ちょっと気になる」を、<br className="hidden sm:block" />今日の推し動画に変える。
+            </h1>
+            <p className="mt-5 max-w-2xl text-sm font-medium leading-7 text-gray-600 md:text-base">
+              元のTinterpanの熱量をそのままに、=LOVE現メンバー10人の魅力を公式動画への導線でたどる非公式ガイド。まずは5本、気になるメンバー、歌、ダンス、ライブ。好きの入口を軽やかに探せます。
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <button onClick={() => setActivePage("archive")} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-black text-white shadow-lg shadow-purple-200 transition hover:bg-purple-800">
+                <Icon name="play" className="h-4 w-4" />
+                動画から入る
+              </button>
+              <button onClick={() => setActivePage("profile")} className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-black text-purple-950 ring-1 ring-purple-100 transition hover:bg-purple-50">
+                <Icon name="users" className="h-4 w-4" />
+                メンバーを見る
+              </button>
+            </div>
+          </div>
+
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
+            {FEATURED_IDS.slice(0, 2).map((id) => {
+              const video = VIDEO_BY_ID[id];
+              const member = MEMBER_BY_ID[video.memberId];
+              return (
+                <a key={id} href={video.url} target="_blank" rel="noreferrer" className="soft-card group grid grid-cols-[116px_1fr] gap-3 overflow-hidden p-3 transition hover:-translate-y-0.5 hover:shadow-xl">
+                  <Thumbnail video={video} />
+                  <div className="min-w-0 py-1">
+                    <p className="text-[11px] font-black" style={{ color: member.hexColor }}>{member.name}</p>
+                    <h2 className="mt-1 line-clamp-2 text-sm font-black text-purple-950">{video.title}</h2>
+                    <p className="mt-2 line-clamp-2 text-xs font-medium leading-5 text-gray-500">{video.comment}</p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    function MemberRail({ selectedMember, setSelectedMember, watchedIds }) {
+      return (
+        <section className="mt-6">
+          <div className="mb-3 flex items-end justify-between gap-4">
+            <div>
+              <h2 className="font-rounded text-xl font-extrabold text-purple-950">メンバーから探す</h2>
+              <p className="text-xs font-bold text-gray-500">各メンバー15本、合計150本</p>
+            </div>
+            <button
+              onClick={() => setSelectedMember("all")}
+              className={`rounded-full px-3 py-1.5 text-xs font-black transition ${selectedMember === "all" ? "bg-primary text-white" : "bg-white text-gray-500 ring-1 ring-purple-100"}`}
+            >
+              全員
+            </button>
+          </div>
+          <div className="scrollbar-hide flex gap-3 overflow-x-auto pb-2">
+            {MEMBERS.map((member) => {
+              const progress = memberProgress(member.id, watchedIds);
+              const active = selectedMember === member.id;
+              return (
+                <button
+                  key={member.id}
+                  onClick={() => setSelectedMember(member.id)}
+                  className={`soft-card min-w-[172px] p-3 text-left transition ${active ? "ring-2 ring-purple-300" : "hover:-translate-y-0.5"}`}
+                  style={{ background: active ? member.softColor : "rgba(255,255,255,0.78)" }}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="member-dot h-10 w-10 rounded-full" style={{ background: member.hexColor }}></span>
+                    <span className="min-w-0">
+                      <span className="block truncate text-sm font-black text-purple-950">{member.name}</span>
+                      <span className="block text-[10px] font-black uppercase tracking-wide text-gray-400">{member.short}</span>
+                    </span>
+                  </div>
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white">
+                    <div className="h-full rounded-full transition-all duration-500" style={{ width: `${progress.percent}%`, background: member.hexColor }}></div>
+                  </div>
+                  <p className="mt-1 text-right text-[10px] font-black text-gray-500">{progress.watched}/{progress.total}</p>
+                </button>
+              );
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    function FilterBar({ searchQuery, setSearchQuery, selectedType, setSelectedType, selectedTag, setSelectedTag, showWatchedOnly, setShowWatchedOnly, resetFilters, filteredCount }) {
+      return (
+        <section className="soft-card mt-6 p-3 md:p-4">
+          <div className="grid gap-3 md:grid-cols-[1fr_auto_auto] md:items-center">
+            <label className="relative block">
+              <Icon name="search" className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+              <input
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="動画タイトル・説明・タグで検索..."
+                className="h-11 w-full rounded-full border border-purple-100 bg-white pl-10 pr-4 text-sm font-bold outline-none transition focus:border-primary focus:ring-2 focus:ring-purple-100"
+              />
+            </label>
+
+            <button
+              onClick={() => setShowWatchedOnly((value) => !value)}
+              className={`inline-flex h-11 items-center justify-center gap-2 rounded-full px-4 text-sm font-black transition ${showWatchedOnly ? "bg-primary text-white" : "bg-purple-50 text-purple-950"}`}
+            >
+              <Icon name="check" className="h-4 w-4" />
+              視聴済み
+            </button>
+
+            <button onClick={resetFilters} className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-white px-4 text-sm font-black text-gray-500 ring-1 ring-purple-100 transition hover:bg-purple-50">
+              <Icon name="reset" className="h-4 w-4" />
+              リセット
+            </button>
+          </div>
+
+          <div className="mt-3 flex flex-wrap gap-2">
+            {TYPES.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedType(type)}
+                className={`rounded-full px-3 py-2 text-xs font-black transition ${selectedType === type ? "bg-ink text-white" : "bg-white text-gray-500 ring-1 ring-purple-100 hover:bg-purple-50"}`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1 rounded-full bg-purple-50 px-3 py-2 text-xs font-black text-purple-900">
+              <Icon name="filter" className="h-3.5 w-3.5" />
+              {filteredCount}件
+            </span>
+            {TAGS.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(tag)}
+                className={`rounded-full px-3 py-2 text-xs font-black transition ${selectedTag === tag ? "bg-primary text-white" : "bg-white text-gray-500 ring-1 ring-purple-100 hover:bg-purple-50"}`}
+              >
+                #{tag}
+              </button>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    function VideoCard({ video, watched, toggleWatched }) {
+      const member = MEMBER_BY_ID[video.memberId];
+      return (
+        <article className="soft-card group overflow-hidden transition hover:-translate-y-0.5 hover:shadow-xl">
+          <Thumbnail video={video} />
+          <div className="p-4">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <div className="flex min-w-0 items-center gap-2">
+                <span className="member-dot h-5 w-5 rounded-full" style={{ background: member.hexColor }}></span>
+                <span className="truncate text-[11px] font-black" style={{ color: member.hexColor }}>{member.name}</span>
+              </div>
+              <button
+                onClick={() => toggleWatched(video.id)}
+                className={`grid h-8 w-8 flex-none place-items-center rounded-full transition ${watched ? "text-white" : "bg-purple-50 text-gray-400 hover:text-primary"}`}
+                style={{ background: watched ? member.hexColor : undefined }}
+                aria-label={watched ? "視聴済みを解除" : "視聴済みにする"}
+                title={watched ? "視聴済みを解除" : "視聴済みにする"}
+              >
+                <Icon name="check" className="h-4 w-4" />
+              </button>
+            </div>
+            <h3 className="line-clamp-2 min-h-[2.75rem] text-base font-black leading-snug text-purple-950">{video.title}</h3>
+            <p className="mt-2 line-clamp-3 min-h-[4.5rem] text-sm font-medium leading-6 text-gray-600">{video.comment}</p>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {video.tags.slice(0, 3).map((tag) => (
+                <span key={tag} className="rounded-full bg-purple-50 px-2.5 py-1 text-[10px] font-black text-purple-800">#{tag}</span>
+              ))}
+            </div>
+            <div className="mt-4 flex items-center justify-between gap-3 border-t border-purple-100 pt-3">
+              <span className="text-[10px] font-black text-gray-400">{video.sourceLabel}</span>
+              <a href={video.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-2 text-[11px] font-black text-white transition hover:bg-primary">
+                観る
+                <Icon name="external" className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+        </article>
+      );
+    }
+
+    function VideoGrid({ videos, watchedIds, toggleWatched }) {
+      if (videos.length === 0) {
+        return (
+          <div className="soft-card mt-6 p-10 text-center">
+            <p className="font-rounded text-xl font-extrabold text-purple-950">この条件の動画はまだ見つかりません</p>
+            <p className="mt-2 text-sm font-bold text-gray-500">検索語やタグを少しゆるめると、入口が見つかるかもしれません。</p>
+          </div>
+        );
+      }
+
+      return (
+        <section className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video} watched={watchedIds.includes(video.id)} toggleWatched={toggleWatched} />
+          ))}
+        </section>
+      );
+    }
+
+    function ProfilePanel({ selectedMember, setSelectedMember, watchedIds }) {
+      const members = selectedMember === "all" ? MEMBERS : [MEMBER_BY_ID[selectedMember]];
+      return (
+        <section className="mt-6 grid gap-4 lg:grid-cols-2">
+          {members.map((member) => {
+            const progress = memberProgress(member.id, watchedIds);
+            const picks = VIDEO_DATA.filter((video) => video.memberId === member.id).slice(0, 3);
             return (
-                <div className="min-h-screen dual-bg selection:bg-deep selection:text-white pb-40">
-                    
-                    {/* Header Nav: Direct Switch (ハンバーガー非採用、スクロールバー非表示追加) */}
-                    <nav className="fixed top-0 w-full z-[1000] glass-nav border-b border-zinc-100/50 px-8 py-5 flex justify-between items-center">
-                        <div className="flex items-center gap-8 overflow-x-auto no-scrollbar">
-                            {MEMBERS.map(m => (
-                                <button key={m.id} onClick={() => setMember(m.id)} className={`text-2xl font-display font-black italic tracking-tighter transition-all ${member === m.id ? `${m.color} scale-110` : 'opacity-20 hover:opacity-50'}`}>
-                                    {m.id.toUpperCase()}.
-                                </button>
-                            ))}
-                        </div>
-                        <div className="flex gap-10 text-[11px] font-bold tracking-[0.3em] uppercase">
-                            <button onClick={() => setPage('about')} className={page === 'about' ? current.color : 'opacity-30'}>Profile</button>
-                            <button onClick={() => setPage('works')} className={page === 'works' ? current.color : 'opacity-30'}>Archive</button>
-                        </div>
-                    </nav>
-
-                    {/* Member-Specific Barometer (Archiveページのみ表示) */}
-                    {page === 'works' && (
-                        <div className="fixed bottom-12 left-12 z-[50] animate-in hidden md:block">
-                            <div className={`bg-white/95 backdrop-blur-md p-6 border-l-8 shadow-2xl ${current.border}`}>
-                                <div className={`text-[10px] font-black tracking-widest mb-2 uppercase ${current.color}`}>{current.name} Experience</div>
-                                <div className="w-52 h-1.5 bg-zinc-100 rounded-full overflow-hidden">
-                                    <div className={`h-full ${current.bg} transition-all duration-1000`} style={{width: `${score}%`}}></div>
-                                </div>
-                                <div className="text-right text-sm font-display italic font-black mt-2 text-zinc-900">{score}% Explored</div>
-                            </div>
-                        </div>
-                    )}
-
-                    <div className="container mx-auto px-6 pt-44">
-                        {page === 'works' && (
-                            <div className="animate-in">
-                                <header className="text-center mb-36">
-                                    <span className="text-xs font-bold text-gold tracking-[0.8em] uppercase mb-6 block">Selection curated by いろは紅葉</span>
-                                    <h1 className="text-6xl md:text-9xl font-display italic font-black tracking-tighter leading-none">{current.en}</h1>
-                                </header>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-32">
-                                    {videos.map(v => (
-                                        <div key={v.id} className="group">
-                                            <div className="relative mb-10">
-                                                <HighResThumbnail videoId={v.url} title={v.title} />
-                                                <div className="absolute -top-5 -left-5 bg-deep text-white text-[10px] font-black px-6 py-2 tracking-widest uppercase">{v.type}</div>
-                                                <button onClick={() => toggle(v.id)} className={`absolute -bottom-6 -right-6 w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-2xl transition-all transform hover:scale-110 ${currentWatched.includes(v.id) ? `${current.bg} text-white ring-8 ring-white` : 'bg-white text-zinc-300'}`}>
-                                                    {currentWatched.includes(v.id) ? current.emoji : '＋'}
-                                                </button>
-                                            </div>
-                                            <div className="space-y-6">
-                                                <h3 className={`text-3xl font-serif font-black transition-colors group-hover:${current.color}`}>{v.title}</h3>
-                                                <p className="text-[15px] text-zinc-500 leading-[2.2] font-light line-clamp-3">{v.comment}</p>
-                                                <a href={`https://www.youtube.com/watch?v=${v.url}`} target="_blank" className={`inline-block text-[11px] font-black tracking-[0.3em] border-b-2 pb-1 hover:opacity-50 transition-opacity ${current.border}`}>VIEW ON YOUTUBE</a>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {page === 'about' && (
-                            <div className="max-w-6xl mx-auto animate-in space-y-20">
-                                <div className="bg-white p-12 md:p-24 border border-zinc-100 shadow-2xl flex flex-col md:flex-row gap-24 items-start relative overflow-hidden">
-                                    <div className={`absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-${current.id}/10 to-transparent rounded-full blur-3xl -mr-32 -mt-32`}></div>
-                                    <div className="md:w-5/12 space-y-16 relative z-10">
-                                        {/* 名前を一行で表示するように修正 */}
-                                        <h2 className={`text-5xl md:text-6xl font-serif font-black leading-tight whitespace-nowrap ${current.color}`}>{current.name}<br/><span className="text-4xl text-zinc-900 opacity-10 font-sans italic tracking-tighter uppercase">{current.en}</span></h2>
-                                        <ul className="space-y-8 text-sm">
-                                            <li className="flex justify-between border-b border-zinc-50 pb-4"><span className="text-gold font-bold tracking-widest uppercase">Birthday</span><span className="font-bold">{current.birth}</span></li>
-                                            <li className="flex justify-between border-b border-zinc-50 pb-4"><span className="text-gold font-bold tracking-widest uppercase">Birthplace</span><span className="font-bold">{current.place}</span></li>
-                                            <li className="flex justify-between border-b border-zinc-50 pb-4"><span className="text-gold font-bold tracking-widest uppercase">Color</span><span className={`font-black ${current.color}`}>{current.id === 'iori' ? 'Purple' : current.id === 'hana' ? 'Orange' : 'White'}</span></li>
-                                        </ul>
-                                        <div className="pt-10 border-t border-zinc-50 space-y-4 text-center">
-                                            <h3 className={`text-xl font-serif font-black mb-4 ${current.color}`}>Official Accounts</h3>
-                                            <div className="grid grid-cols-1 gap-4">
-                                                {/* IGアカウントが存在する場合のみボタンを表示 */}
-                                                <a href={`https://twitter.com/${current.x}`} target="_blank" className={`border-2 px-8 py-4 rounded-full font-black text-[11px] tracking-widest hover:text-white transition-all ${current.border} ${current.color} hover:${current.bg}`}>X (Twitter) →</a>
-                                                {current.ig && (
-                                                    <a href={`https://www.instagram.com/${current.ig}/`} target="_blank" className={`border-2 px-8 py-4 rounded-full font-black text-[11px] tracking-widest hover:text-white transition-all ${current.border} ${current.color} hover:${current.bg}`}>Instagram →</a>
-                                                )}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="md:w-7/12 text-[18px] leading-[2.8] font-light text-zinc-600 relative z-10">
-                                        <p className={`text-zinc-900 font-black text-3xl border-l-8 pl-8 mb-12 uppercase italic font-display ${current.border}`}>The Essential Muse.</p>
-                                        {member === 'maika' && <p>佐々木舞香、その人は透明感溢れる歌声と観る者を惹きつける圧倒的なビジュアル力が共存する稀有な存在だ。彼女が放つ唯一無二のオーラは楽曲に強靭な説得力を与える。故にイコラブの顔と言える存在であり、その表現力は常にファンの期待を鮮やかに超えていく。</p>}
-                                        {member === 'iori' && <p>彼女の魅力はなんといっても変幻自在な歌唱スキルと観る者を射抜く圧倒的な目力だ。衣織が立つステージには常に魂の咆哮が響いている。クールで中性的な美しさを持ちながら、アニメへの深い造詣やメンバーに見せる笑顔の落差は沼確定要素。そのギャップこそが彼女を語る上で欠かせない要素である。楽曲の世界観に完全に身を投じる憑依型パフォーマーであり、グループ全体の表現力を次のレベルへと引き上げ続けている。</p>}
-                                        {member === 'hana' && <p>彼女こそイコラブの太陽だ。花菜ちゃんがステージに現れるだけで会場には明るい光が灯る。しかし、彼女の真の凄みはそのシアトリカルな表現にある。美しい所作と一瞬で役を支配する没入感は他の追随を許さない。イラストやブログ制作までこなす表現の職人であり、知れば知るほど底なしの魅力を持つ、唯一無二のアーティストである。</p>}
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+              <article key={member.id} className="soft-card overflow-hidden">
+                <div className="p-5" style={{ background: `linear-gradient(135deg, ${member.softColor}, rgba(255,255,255,0.82))` }}>
+                  <div className="flex items-start justify-between gap-4">
+                    <button onClick={() => setSelectedMember(member.id)} className="flex min-w-0 items-center gap-3 text-left">
+                      <span className="member-dot h-14 w-14 flex-none rounded-full" style={{ background: member.hexColor }}></span>
+                      <span className="min-w-0">
+                        <span className="block text-xl font-black text-purple-950">{member.name}</span>
+                        <span className="block text-xs font-black uppercase tracking-wide text-gray-500">{member.en}</span>
+                      </span>
+                    </button>
+                    <span className="rounded-full bg-white px-3 py-1.5 text-xs font-black text-gray-500">{progress.percent}%</span>
+                  </div>
+                  <p className="mt-5 font-rounded text-xl font-extrabold leading-snug" style={{ color: member.hexColor }}>{member.catchcopy}</p>
+                  <p className="mt-3 text-sm font-medium leading-7 text-gray-600">{member.profile}</p>
+                  <dl className="mt-4 grid grid-cols-2 gap-2 text-xs font-black text-gray-500">
+                    <div className="rounded-md bg-white/80 px-3 py-2">
+                      <dt className="text-[10px] uppercase tracking-wide text-gray-400">Birthday</dt>
+                      <dd className="mt-1 text-purple-950">{member.birth}</dd>
                     </div>
-
-                    <footer className="bg-deep text-white py-48 px-8 text-center mt-20 relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-10 pointer-events-none font-display italic font-black text-9xl flex flex-wrap gap-10 items-center justify-center uppercase"><span>IORI</span><span>HANA</span><span>MAIKA</span></div>
-                        <div className="relative z-10 space-y-12">
-                            <div className="text-[11px] font-black tracking-[1.4em] opacity-20 mb-4 uppercase text-center text-white">Curated and Produced by いろは紅葉</div>
-                            <div className="text-6xl md:text-8xl font-display italic font-black text-gold mb-16 underline decoration-white/10 decoration-8 underline-offset-8">
-                                <a href="https://twitter.com/iohana_momiji" target="_blank" className="signature-link">いろは紅葉</a>
-                            </div>
-                            <p className="text-[11px] font-bold tracking-[0.5em] opacity-30 max-w-2xl mx-auto leading-relaxed uppercase text-center">Dedicated to the unparalleled artistry of Iori, Hana, and Maika.</p>
-                            <div className="flex flex-col items-center gap-4 text-[10px] font-black opacity-30 tracking-[0.8em] uppercase">
-                                <a href="https://twitter.com/iohana_momiji" target="_blank" className="hover:opacity-100 transition-opacity">X:@iohana_momiji</a>
-                                <span>#イコラブ</span>
-                            </div>
-                        </div>
-                    </footer>
+                    <div className="rounded-md bg-white/80 px-3 py-2">
+                      <dt className="text-[10px] uppercase tracking-wide text-gray-400">Birthplace</dt>
+                      <dd className="mt-1 text-purple-950">{member.place}</dd>
+                    </div>
+                  </dl>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {member.notes.map((note) => (
+                      <span key={note} className="rounded-full bg-white px-3 py-1.5 text-xs font-black text-gray-500">#{note}</span>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {member.socials.map((social) => (
+                      <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-2 text-xs font-black text-white transition hover:bg-primary">
+                        {social.label}
+                        <Icon name="external" className="h-3.5 w-3.5" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
+                <div className="divide-y divide-purple-100/70">
+                  {picks.map((video) => (
+                    <a key={video.id} href={video.url} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-4 transition hover:bg-purple-50/60">
+                      <span className="grid h-8 w-8 flex-none place-items-center rounded-full text-xs font-black text-white" style={{ background: member.hexColor }}>{video.id.split("-").pop()}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-sm font-black text-purple-950">{video.title}</span>
+                        <span className="block truncate text-xs font-bold text-gray-500">{video.type} / {video.tags.join("、")}</span>
+                      </span>
+                      <Icon name="external" className="h-4 w-4 flex-none text-gray-300" />
+                    </a>
+                  ))}
+                </div>
+              </article>
             );
-        };
+          })}
+        </section>
+      );
+    }
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
+    function SourceNote() {
+      return (
+        <section className="mt-16 rounded-[8px] border border-[#f6dce5] bg-white/72 px-6 py-7 fluid-caption font-normal leading-7 text-[#6f5b65]">
+          <p className="fluid-label font-bold tracking-[0.18em] text-[#c86b88]">公式リンクについて</p>
+          <p className="mt-3">
+            当サイトはファンによる非公式ページです。動画への導線は公式YouTubeおよび公式に公開されている動画を優先し、サムネイルはYouTubeの公開サムネイルURLを参照しています。権利は各権利者に帰属します。
+          </p>
+          <div className="mt-4 flex flex-wrap gap-5">
+            <a href="https://equal-love.jp/feature/profile" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 border-b border-[#f9769f] pb-1 text-[11px] font-black uppercase tracking-[0.22em] text-[#2d2429] transition-opacity hover:opacity-50">
+              公式プロフィール
+              <Icon name="external" className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </section>
+      );
+    }
+
+    function SiteFooter() {
+      return (
+        <footer className="mt-12 bg-ink px-4 py-16 text-center text-white md:mt-16">
+          <p className="text-[11px] font-black uppercase tracking-[0.35em] text-white/35">Curated and Produced by</p>
+          <a href="https://twitter.com/iohana_momiji" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 font-rounded text-3xl font-extrabold text-white transition hover:text-purple-200 md:text-5xl">
+            いろは紅葉
+            <Icon name="external" className="h-5 w-5" />
+          </a>
+          <p className="mx-auto mt-5 max-w-2xl text-xs font-bold leading-6 text-white/45">
+            Tinterpanの熱を出発点に、=LOVE現メンバー10人の入口を集めた非公式ファンページです。
+          </p>
+        </footer>
+      );
+    }
+
+    function HomeMemberIndex({ setMember, setPage, setView, resetFilters, watchedIds }) {
+      const openMember = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("works");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      return (
+        <main className="official-home page-transition relative min-h-screen overflow-hidden px-5 py-12 selection:bg-[#fb4968] selection:text-white md:px-10 md:py-16">
+          <section className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col justify-center gap-8">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <p className="fluid-label font-bold tracking-[0.18em] text-[#c86b88]">=LOVE OFFICIAL LINKS</p>
+                <p className="mt-1 fluid-caption font-bold text-[#6f5b65]">グループ公式SNSはこちらから</p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {GROUP_SOCIALS.map((social) => (
+                  <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="group-social-link px-4 py-2 fluid-label font-bold tracking-[0.12em] text-[#2d2429]">
+                    {social.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              {MEMBERS.map((item, index) => {
+                const progress = memberProgress(item.id, watchedIds);
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => openMember(item.id)}
+                    className="home-member-card page-card group min-w-0 px-5 py-7 text-left md:min-h-[220px] md:px-6 md:py-8"
+                    style={{ "--stagger": `${index * 35}ms` }}
+                    data-index={String(index + 1).padStart(2, "0")}
+                  >
+                    <span className="mb-5 flex items-center justify-between gap-4">
+                      <span className="block h-1 w-12 rounded-full transition-all group-hover:w-20" style={{ background: memberGradient(item) }}></span>
+                      <span className="rounded-full bg-white/80 px-2.5 py-1 fluid-label font-bold text-[#8f6f7c] shadow-[0_8px_22px_rgba(249,118,159,0.10)]">{progress.watched}/{progress.total}</span>
+                    </span>
+                    <FitTitle text={item.name.replace(" ", "")} as="span" max={42} min={18} className="font-serif font-bold text-[#2d2429]" />
+                    <span className="mt-3 block truncate fluid-caption font-bold text-[#8f6f7c]">{item.en}</span>
+                    <span className="mt-5 flex flex-wrap items-center gap-2">
+                      <span className="soft-chip fluid-label font-bold">{item.colorName}</span>
+                      <span className="soft-chip fluid-label font-bold">{item.place}</span>
+                    </span>
+                    <span className="mt-6 block h-1.5 overflow-hidden rounded-full bg-[#f8d7e2]">
+                      <span className="block h-full rounded-full transition-all duration-700" style={{ width: `${progress.percent}%`, background: memberGradient(item) }}></span>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        </main>
+      );
+    }
+
+    function PrivacyPolicy({ setView }) {
+      return (
+        <main className="page-transition mx-auto max-w-5xl px-6 pb-10 pt-36 md:pt-44">
+          <section className="animate-in rounded-[8px] border border-[#f6dce5] bg-white p-8 shadow-[0_22px_65px_rgba(45,36,41,0.12)] md:p-16">
+            <p className="mb-5 text-[10px] font-black uppercase tracking-[0.5em] text-gold">Privacy Policy</p>
+            <FitTitle text="プライバシーポリシー" as="h1" max={72} min={34} className="font-serif font-bold text-[#2d2429]" />
+            <div className="mt-12 space-y-10 text-sm font-normal leading-8 text-zinc-600 md:text-base md:leading-9">
+              <section>
+                <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>このサイトについて</h2>
+                <p className="readable-ja">本ページは、=LOVEを応援する非公式ファンページです。初めての方にも長く好きな方にも、10人それぞれの魅力へ自然にたどり着ける入口を目指しています。</p>
+              </section>
+              <section>
+                <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>視聴メモについて</h2>
+                <p className="readable-ja">動画カードのチェックは、この端末で続きを見つけやすくするための小さなメモです。会員登録やコメント投稿はなく、サイト側が誰の視聴状況かを確認する仕組みも設けていません。</p>
+              </section>
+              <section>
+                <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>外部サービス</h2>
+                <p>YouTubeサムネイルはYouTubeの公開サムネイルURLを参照します。動画、公式プロフィール、公式アプリ、X、Instagram、TikTok、SHOWROOM、Amebaなどの外部リンクを開くと、各サービスのプライバシーポリシーが適用されます。</p>
+              </section>
+              <section>
+                <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>画像・アクセス解析</h2>
+                <p>メンバー公式画像はこのHTML内に保存・再配布せず、主なビジュアルは公式動画サムネイルへの参照に留めます。現時点で独自の入力フォームは設置していません。アクセス解析を導入する場合も、個人を直接識別しない利用状況の把握に限定します。</p>
+              </section>
+              <section>
+                <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>お問い合わせ</h2>
+                <p className="readable-ja">掲載内容やリンクに関する連絡は <a href="https://twitter.com/eyes_takamatsu" target="_blank" rel="noreferrer" className="font-bold text-zinc-900 underline decoration-[#f9769f] decoration-2 underline-offset-4">あお（X: @eyes_takamatsu）</a> へ、UIやサイトデザインに関する連絡は <a href="https://twitter.com/iohana_momiji" target="_blank" rel="noreferrer" className="font-bold text-zinc-900 underline decoration-[#f9769f] decoration-2 underline-offset-4">いろは紅葉（X: @iohana_momiji）</a> へお願いします。</p>
+              </section>
+            </div>
+            <button onClick={() => { runUiTransition(() => setView("home")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="mt-12 border-b-2 border-zinc-900 pb-1 text-[11px] font-black uppercase tracking-[0.28em] text-zinc-900 transition-opacity hover:opacity-50">
+              Back to Top
+            </button>
+          </section>
+        </main>
+      );
+    }
+
+    function LegacyTopNav({ member, setMember, page, setPage, view, setView, resetFilters }) {
+      const current = MEMBER_BY_ID[member];
+      const chooseMember = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setView("member");
+          if (page === "works") resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      return (
+        <nav className="glass-nav fixed top-0 z-[1000] flex w-full items-center justify-between gap-6 px-5 py-5 md:px-8">
+          <div className="scrollbar-hide flex min-w-0 items-center gap-7 overflow-x-auto">
+            {MEMBERS.map((item) => {
+              const active = member === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => chooseMember(item.id)}
+                  className={`shrink-0 font-display text-2xl font-black italic tracking-tight transition-all ${active ? "scale-110" : "opacity-35 hover:opacity-65"}`}
+                  style={{ color: active ? item.hexColor : undefined }}
+                  title={item.name}
+                >
+                  {item.short.toUpperCase()}.
+                </button>
+              );
+            })}
+          </div>
+          <div className="flex shrink-0 gap-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#2d2429] md:gap-8 md:tracking-[0.28em]">
+            <button onClick={() => { runUiTransition(() => setView("home")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className={view === "home" ? "" : "opacity-30 hover:opacity-60"} style={{ color: view === "home" ? "#f9769f" : undefined }}>Top</button>
+            <button onClick={() => { runUiTransition(() => { setView("member"); setPage("about"); }); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ color: view === "member" && page === "about" ? current.hexColor : undefined }} className={view === "member" && page === "about" ? "" : "opacity-30 hover:opacity-60"}>Profile</button>
+            <button onClick={() => { runUiTransition(() => { setView("member"); setPage("works"); }); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ color: view === "member" && page === "works" ? current.hexColor : undefined }} className={view === "member" && page === "works" ? "" : "opacity-30 hover:opacity-60"}>Archive</button>
+            <button onClick={() => { runUiTransition(() => setView("privacy")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className={view === "privacy" ? "" : "opacity-30 hover:opacity-60"} style={{ color: view === "privacy" ? "#f9769f" : undefined }}>Policy</button>
+          </div>
+        </nav>
+      );
+    }
+
+    function LegacyProgress({ current, progress, page }) {
+      if (page !== "works") return null;
+      return (
+        <div className="fixed bottom-12 left-12 z-[50] hidden animate-in md:block">
+          <div className="rounded-[8px] border-l-8 bg-white/95 p-6 shadow-[0_18px_50px_rgba(45,36,41,0.14)] backdrop-blur-md" style={{ borderColor: current.hexColor }}>
+            <div className="mb-2 text-[10px] font-bold tracking-[0.18em]" style={{ color: current.hexColor }}>{current.name} 視聴メモ</div>
+            <div className="h-1.5 w-52 overflow-hidden rounded-full bg-zinc-100">
+              <div className="h-full transition-all duration-1000" style={{ width: `${progress.percent}%`, background: memberGradient(current) }}></div>
+            </div>
+            <div className="mt-2 text-right text-sm font-bold text-[#2d2429]">{progress.percent}% 視聴済み</div>
+          </div>
+        </div>
+      );
+    }
+
+    function MemberHero({ current, progress, memberVideos }) {
+      return (
+        <header className="member-hero mx-auto mb-16 grid max-w-6xl gap-10 px-6 py-8 md:mb-24 md:grid-cols-[1.35fr_0.95fr] md:px-10 md:py-10" style={{ "--hero-soft": current.softColor }}>
+          <div className="min-w-0">
+            <span className="precision-line inline-flex items-center gap-3 fluid-label font-bold tracking-[0.18em] text-[#c86b88]">
+              <span className="block h-1 w-10 rounded-full" style={{ background: memberGradient(current) }}></span>
+              おすすめ動画
+            </span>
+            <FitTitle text={current.name.replace(" ", "")} as="h1" max={86} min={38} className="mt-7 font-serif font-bold text-[#2d2429]" />
+            <p className="mt-3 fluid-caption font-bold text-[#8f6f7c]">{current.en}</p>
+            <p className="readable-ja mt-8 max-w-2xl fluid-copy font-normal leading-9 text-[#5f4d56]">{current.catchcopy}</p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {current.notes.map((note) => <span key={note} className="soft-chip fluid-label font-bold">#{note}</span>)}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 self-end">
+            <div className="stat-tile p-4">
+              <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">GUIDE</p>
+              <p className="mt-2 font-display text-4xl font-black italic leading-none text-[#2d2429]">{memberVideos.length}</p>
+              <p className="mt-2 text-xs font-bold text-[#8f6f7c]">公開動画カード</p>
+            </div>
+            <div className="stat-tile p-4">
+              <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">WATCHED</p>
+              <p className="mt-2 font-display text-4xl font-black italic leading-none" style={{ color: current.hexColor }}>{progress.percent}%</p>
+              <p className="mt-2 text-xs font-bold text-[#8f6f7c]">{progress.watched}本 視聴済み</p>
+            </div>
+            <div className="stat-tile p-4">
+              <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">COLOR</p>
+              <p className="mt-3 truncate text-sm font-bold text-[#2d2429]">{current.colorName}</p>
+              <span className="mt-3 block h-1.5 rounded-full" style={{ background: memberGradient(current) }}></span>
+            </div>
+            <div className="stat-tile p-4">
+              <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">PROFILE</p>
+              <p className="mt-3 text-sm font-bold text-[#2d2429]">{current.place}</p>
+              <p className="mt-1 text-xs font-bold text-[#8f6f7c]">{current.height}</p>
+            </div>
+          </div>
+        </header>
+      );
+    }
+
+    function LegacyFilterBar({ searchQuery, setSearchQuery, selectedType, setSelectedType, selectedTag, setSelectedTag, showWatchedOnly, setShowWatchedOnly, resetFilters, filteredCount }) {
+      return (
+        <section className="filter-panel relative z-10 mb-16 px-4 py-5 md:px-6">
+          <div className="mx-auto mb-4 flex max-w-6xl flex-wrap items-center justify-between gap-3">
+            <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">絞り込み</p>
+            <p className="rounded-full bg-white/80 px-3 py-1 fluid-label font-bold text-[#8f6f7c] shadow-[0_8px_24px_rgba(249,118,159,0.10)]">{filteredCount}件表示中</p>
+          </div>
+          <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-[1.2fr_0.7fr_0.7fr_auto_auto] md:items-end">
+            <label className="block">
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">さがす</span>
+              <input
+                value={searchQuery}
+                onChange={(event) => setSearchQuery(event.target.value)}
+                placeholder="タイトル・コメントで検索"
+                className="filter-control h-10 w-full text-sm font-bold text-[#2d2429] placeholder:text-zinc-300"
+              />
+            </label>
+            <label className="block">
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">種類</span>
+              <select value={selectedType} onChange={(event) => setSelectedType(event.target.value)} className="filter-control h-10 w-full text-sm font-bold text-[#2d2429]">
+                {TYPES.map((type) => <option key={type} value={type}>{type}</option>)}
+              </select>
+            </label>
+            <label className="block">
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">タグ</span>
+              <select value={selectedTag} onChange={(event) => setSelectedTag(event.target.value)} className="filter-control h-10 w-full text-sm font-bold text-[#2d2429]">
+                {TAGS.map((tag) => <option key={tag} value={tag}>{tag}</option>)}
+              </select>
+            </label>
+            <label className="flex h-10 items-center gap-2 text-xs font-bold tracking-[0.12em] text-[#8f6f7c]">
+              <input type="checkbox" checked={showWatchedOnly} onChange={(event) => setShowWatchedOnly(event.target.checked)} className="h-4 w-4 accent-[#f9769f]" />
+              視聴済み
+            </label>
+            <button onClick={resetFilters} className="h-10 border-b border-[#f9769f] px-1 text-xs font-bold tracking-[0.16em] text-[#2d2429] transition-opacity hover:opacity-50">
+              リセット
+            </button>
+          </div>
+        </section>
+      );
+    }
+
+    function LegacyVideoGrid({ videos, current, watchedIds, toggleWatched }) {
+      if (videos.length === 0) {
+        return (
+          <div className="mx-auto max-w-3xl rounded-[8px] border border-[#f8d7e2] bg-white p-12 text-center shadow-[0_18px_45px_rgba(249,118,159,0.10)]">
+            <p className="font-serif text-2xl font-bold text-[#2d2429]">該当する動画がありません</p>
+            <p className="mt-3 text-sm font-normal leading-7 text-zinc-500">検索語や絞り込みを少しゆるめて、もう一度探してみてください。</p>
+          </div>
+        );
+      }
+
+      return (
+        <div className="grid grid-cols-1 gap-x-14 gap-y-28 md:grid-cols-2 lg:grid-cols-3">
+          {videos.map((video, index) => {
+            const watched = watchedIds.includes(video.id);
+            return (
+              <article key={video.id} className="video-card page-card group" style={{ "--stagger": `${Math.min(index, 8) * 36}ms` }}>
+                <div className="relative mb-9">
+                  <a href={video.url} target="_blank" rel="noreferrer" className="block" aria-label={`${video.title}をYouTubeで観る`}>
+                    <Thumbnail video={video} />
+                    <span className="play-badge" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current, 135) }}>
+                      <Icon name="play" className="h-5 w-5 translate-x-0.5" />
+                    </span>
+                  </a>
+                  <div className="absolute -left-3 -top-3 rounded-[8px] px-4 py-2 text-[10px] font-black uppercase tracking-widest text-white shadow-lg" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current) }}>{video.type}</div>
+                  {watched && (
+                    <div className="absolute right-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-bold tracking-[0.12em] shadow-[0_10px_26px_rgba(45,36,41,0.12)]" style={{ color: current.hexColor }}>
+                      視聴済み
+                    </div>
+                  )}
+                  <button
+                    onClick={() => toggleWatched(video.id)}
+                    className={`absolute -bottom-5 -right-5 flex h-14 w-14 items-center justify-center rounded-full text-xl shadow-2xl ring-8 ring-white transition-all hover:scale-105 ${watched ? "text-white" : "bg-white text-zinc-300"}`}
+                    style={{ background: watched ? (current.id === "maika" ? "#2d2429" : memberGradient(current, 135)) : undefined }}
+                    title={watched ? "視聴済みを解除" : "視聴済みにする"}
+                    aria-label={watched ? "視聴済みを解除" : "視聴済みにする"}
+                  >
+                    {watched ? "✓" : "＋"}
+                  </button>
+                </div>
+                <div className="space-y-5">
+                  <div className="flex items-center justify-between gap-3 fluid-label font-bold tracking-[0.12em] text-[#c86b88]">
+                    <span>{video.watchPoint}</span>
+                    <span className="text-zinc-300">{video.date}</span>
+                  </div>
+                  <h3 className="font-serif text-2xl font-bold leading-snug text-[#2d2429] transition-colors md:text-3xl group-hover:text-[#c86b88]">{video.title}</h3>
+                  <p className="line-clamp-3 text-[15px] font-normal leading-[2.1] text-zinc-500">{video.comment}</p>
+                  <div className="flex flex-wrap gap-2 fluid-label font-bold tracking-[0.08em]">
+                    {video.tags.slice(0, 3).map((tag) => <span key={tag} className="soft-chip">#{tag}</span>)}
+                  </div>
+                  <a href={video.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-4 py-2 fluid-label font-bold tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(45,36,41,0.12)] transition hover:-translate-y-0.5 hover:opacity-90" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current, 135), color: "#fff" }}>
+                    <Icon name="play" className="h-3.5 w-3.5" />
+                    YouTubeで観る
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      );
+    }
+
+    function LegacyProfile({ current, videos }) {
+      return (
+        <div className="mx-auto max-w-6xl animate-in">
+          <div className="section-card relative flex flex-col gap-16 overflow-hidden p-10 md:flex-row md:p-20">
+            <div className="absolute inset-x-0 top-0 h-1.5" style={{ background: memberGradient(current) }}></div>
+            <div className="relative z-10 space-y-12 md:w-5/12">
+              <div>
+                <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-[#c7a5b1]">プロフィール</p>
+                <FitTitle text={current.name.replace(" ", "")} as="h2" max={64} min={30} className="font-serif font-bold" style={{ color: current.hexColor }} />
+                <p className="mt-3 text-sm font-bold text-[#8f6f7c]">{current.en}</p>
+              </div>
+              <dl className="space-y-5 text-sm">
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">メンバーカラー</dt><dd className="text-right font-bold">{current.colorName}</dd></div>
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">誕生日</dt><dd className="text-right font-bold">{current.birth}</dd></div>
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">血液型 / 星座</dt><dd className="text-right font-bold">{current.blood} / {current.sign}</dd></div>
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">身長 / 出身地</dt><dd className="text-right font-bold">{current.height} / {current.place}</dd></div>
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">おすすめ</dt><dd className="text-right font-bold">{videos.length}本</dd></div>
+              </dl>
+              <div className="space-y-4 rounded-[8px] border border-[#f8d7e2] bg-[#fffafb] p-5">
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">公式プロフィールから拾える入口</p>
+                <dl className="space-y-3 text-sm leading-7 text-[#6f5963]">
+                  <div>
+                    <dt className="font-bold text-[#2d2429]">趣味</dt>
+                    <dd>{current.hobby}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-bold text-[#2d2429]">特技</dt>
+                    <dd>{current.skill}</dd>
+                  </div>
+                  {current.qualification && (
+                    <div>
+                      <dt className="font-bold text-[#2d2429]">資格</dt>
+                      <dd>{current.qualification}</dd>
+                    </div>
+                  )}
+                </dl>
+              </div>
+              <div className="space-y-3">
+                <p className="font-serif text-xl font-bold" style={{ color: current.hexColor }}>好きポイント</p>
+                <div className="flex flex-wrap gap-2">
+                  {current.notes.map((note) => (
+                    <span key={note} className="soft-chip fluid-label font-bold">#{note}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-3 border-t border-zinc-100 pt-8">
+                <p className="font-serif text-xl font-bold" style={{ color: current.hexColor }}>公式SNS・公開コンテンツ</p>
+                <div className="grid gap-3">
+                  {current.socials.map((social) => (
+                    <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="rounded-[8px] border-2 px-6 py-3 text-center text-[11px] font-bold tracking-[0.16em] transition-all hover:text-white" style={{ borderColor: current.hexColor, color: current.hexColor }} onMouseEnter={(event) => { event.currentTarget.style.background = current.hexColor; event.currentTarget.style.color = "#fff"; }} onMouseLeave={(event) => { event.currentTarget.style.background = "transparent"; event.currentTarget.style.color = current.hexColor; }}>
+                      {social.label} →
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="relative z-10 md:w-7/12">
+              <p className="readable-ja mb-10 rounded-r-[8px] border-l-8 bg-[#fffafb] px-7 py-5 font-serif text-[clamp(1.35rem,1rem+1.15vw,1.9rem)] font-bold leading-relaxed text-[#2d2429]" style={{ borderColor: current.hexColor }}>
+                {current.catchcopy}
+              </p>
+              <p className="readable-ja fluid-copy font-normal leading-[2.25] text-zinc-600">{current.profile}</p>
+              <div className="mt-10 grid gap-3 border-t border-zinc-100 pt-8">
+                <p className="mb-1 fluid-label font-bold tracking-[0.16em] text-[#c86b88]">まず観たい3本</p>
+                {videos.slice(0, 3).map((video) => (
+                  <a key={video.id} href={video.url} target="_blank" rel="noreferrer" className="flex items-center justify-between gap-4 border-b border-zinc-50 pb-3 text-sm transition-opacity hover:opacity-60">
+                    <span className="min-w-0 truncate font-bold text-[#2d2429]">{video.title}</span>
+                    <span className="shrink-0 text-[10px] font-black uppercase tracking-widest text-zinc-300">{video.type}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function LegacyFooter({ setView }) {
+      return (
+        <footer className="relative mt-24 overflow-hidden border-t border-[#f6dce5] px-8 py-24 text-center md:py-32" style={{ background: "linear-gradient(180deg, #fffafb 0%, #ffeef5 100%)" }}>
+          <div className="relative z-10 space-y-8">
+            <p className="mx-auto max-w-2xl fluid-caption font-normal leading-7 tracking-[0.06em] text-[#6f5b65]">
+              =LOVEを好きになった瞬間を、少しずつ集めていける非公式ファンページです。
+            </p>
+            <div className="mx-auto grid max-w-3xl gap-3 md:grid-cols-2">
+              <a href="https://twitter.com/eyes_takamatsu" target="_blank" rel="noreferrer" className="section-card p-5 text-left transition hover:-translate-y-1">
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">総合管理者</p>
+                <p className="mt-2 font-serif text-2xl font-bold text-[#2d2429]">あお</p>
+                <p className="mt-2 fluid-label font-bold text-[#8f6f7c]">X: @eyes_takamatsu</p>
+              </a>
+              <a href="https://twitter.com/iohana_momiji" target="_blank" rel="noreferrer" className="section-card p-5 text-left transition hover:-translate-y-1">
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">技術協力</p>
+                <p className="mt-2 font-serif text-2xl font-bold text-[#2d2429]">いろは紅葉</p>
+                <p className="mt-2 fluid-label font-bold text-[#8f6f7c]">X: @iohana_momiji</p>
+              </a>
+            </div>
+            <button onClick={() => { runUiTransition(() => setView("privacy")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="border-b border-[#f9769f] pb-1 fluid-label font-bold tracking-[0.18em] text-[#8f6f7c] transition hover:text-[#2d2429]">
+              プライバシーポリシー
+            </button>
+          </div>
+        </footer>
+      );
+    }
+
+    function App() {
+      const [view, setView] = useState("home");
+      const [page, setPage] = useState("works");
+      const [member, setMember] = useState("iori");
+      const [searchQuery, setSearchQuery] = useState("");
+      const [selectedType, setSelectedType] = useState("すべて");
+      const [selectedTag, setSelectedTag] = useState("すべて");
+      const [showWatchedOnly, setShowWatchedOnly] = useState(false);
+      const [watchedIds, setWatchedIds] = useState(loadWatchedIds);
+
+      useEffect(() => {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(watchedIds));
+      }, [watchedIds]);
+
+      const current = MEMBER_BY_ID[member];
+      const memberVideos = useMemo(() => VIDEO_DATA.filter((video) => video.memberId === member), [member]);
+      const progress = memberProgress(member, watchedIds);
+
+      const filteredVideos = useMemo(() => {
+        const normalized = searchQuery.trim().toLowerCase();
+        return memberVideos.filter((video) => {
+          const text = `${video.title} ${video.comment} ${video.type} ${video.tags.join(" ")} ${current.name} ${current.en}`.toLowerCase();
+          if (selectedType !== "すべて" && video.type !== selectedType) return false;
+          if (selectedTag !== "すべて" && !video.tags.includes(selectedTag)) return false;
+          if (showWatchedOnly && !watchedIds.includes(video.id)) return false;
+          if (normalized && !text.includes(normalized)) return false;
+          return true;
+        });
+      }, [searchQuery, selectedType, selectedTag, showWatchedOnly, watchedIds, memberVideos, current]);
+
+      const toggleWatched = (id) => {
+        setWatchedIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
+      };
+
+      const resetFilters = () => {
+        setSearchQuery("");
+        setSelectedType("すべて");
+        setSelectedTag("すべて");
+        setShowWatchedOnly(false);
+      };
+
+      return (
+        <div className="app-shell dual-bg selection:bg-deep selection:text-white">
+          {view !== "home" && (
+            <LegacyTopNav
+              member={member}
+              setMember={setMember}
+              page={page}
+              setPage={setPage}
+              view={view}
+              setView={setView}
+              resetFilters={resetFilters}
+            />
+          )}
+          {view === "member" && <LegacyProgress current={current} progress={progress} page={page} />}
+
+          {view === "home" && (
+            <HomeMemberIndex setMember={setMember} setPage={setPage} setView={setView} resetFilters={resetFilters} watchedIds={watchedIds} />
+          )}
+
+          {view === "privacy" && (
+            <PrivacyPolicy setView={setView} />
+          )}
+
+          {view === "member" && (
+          <main className="page-transition mx-auto max-w-7xl px-6 pb-8 pt-40 md:pt-44">
+            {page === "works" && (
+              <div key={`${member}-works`} className="animate-in">
+                <MemberHero current={current} progress={progress} memberVideos={memberVideos} />
+                <LegacyFilterBar
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
+                  selectedType={selectedType}
+                  setSelectedType={setSelectedType}
+                  selectedTag={selectedTag}
+                  setSelectedTag={setSelectedTag}
+                  showWatchedOnly={showWatchedOnly}
+                  setShowWatchedOnly={setShowWatchedOnly}
+                  resetFilters={resetFilters}
+                  filteredCount={filteredVideos.length}
+                />
+                <LegacyVideoGrid videos={filteredVideos} current={current} watchedIds={watchedIds} toggleWatched={toggleWatched} />
+                <SourceNote />
+              </div>
+            )}
+
+            {page === "about" && (
+              <div key={`${member}-about`} className="animate-in">
+                <LegacyProfile current={current} videos={memberVideos} />
+                <SourceNote />
+              </div>
+            )}
+          </main>
+          )}
+          <LegacyFooter setView={setView} />
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
 </body>
 </html>
-
-
