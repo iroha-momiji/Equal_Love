@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>【非公式】=LOVE沼ガイド | =LOVEファンページ</title>
-  <meta name="description" content="=LOVE現メンバー10人の魅力を公式動画への導線でたどる非公式ファンページ。" />
+  <title>【非公式】=LOVE 初期メン12人沼ガイド | =LOVEファンページ</title>
+  <meta name="description" content="=LOVE12人の魅力を、公式動画への導線とファン目線の言葉でたどる非公式ファンページ。" />
   <meta name="theme-color" content="#f9769f" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -63,6 +63,15 @@
       --site-rose: #fb4968;
       --site-gold: #d0a45b;
       --ink: #2d2429;
+      --paper: #fffafb;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-strong: rgba(255, 255, 255, 0.94);
+      --line-soft: rgba(249, 118, 159, 0.16);
+      --line-strong: rgba(249, 118, 159, 0.34);
+      --shadow-card: 0 22px 65px rgba(45, 36, 41, 0.09);
+      --shadow-lift: 0 34px 95px rgba(249, 118, 159, 0.16);
+      --radius-card: 14px;
+      --radius-panel: 18px;
     }
 
     .fluid-copy {
@@ -319,6 +328,282 @@
       border-color: rgba(249, 118, 159, 0.48);
       background: #2d2429;
       color: #fff;
+    }
+
+    .fan-tool-card {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-card);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 250, 252, 0.72)),
+        rgba(255, 255, 255, 0.74);
+      box-shadow: 0 18px 54px rgba(45, 36, 41, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.86);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .fan-tool-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--line-strong);
+      box-shadow: var(--shadow-lift);
+    }
+
+    .fan-tool-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 12% 12%, rgba(249, 118, 159, 0.16), transparent 36%),
+        radial-gradient(circle at 88% 10%, rgba(208, 164, 91, 0.12), transparent 30%);
+      opacity: 0.72;
+    }
+
+    .relation-line {
+      background:
+        linear-gradient(90deg, rgba(249, 118, 159, 0.1), rgba(249, 118, 159, 0.58), rgba(208, 164, 91, 0.32), rgba(249, 118, 159, 0.1));
+    }
+
+    .enterprise-section {
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-panel);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 250, 252, 0.72)),
+        var(--surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .service-card {
+      display: flex;
+      min-height: 9.2rem;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-card);
+      background:
+        linear-gradient(150deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 252, 0.72)),
+        rgba(255, 255, 255, 0.78);
+      padding: 1.1rem;
+      text-align: left;
+      box-shadow: 0 16px 42px rgba(45, 36, 41, 0.07);
+      transition: transform 0.34s ease, box-shadow 0.34s ease, border-color 0.34s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--line-strong);
+      box-shadow: var(--shadow-lift);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      padding: 0.28rem 0.62rem;
+      color: #8f6f7c;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86);
+    }
+
+    .chemistry-shell {
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius-panel);
+      background: rgba(255, 255, 255, 0.66);
+      box-shadow: var(--shadow-card);
+    }
+
+    .chemistry-grid {
+      display: grid;
+      grid-template-columns: minmax(5.8rem, 0.82fr) repeat(12, minmax(2.6rem, 1fr));
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid rgba(249, 118, 159, 0.12);
+      border-radius: 12px;
+      background: rgba(249, 118, 159, 0.16);
+    }
+
+    .chemistry-header,
+    .chemistry-row-head,
+    .chemistry-cell,
+    .chemistry-diagonal {
+      min-height: 2.85rem;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .chemistry-header,
+    .chemistry-row-head {
+      display: grid;
+      place-items: center;
+      padding: 0.3rem;
+      color: #8f6f7c;
+      font-size: clamp(0.56rem, 0.48rem + 0.18vw, 0.72rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .chemistry-row-head {
+      justify-items: start;
+      padding-inline: 0.65rem;
+      color: #2d2429;
+    }
+
+    .chemistry-cell {
+      position: relative;
+      display: grid;
+      place-items: center;
+      border: 0;
+      color: #c86b88;
+      font-size: clamp(0.54rem, 0.48rem + 0.14vw, 0.66rem);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+      overflow: hidden;
+      padding: 0.22rem;
+      text-align: center;
+      word-break: keep-all;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .chemistry-cell:hover,
+    .chemistry-cell.is-selected {
+      z-index: 2;
+      background: linear-gradient(135deg, #2d2429, #fb4968);
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 16px 36px rgba(45, 36, 41, 0.18);
+    }
+
+    .chemistry-diagonal {
+      background:
+        repeating-linear-gradient(135deg, rgba(249, 118, 159, 0.06), rgba(249, 118, 159, 0.06) 6px, rgba(255, 255, 255, 0.72) 6px, rgba(255, 255, 255, 0.72) 12px);
+    }
+
+    .relation-member-picker {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+      gap: 0.65rem;
+    }
+
+    .relation-member-button {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.78);
+      padding: 0.95rem;
+      text-align: left;
+      transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background 0.24s ease;
+    }
+
+    .relation-member-button::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 3px;
+      background: var(--member-accent, #f9769f);
+      transform: scaleX(0.24);
+      transform-origin: left;
+      transition: transform 0.24s ease;
+    }
+
+    .relation-member-button:hover,
+    .relation-member-button.is-selected {
+      transform: translateY(-3px);
+      border-color: rgba(249, 118, 159, 0.3);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 18px 46px rgba(45, 36, 41, 0.12);
+    }
+
+    .relation-member-button.is-selected::after,
+    .relation-member-button:hover::after {
+      transform: scaleX(1);
+    }
+
+    .chemistry-list-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      border-radius: 16px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 252, 0.78)),
+        radial-gradient(circle at var(--mx, 22%) var(--my, 0%), rgba(249, 118, 159, 0.12), transparent 34%);
+      box-shadow: var(--shadow-card);
+      transition: transform 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
+    }
+
+    .chemistry-list-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(249, 118, 159, 0.32);
+      box-shadow: 0 28px 70px rgba(45, 36, 41, 0.14);
+    }
+
+    .chemistry-list-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--left-accent, #f9769f), var(--right-accent, #d0a45b));
+    }
+
+    .mono-action-primary {
+      border-color: #2d2429 !important;
+      background: #2d2429 !important;
+      color: #fff !important;
+    }
+
+    .timeline-board {
+      position: relative;
+    }
+
+    .timeline-board::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 1.15rem;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(249, 118, 159, 0.35), rgba(208, 164, 91, 0.28), transparent);
+    }
+
+    .timeline-year {
+      position: sticky;
+      top: 6rem;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 0.45rem 0.85rem;
+      color: #2d2429;
+      box-shadow: 0 16px 42px rgba(45, 36, 41, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    @media (max-width: 767px) {
+      .timeline-board::before {
+        left: 0.35rem;
+      }
+    }
+
+    .badge-card {
+      border: 1px solid rgba(249, 118, 159, 0.14);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+      transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+    }
+
+    .badge-card.is-locked {
+      opacity: 0.46;
+    }
+
+    .badge-card:not(.is-locked):hover {
+      transform: translateY(-2px);
+      border-color: rgba(249, 118, 159, 0.34);
     }
 
     .video-card {
@@ -647,6 +932,34 @@
         ]
       },
       {
+        id: "nagisa",
+        name: "齊藤 なぎさ",
+        en: "Nagisa Saito",
+        short: "Nagisa",
+        hexColor: "#ec4899",
+        softColor: "#fdf2f8",
+        colorName: "ピンク",
+        colorStops: ["#ec4899", "#f9a8d4"],
+        status: "卒業メンバー",
+        blood: "AB型",
+        sign: "かに座",
+        height: "151cm",
+        birth: "2003/7/6",
+        place: "神奈川県",
+        hobby: "食べること、音楽を聴くこと、カメラ",
+        skill: "口笛、大食い、スキー、指定された50音でかわいいアイドル言葉が言える",
+        qualification: "",
+        profile: "“なーたん”の入口は、やっぱり圧倒的な王道アイドル感。大きな瞳、甘い声、ファンへ向ける距離の近さ、その全部が強い。けれど本当に刺さるのは、かわいいをただ出すだけでなく、ステージで一瞬ごとに計算して届ける集中力。初期=LOVEの「かわいい」の説得力を、鮮やかに背負っていた人。",
+        catchcopy: "王道のかわいいを、記憶に残る強さまで磨いた人。",
+        notes: ["王道", "かわいい", ""],
+        socials: [
+          { label: "X", url: "https://twitter.com/saito_nagisa" },
+          { label: "Instagram", url: "https://www.instagram.com/saitou_nagisa/" },
+          { label: "TikTok", url: "https://www.tiktok.com/@equal_love_nagisa" },
+          { label: "Official Fanclub", url: "https://saitonagisa-fc.jp/" }
+        ]
+      },
+      {
         id: "maika",
         name: "佐々木 舞香",
         en: "Maika Sasaki",
@@ -673,6 +986,31 @@
           { label: "SHOWROOM", url: "https://www.showroom-live.com/LOVE_MAIKA_SASAKI" },
           { label: "公式アプリ", url: "https://app.equal-love.link.cosm.jp/open-app" },
           { label: "公式プロフィール", url: "https://equal-love.jp/feature/sasaki_maika" }
+        ]
+      },
+      {
+        id: "nonno",
+        name: "佐竹 のん乃",
+        en: "Nonno Satake",
+        short: "Nonno",
+        hexColor: "#2563eb",
+        softColor: "#eff6ff",
+        colorName: "青",
+        colorStops: ["#2563eb", "#60a5fa"],
+        status: "卒業メンバー",
+        blood: "A型",
+        sign: "さそり座",
+        height: "159cm",
+        birth: "1998/11/6",
+        place: "群馬県",
+        hobby: "映画・ドラマ鑑賞、アイドルの曲を聴くこと、動画を見ること",
+        skill: "縄跳び",
+        qualification: "",
+        profile: "のんのちゃんは、初期=LOVEに“アイドルを好きな人の目線”を持ち込んでくれた存在。かわいいを受け取る側の熱も、届ける側の覚悟も知っているから、ステージ上の笑顔にまっすぐな説得力がある。グループ初の卒業メンバーとして残した時間も含めて、12人版で辿るべき大切な始まりのひとり。",
+        catchcopy: "アイドルを好きな気持ちごと、初期の景色を明るくした人。",
+        notes: ["", "アイドル愛", "ハッピー"],
+        socials: [
+          { label: "関連ニュース", url: "https://equal-love.jp/news/list?keyword=%E4%BD%90%E7%AB%B9%E3%81%AE%E3%82%93%E4%B9%83" }
         ]
       },
       {
@@ -887,7 +1225,9 @@
       emiri: ["sweetest-girl", "princess", "love-rocket", "zuttomo", "drive-date", "want-you", "cameo", "seishun", "trigger", "natsumatope-focus", "tokubechu", "egao-recipe", "zettai", "be-selfish", "chotokkyu"],
       risa: ["natsumatsuri", "poison-girl", "shirankedo", "zurui", "ano-con", "cameo", "natsumatope-live", "drive-date", "egao-recipe", "niji-no-moto", "trigger", "tokubechu", "want-you", "chotokkyu", "teokure"],
       kiara: ["kiara-help", "tokubechu", "princess", "love-rocket", "natsumatope-focus", "zuttomo", "chotokkyu", "seishun", "cameo", "trigger", "want-you", "teokure", "egao-recipe", "poison-girl", "zettai"],
+      nagisa: ["princess", "tokubechu", "sweetest-girl", "love-rocket", "want-you", "shukipi", "kiara-help", "seishun", "zettai-focus", "zuttomo", "trigger", "drive-date", "teokure", "diamond-lily", "ship"],
       hitomi: ["want-you", "diamond-lily", "teokure", "seishun", "trigger", "natsumatope-live", "be-selfish", "zettai", "cameo", "egao-recipe", "chotokkyu", "zurui", "ano-con", "norotte", "tokubechu"],
+      nonno: ["want-you", "ship", "ai-kachitore", "teokure", "bekagai", "diamond-lily", "zurui", "kioku", "shukipi", "kimi-watashi", "love-rocket", "seishun", "egao-recipe", "zuttomo", "chotokkyu"],
       shoko: ["sweetest-girl", "love-rocket", "drive-date", "trigger", "egao-recipe", "cameo", "teokure", "seishun", "want-you", "chotokkyu", "tokubechu", "be-selfish", "natsumatsuri", "zuttomo", "poison-girl"],
       sana: ["niji-no-moto", "zurui", "ano-con", "shirankedo", "cameo", "poison-girl", "natsumatsuri", "teokure", "seishun", "want-you", "chotokkyu", "drive-date", "egao-recipe", "tokubechu", "be-selfish"],
       anna: ["egao-recipe", "seishun", "trigger", "want-you", "teokure", "chotokkyu", "drive-date", "love-create", "cameo", "natsumatope-live", "zuttomo", "be-selfish", "tokubechu", "ship", "ai-kachitore"]
@@ -952,7 +1292,9 @@
       hana: ["花菜ちゃんの表情が、曲の温度を一段上げてくれる。幸せの作り方がうまい。", "明るいだけじゃない、役をつかむ力が見える一本。気づくと目で追っている。", "楽しいの中に職人技がある。細部まで愛が通っていて、見終わると元気が残る。"],
       risa: ["莉沙ちゃんのしなやかさが曲に余韻を残す。やわらかいのに芯がある。", "一瞬の目線と所作がきれい。透明感の入口として置いておきたい一本。", "前に出すぎず、でも確かに残る。莉沙ちゃんの魅力がじわっと効く。"],
       kiara: ["樹愛羅ちゃんのかわいいは瞬発力がすごい。気づいたら何度も巻き戻している。", "明るさの中に成長の熱が見える。今の樹愛羅ちゃんを追いたくなる。", "キュートの芯が強い。表情が切り替わるたび、沼がもう一段深くなる。"],
+      nagisa: ["なーたんの王道アイドル感が画面をぱっと支配する。かわいいの密度が高い。", "甘さだけでは終わらない、視線の強さと集中力がちゃんと残る一本。", "初期=LOVEのきらめきを辿るなら外せない。記憶に残る表情が多い。"],
       maika: ["舞香ちゃんの声が入るだけで、曲の景色がすっと変わる。透明なのに強い。", "目線の温度と歌の説得力。静かな一撃で心を持っていく一本。", "可憐さと鋭さの同居がずるい。舞香ちゃんの余韻に浸れる。"],
+      nonno: ["のんのちゃんの明るさに、初期の空気がふっと近づく。まっすぐな笑顔がいい。", "アイドルを好きな人だから出せる温度がある。グループの始まりを感じたい一本。", "やさしい存在感が、曲の中で確かに効いている。12人の景色として見返したい。"],
       hitomi: ["瞳ちゃんが真ん中に立つと、景色が一気に開ける。王道の眩しさを浴びたい。", "笑顔の強さがそのまま推進力になる。初見にもまっすぐ届く一本。", "センター感だけじゃない、曲を支える体幹まで見てほしい。"],
       shoko: ["笙古ちゃんの誠実なパフォーマンスが胸に残る。積み重ねの強さが見える。", "凛とした立ち姿がきれい。派手さより深く残るタイプの魅力。", "歌も表情も丁寧。見終わったあとに、もう一回確認したくなる。"],
       iori: ["衣織ちゃんの目線が曲の奥へ連れていく。表現の圧に、一度浴びたら戻れない。", "声の色がくるくる変わる。かわいいも怖いも切ないも、全部持っている。", "一瞬で空気を支配するタイプの表現者。ここから沼が始まる。"],
@@ -1026,8 +1368,244 @@
     const MEMBER_BY_ID = Object.fromEntries(MEMBERS.map((member) => [member.id, member]));
     const VIDEO_BY_ID = Object.fromEntries(VIDEO_DATA.map((video) => [video.id, video]));
 
+    const RELATION_GROUPS = [
+      { id: "ikaring", label: "いかりんぐ", members: ["iori", "maika"], type: "ユニット", description: "熱と透明感がぶつかる、歌で物語を作る入口。声の質感の違いがそのまま関係性の魅力になる。", videoKeys: ["niji-no-moto", "norotte", "ano-con"], tags: ["歌", "ユニット", "表現力"] },
+      { id: "anmai", label: "あんまい", members: ["maika", "anna"], type: "ペア", description: "ゆるい空気と確かな信頼感で見られる、佐々木舞香と山本杏奈の入口。個人YouTube導線とも相性がいい。", videoKeys: ["egao-recipe", "trigger", "seishun"], tags: ["ペア", "安心感", "素顔"] },
+      { id: "vocal", label: "歌で刺す組", members: ["iori", "maika", "sana", "shoko"], type: "歌", description: "声の温度、言葉の置き方、ライブでの強さを辿りたい人向け。まずは歌に耳を預けるコース。", videoKeys: ["haikei", "mayonaka", "niji-no-moto", "zurui"], tags: ["歌", "ソロ", "ライブ"] },
+      { id: "expression", label: "表現力で連れていく組", members: ["iori", "hana", "maika", "risa"], type: "表現", description: "一瞬の目線や所作で曲の温度を変えるメンバーたち。画面の端まで追いたくなる関係性。", videoKeys: ["kyoso", "poison-girl", "darebare", "norotte"], tags: ["表現力", "所作", "世界観"] },
+      { id: "happy", label: "ハッピー入口組", members: ["hana", "emiri", "kiara", "nagisa", "hitomi", "anna"], type: "初見", description: "明るい気持ちで入れる王道・かわいい入口。親子や初見にもすすめやすい動画へつなぐ。", videoKeys: ["love-rocket", "tokubechu", "egao-recipe", "want-you", "zuttomo"], tags: ["かわいい", "ハッピー", "王道"] },
+      { id: "origin", label: "初期12人の原点", members: MEMBERS.map((member) => member.id), type: "初期", description: "現メンバーと卒業メンバーを同じ地図に置き、今につながる始まりの景色として辿る入口。", videoKeys: ["want-you", "teokure", "diamond-lily", "seishun"], tags: ["", "沿革", "12人"] }
+    ];
+
+    function chemistryKey(a, b) {
+      return [a, b].sort().join("__");
+    }
+
+    const CHEMISTRY_NAME_MAP = {
+      [chemistryKey("iori", "maika")]: { label: "いかりんぐ", sourceLabel: "イコラブ用語辞典 / いかりんぐ紹介記事", origin: "佐々木舞香の「いか」と、野口衣織のファン呼称「いおりんぐ」由来。" },
+      [chemistryKey("maika", "anna")]: { label: "あんまい", sourceLabel: "あんまい関連情報", origin: "山本杏奈の「あん」と佐々木舞香の「まい」由来。個人YouTube名としても使われる。" },
+      [chemistryKey("iori", "hitomi")]: { label: "高2コンビ", sourceLabel: "イコラブ用語辞典 / いかりんぐ紹介記事", origin: "デビュー当時に同学年だったことに由来する呼び名。" },
+      [chemistryKey("iori", "emiri")]: { label: "いおみり", sourceLabel: "イコラブ用語辞典", origin: "野口衣織の「いお」と大谷映美里の愛称「みりにゃ」由来。" },
+      [chemistryKey("anna", "hitomi")]: { label: "杏アイス", sourceLabel: "いかりんぐ紹介記事", origin: "山本杏奈と髙松瞳のペア名。" },
+      [chemistryKey("maika", "hitomi")]: { label: "おすつ", sourceLabel: "いかりんぐ紹介記事", origin: "佐々木舞香と髙松瞳のペア名。" },
+      [chemistryKey("maika", "kiara")]: { label: "きあまい", sourceLabel: "いかりんぐ紹介記事", origin: "齋藤樹愛羅の「きあ」と佐々木舞香の「まい」由来。" },
+      [chemistryKey("maika", "shoko")]: { label: "しょこごころ", sourceLabel: "いかりんぐ紹介記事", origin: "瀧脇笙古と佐々木舞香のペア名。" },
+      [chemistryKey("risa", "shoko")]: { label: "しょこりさ", sourceLabel: "ananweb / いかりんぐ紹介記事", origin: "瀧脇笙古の「しょこ」と音嶋莉沙の「りさ」由来。" },
+      [chemistryKey("shoko", "emiri")]: { label: "瀧谷", sourceLabel: "いかりんぐ紹介記事", origin: "瀧脇笙古と大谷映美里のペア名。" },
+      [chemistryKey("hana", "iori")]: { label: "ティンターパン", sourceLabel: "ananweb / 大場花菜公式ブログ / いかりんぐ紹介記事", origin: "大場花菜と野口衣織の名物コンビ名。元ページ名にも引き継がれている。" },
+      [chemistryKey("emiri", "anna")]: { label: "にゃーにゃー", sourceLabel: "いかりんぐ紹介記事", origin: "大谷映美里と山本杏奈のペア名。" },
+      [chemistryKey("hana", "maika")]: { label: "凛々sing", sourceLabel: "いかりんぐ紹介記事 / イコラブアーカイブ", origin: "大場花菜と佐々木舞香のペア名。読みは「りりしんぐ」。" }
+    };
+
+    const CHEMISTRY_MOTIF_MAP = {
+      [chemistryKey("emiri", "hana")]: { label: "おしゃれ広報室", origin: "美容や発信を楽しむ映美里ちゃんと、絵や言葉で世界を作る花菜ちゃん。かわいいを届けるまでの裏側まで好きになれる組み合わせ。" },
+      [chemistryKey("emiri", "risa")]: { label: "余韻のミルフィーユ", origin: "映美里ちゃんの作り込まれた甘さと、莉沙ちゃんのしなやかな余韻が重なる。画面に残る品の良さをゆっくり味わいたいふたり。" },
+      [chemistryKey("emiri", "kiara")]: { label: "甘やかしリボン", origin: "映美里ちゃんのやわらかい視線と、樹愛羅ちゃんの素直なかわいさ。見ている側まで少し甘やかされるような入口。" },
+      [chemistryKey("emiri", "nagisa")]: { label: "王道プリンセスライン", origin: "研究されたかわいさと、天性のヒロイン感。=LOVEの華やかな第一印象をまっすぐ運んでくれる並び。" },
+      [chemistryKey("emiri", "maika")]: { label: "透明ショーケース", origin: "映美里ちゃんの甘い輝きと、舞香ちゃんの透明な歌声。可憐さの中に静かな芯が見えてくる。" },
+      [chemistryKey("emiri", "nonno")]: { label: "初期かわいい同盟", origin: "初期曲の明るさを、映美里ちゃんは美意識で、のんのちゃんはまっすぐなアイドル愛で支えていたと思えるふたり。" },
+      [chemistryKey("emiri", "hitomi")]: { label: "ピンクのセンター街", origin: "映美里ちゃんの細部まで作るかわいさと、瞳ちゃんの景色を開く明るさ。王道アイドルの入口として強い並び。" },
+      [chemistryKey("emiri", "sana")]: { label: "大人かわいい楽屋", origin: "映美里ちゃんの甘い品と、沙夏ちゃんの落ち着いた艶。楽屋の会話まできれいに見えてきそうな大人かわいい組み合わせ。" },
+      [chemistryKey("hana", "risa")]: { label: "劇場袖の微笑み", origin: "花菜ちゃんの演劇的な表情と、莉沙ちゃんのしなやかな余韻。ステージ袖で目を合わせる一瞬まで想像したくなる。" },
+      [chemistryKey("hana", "kiara")]: { label: "末っ子応援団", origin: "花菜ちゃんの面倒見のよさと、樹愛羅ちゃんの伸びていく明るさ。成長を見守る楽しさが自然に伝わる。" },
+      [chemistryKey("hana", "nagisa")]: { label: "お姫様演出班", origin: "花菜ちゃんの物語を作る力と、なぎさちゃんの主役感。かわいい場面をちゃんと一つの舞台にしてくれるふたり。" },
+      [chemistryKey("hana", "nonno")]: { label: "交換日記のリボン", origin: "花菜ちゃんの言葉と絵、のんのちゃんのアイドル愛。初期の空気を、手書きのページみたいに残したくなる。" },
+      [chemistryKey("hana", "hitomi")]: { label: "太陽装飾係", origin: "瞳ちゃんの明るい推進力に、花菜ちゃんの色と物語が乗る。ライブの多幸感を飾り付けてくれる並び。" },
+      [chemistryKey("hana", "shoko")]: { label: "ステージ職人会", origin: "花菜ちゃんの表現の細かさと、笙古ちゃんの積み重ねる強さ。派手さだけでは終わらない、手つきの丁寧なふたり。" },
+      [chemistryKey("hana", "sana")]: { label: "台詞の余白", origin: "花菜ちゃんの演じる力と、沙夏ちゃんの声に残る余韻。言葉にしすぎない感情まで届く組み合わせ。" },
+      [chemistryKey("hana", "anna")]: { label: "司令塔の交換ノート", origin: "花菜ちゃんの言葉にする力と、杏奈ちゃんの全体を見る力。グループを好きな人ほど、ふたりの支え方の違いが見えてくる。" },
+      [chemistryKey("risa", "kiara")]: { label: "ふわふわ成長記", origin: "莉沙ちゃんの柔らかい空気と、樹愛羅ちゃんの成長していく眩しさ。見ていると自然に頬がゆるむ。" },
+      [chemistryKey("risa", "nagisa")]: { label: "余韻プリンセス", origin: "莉沙ちゃんのしなやかな余韻と、なぎさちゃんの物語性。かわいいだけでなく、見終わったあとに残る強さがある。" },
+      [chemistryKey("risa", "maika")]: { label: "雨上がりの透明感", origin: "莉沙ちゃんの柔らかな湿度と、舞香ちゃんの澄んだ声。切ない曲でふっと景色が変わるふたり。" },
+      [chemistryKey("risa", "nonno")]: { label: "初期のやわらかい風", origin: "莉沙ちゃんのしなやかさとのんのちゃんの明るさ。初期曲を見返した時、画面の温度をやさしくしてくれる。" },
+      [chemistryKey("risa", "hitomi")]: { label: "しなやか太陽線", origin: "莉沙ちゃんの余韻と、瞳ちゃんの明るい直進力。違う質感だからこそ、並ぶと曲の幅が広く見える。" },
+      [chemistryKey("risa", "iori")]: { label: "余韻の刃先", origin: "莉沙ちゃんの柔らかい残像と、衣織ちゃんの鋭い表現。静かな場面ほど、ふたりのコントラストが効く。" },
+      [chemistryKey("risa", "sana")]: { label: "艶色ハーモニー", origin: "莉沙ちゃんのしなやかな余韻と、沙夏ちゃんの大人っぽい声色。夜に聴き返したくなる落ち着いた組み合わせ。" },
+      [chemistryKey("risa", "anna")]: { label: "ほっとする大人組", origin: "莉沙ちゃんの柔らかさと、杏奈ちゃんの安心感。グループの空気を穏やかに整えてくれるふたり。" },
+      [chemistryKey("kiara", "nagisa")]: { label: "末っ子プリンセス", origin: "樹愛羅ちゃんの成長物語と、なぎさちゃんの王道ヒロイン感。かわいいの入口を明るく広げてくれる。" },
+      [chemistryKey("kiara", "nonno")]: { label: "初期ハッピー係", origin: "樹愛羅ちゃんの勢いとのんのちゃんのアイドル愛。初期の明るい曲を、肩の力を抜いて楽しませてくれるふたり。" },
+      [chemistryKey("kiara", "hitomi")]: { label: "笑顔のブースター", origin: "樹愛羅ちゃんの弾けるかわいさに、瞳ちゃんの太陽みたいな力が乗る。ライブで客席まで明るくなる組み合わせ。" },
+      [chemistryKey("kiara", "shoko")]: { label: "コツコツ応援席", origin: "樹愛羅ちゃんの変化を、笙古ちゃんの誠実な積み重ねと並べて見ると、続けることの強さが見えてくる。" },
+      [chemistryKey("kiara", "iori")]: { label: "ギャップ観測班", origin: "樹愛羅ちゃんのまっすぐな可愛さと、衣織ちゃんの深い表現。振れ幅の大きさを楽しめるふたり。" },
+      [chemistryKey("kiara", "sana")]: { label: "かわいい修行部", origin: "樹愛羅ちゃんの成長速度と、沙夏ちゃんの落ち着いた魅せ方。かわいいが少しずつ大人になっていく感じがある。" },
+      [chemistryKey("kiara", "anna")]: { label: "やさしい見守り席", origin: "樹愛羅ちゃんの伸びやかさを、杏奈ちゃんがあたたかく受け止める。グループ内の安心感が見えやすい。" },
+      [chemistryKey("nagisa", "maika")]: { label: "主役の横顔", origin: "なぎさちゃんの王道感と、舞香ちゃんの透明な存在感。真正面の輝きと、横顔の切なさが同時に見える。" },
+      [chemistryKey("nagisa", "nonno")]: { label: "初期きらめき保存会", origin: "なぎさちゃんのヒロイン感とのんのちゃんの明るいアイドル愛。初期の眩しさを見返す時に外せないふたり。" },
+      [chemistryKey("nagisa", "hitomi")]: { label: "王道センターライン", origin: "なぎさちゃんの物語性と、瞳ちゃんのまっすぐなセンター感。=LOVEの王道を別々の角度から照らす。" },
+      [chemistryKey("nagisa", "shoko")]: { label: "まっすぐステージノート", origin: "なぎさちゃんの華やかさと、笙古ちゃんの丁寧なパフォーマンス。ステージをきれいに支える線が見える。" },
+      [chemistryKey("nagisa", "iori")]: { label: "甘さと刃の交差点", origin: "なぎさちゃんの甘いヒロイン感と、衣織ちゃんの鋭い表現。かわいい曲でも影のある曲でも気になる組み合わせ。" },
+      [chemistryKey("nagisa", "sana")]: { label: "プリンセスの余韻", origin: "なぎさちゃんの主役感と、沙夏ちゃんの声の余韻。華やかな場面のあとに残る静けさまで見たくなる。" },
+      [chemistryKey("nagisa", "anna")]: { label: "ほほえみキャプテン席", origin: "なぎさちゃんの明るい華と、杏奈ちゃんのまとめる力。楽曲の中で安心して見られる温度がある。" },
+      [chemistryKey("maika", "nonno")]: { label: "透明な放課後", origin: "舞香ちゃんの澄んだ空気と、のんのちゃんのまっすぐな明るさ。初期の青春感をふっと思い出させるふたり。" },
+      [chemistryKey("maika", "sana")]: { label: "声色の夜風", origin: "舞香ちゃんの透明な声と、沙夏ちゃんの艶のある響き。夜に聴き返すと、言葉の温度が少し変わって聴こえる。" },
+      [chemistryKey("nonno", "hitomi")]: { label: "始まりの太陽", origin: "のんのちゃんのアイドル愛と、瞳ちゃんの明るいセンター感。初期の勢いをあたたかく思い出せる組み合わせ。" },
+      [chemistryKey("nonno", "shoko")]: { label: "初期ノートの余白", origin: "のんのちゃんの明るさと、笙古ちゃんの誠実な積み重ね。初期のページをめくるように見返したいふたり。" },
+      [chemistryKey("nonno", "iori")]: { label: "アイドル愛観測隊", origin: "のんのちゃんの好きという気持ちと、衣織ちゃんの作品へ潜る力。アイドルを見る楽しさの入口が広がる。" },
+      [chemistryKey("nonno", "sana")]: { label: "やさしい初期便り", origin: "のんのちゃんの明るさと、沙夏ちゃんの落ち着いた声。初期の空気をやさしく届けてくれる。" },
+      [chemistryKey("nonno", "anna")]: { label: "ふんわり舵取り", origin: "のんのちゃんのやわらかい明るさと、杏奈ちゃんの支える力。楽しい空気をきちんと進めてくれるふたり。" },
+      [chemistryKey("hitomi", "shoko")]: { label: "まっすぐランニングロード", origin: "瞳ちゃんの太陽みたいな勢いと、笙古ちゃんの走り続ける誠実さ。努力が明るく見える組み合わせ。" },
+      [chemistryKey("hitomi", "sana")]: { label: "太陽と余韻", origin: "瞳ちゃんの開けた明るさと、沙夏ちゃんの大人っぽい余韻。曲の入口と出口をきれいにつないでくれる。" },
+      [chemistryKey("shoko", "iori")]: { label: "静かな集中線", origin: "笙古ちゃんの丁寧な積み重ねと、衣織ちゃんの研ぎ澄まされた表現。目立つ瞬間より、集中している横顔に惹かれる。" },
+      [chemistryKey("shoko", "sana")]: { label: "誠実ハーモニー", origin: "笙古ちゃんのまっすぐさと、沙夏ちゃんの声の艶。派手ではないのに、聴き終わったあとに残る。" },
+      [chemistryKey("shoko", "anna")]: { label: "支える足音", origin: "笙古ちゃんの努力を続ける姿と、杏奈ちゃんの全体を見る力。ステージの土台を感じられるふたり。" },
+      [chemistryKey("iori", "sana")]: { label: "艶と衝動", origin: "衣織ちゃんの爆発力と、沙夏ちゃんの艶のある余韻。強い表現と大人っぽさがぶつかるところが見どころ。" },
+      [chemistryKey("iori", "anna")]: { label: "芯を支える影", origin: "衣織ちゃんの深く刺す表現を、杏奈ちゃんの安心感が支える。グループ全体を見た時に効いてくる関係性。" },
+      [chemistryKey("sana", "anna")]: { label: "余韻と安心の椅子", origin: "沙夏ちゃんの落ち着いた余韻と、杏奈ちゃんの支える安心感。見終わったあとにほっと息をつけるふたり。" }
+    };
+
+    const MOTIF_LABELS = ["白昼のリボン", "ガラスの合図", "放課後の合流", "月明かりのハーモニー", "ステージ脇の約束", "ひだまりの拍手", "水面のターン", "夕焼けのセンターライン", "星屑のリレー"];
+
+    function chemistryNameFor(left, right) {
+      const confirmed = CHEMISTRY_NAME_MAP[chemistryKey(left.id, right.id)];
+      if (confirmed) return { ...confirmed, status: "named", statusLabel: "ケミ名" };
+      const motif = CHEMISTRY_MOTIF_MAP[chemistryKey(left.id, right.id)];
+      if (motif) {
+        return {
+          ...motif,
+          status: "motif",
+          statusLabel: "ケミ名",
+          sourceLabel: motif.sourceLabel || "由来メモ"
+        };
+      }
+      const notes = Array.from(new Set([...(left.notes || []), ...(right.notes || [])])).slice(0, 2);
+      const labelSeed = MEMBERS.findIndex((member) => member.id === left.id) + MEMBERS.findIndex((member) => member.id === right.id);
+      return {
+        label: MOTIF_LABELS[labelSeed % MOTIF_LABELS.length],
+        status: "motif",
+        statusLabel: "ケミ名",
+        sourceLabel: "由来メモ",
+        origin: `${left.notes[0]}の魅力と${right.notes[0]}の魅力が並ぶと、${notes.join("、")}の見方が広がる。ふたりを同じ場面で追うための呼び名です。`
+      };
+    }
+
+    const FEATURED_CHEMISTRY = {
+      [chemistryKey("iori", "maika")]: { type: "歌", label: "いかりんぐ", description: "熱を帯びた衣織ちゃんと、透明な芯で刺す舞香ちゃん。声の温度差がそのままドラマになる、イコラブを深く好きになるための最短ルート。", videoKeys: ["niji-no-moto", "ano-con", "norotte", "trigger"], tags: ["歌", "ユニット", "表現力"] },
+      [chemistryKey("maika", "anna")]: { type: "素顔", label: "あんまい", description: "ゆるい会話と確かな信頼感が同居するペア。ステージの緊張感とは違う、長く見ていたくなる日常の温度がある。", videoKeys: ["egao-recipe", "trigger", "seishun", "love-create"], tags: ["ペア", "安心感", "個人YouTube"] },
+      [chemistryKey("hitomi", "anna")]: { type: "軸", label: "ひとあん", description: "真ん中で明るく照らす瞳ちゃんと、全体を見て支える杏奈ちゃん。王道と安心感が交差して、グループの骨格が見えてくる。", videoKeys: ["want-you", "egao-recipe", "seishun", "trigger"], tags: ["センター", "リーダー", "王道"] },
+      [chemistryKey("hana", "iori")]: { type: "表現", label: "はないお", description: "花菜ちゃんの物語を作る力と、衣織ちゃんの憑依する力。かわいいもダークも演劇的に見せられる、表現派の濃い組み合わせ。", videoKeys: ["kyoso", "poison-girl", "norotte", "teokure"], tags: ["表現力", "所作", "世界観"] },
+      [chemistryKey("emiri", "nagisa")]: { type: "王道", label: "かわいい二枚看板", description: "研究されたかわいさの映美里ちゃんと、天性の王道感を放つなぎさちゃん。入口の華やかさが強く、初見にも届きやすい。", videoKeys: ["sweetest-girl", "princess", "tokubechu", "love-rocket"], tags: ["かわいい", "王道", "初見"] },
+      [chemistryKey("nonno", "kiara")]: { type: "初期", label: "初期の明るい風", description: "アイドル愛を持つのんのちゃんと、成長の速度で惹きつける樹愛羅ちゃん。初期曲の明るさを、別々の角度から思い出させてくれる。", videoKeys: ["kiara-help", "want-you", "ship", "zuttomo"], tags: ["", "成長", "ハッピー"] },
+      [chemistryKey("sana", "shoko")]: { type: "歌", label: "しなやか歌声組", description: "沙夏ちゃんの艶と、笙古ちゃんの誠実さ。派手な言葉よりも声の質感で残る、じっくり聴きたい組み合わせ。", videoKeys: ["niji-no-moto", "zurui", "drive-date", "trigger"], tags: ["歌", "大人", "誠実"] },
+      [chemistryKey("risa", "emiri")]: { type: "美", label: "余韻のビジュアル組", description: "莉沙ちゃんのしなやかな余韻と、映美里ちゃんの研究されたかわいさ。画面に映った瞬間の品の良さが強い。", videoKeys: ["sweetest-girl", "drive-date", "natsumatope-live", "love-rocket"], tags: ["透明感", "ビジュアル", "所作"] }
+    };
+
+    const CHEMISTRY_ARCHETYPES = [
+      { type: "表情", tag: "表情", copy: "同じ画面にいる時の目線や笑い方を見ると、ふたりの距離感が分かりやすい。" },
+      { type: "歌", tag: "歌", copy: "声の混ざり方や言葉の置き方を比べると、曲の好きな場所が少し増える。" },
+      { type: "ライブ", tag: "ライブ", copy: "ライブだと、客席へ向ける熱とメンバー同士の呼吸がそのまま出る。" },
+      { type: "入口", tag: "沼入口", copy: "初めてでも見つけやすい良さがあって、見返すほど細かい表情も楽しくなる。" },
+      { type: "物語", tag: "関係性", copy: "タイプの違うふたりを並べて見ると、初期から今へのつながりが見えてくる。" }
+    ];
+
+    const CHEMISTRY_PAIRS = MEMBERS.flatMap((left, leftIndex) =>
+      MEMBERS.slice(leftIndex + 1).map((right, offset) => {
+        const rightIndex = leftIndex + 1 + offset;
+        const id = chemistryKey(left.id, right.id);
+        const featured = FEATURED_CHEMISTRY[id];
+        const nameInfo = chemistryNameFor(left, right);
+        const archetype = CHEMISTRY_ARCHETYPES[(leftIndex + rightIndex) % CHEMISTRY_ARCHETYPES.length];
+        const sharedNotes = left.notes.filter((note) => right.notes.includes(note));
+        const videoKeys = featured?.videoKeys || Array.from(new Set([...(PICKS_BY_MEMBER[left.id] || []).slice(0, 2), ...(PICKS_BY_MEMBER[right.id] || []).slice(0, 2)])).slice(0, 4);
+        return {
+          id,
+          label: nameInfo.label,
+          shortLabel: `${left.short} × ${right.short}`,
+          nameStatus: nameInfo.status,
+          nameStatusLabel: nameInfo.statusLabel,
+          nameSource: nameInfo.sourceLabel,
+          nameOrigin: nameInfo.origin,
+          themeLabel: featured?.label || null,
+          members: [left.id, right.id],
+          type: featured?.type || archetype.type,
+          description: featured?.description || `${left.name.replace(" ", "")}と${right.name.replace(" ", "")}は、${archetype.copy} ${sharedNotes.length ? `ふたりに共通して見たいのは「${sharedNotes.join("」「")}」。` : `${left.notes[0]}の人と${right.notes[0]}の人、という違いから入ると見やすい。`}`,
+          videoKeys,
+          tags: featured?.tags || Array.from(new Set([archetype.tag, ...sharedNotes, left.notes[0], right.notes[0]])).slice(0, 4)
+        };
+      })
+    );
+
+    const CHEMISTRY_BY_ID = Object.fromEntries(CHEMISTRY_PAIRS.map((pair) => [pair.id, pair]));
+
+    const TIMELINE_EVENTS = [
+      { year: "2017", dateLabel: "2017", memberIds: MEMBERS.map((member) => member.id), title: "12人で=LOVEが始まる", type: "活動史", description: "オーディションを経て12人が集まり、今につながるグループの原点が生まれる。12人版の年表はここからスタート。", videoKey: null },
+      { year: "2017", dateLabel: "2017", memberIds: MEMBERS.map((member) => member.id), title: "初お披露目からデビューへ", type: "活動史", description: "TIFでの初お披露目、メジャーデビューへと進み、王道アイドルとしての物語が動き出す。", videoKey: null },
+      { year: "2018", dateLabel: "2018", memberIds: ["hitomi", "nonno", "nagisa", "kiara", "anna"], title: "初期のかわいい入口が広がる", type: "楽曲史", description: "『Want you! Want you!』や『今、この船に乗れ！』で、明るさ・青春・初期の空気をまとめて感じられる年。", videoKey: "want-you" },
+      { year: "2018", dateLabel: "2018", memberIds: ["iori", "maika", "hana", "sana", "risa"], title: "手遅れcautionで表現力の扉が開く", type: "楽曲史", description: "ただ可愛いだけではないグループとして、視線、歌、空気の重さまで武器になることを見せた重要曲。", videoKey: "teokure" },
+      { year: "2018", dateLabel: "2018", memberIds: ["kiara", "nagisa", "nonno"], title: "樹愛羅、助けに来たぞが初期の愛され方を刻む", type: "メンバー史", description: "メンバーのキャラクターを曲として残す面白さが強く、初期=LOVEの距離の近さを感じられる。", videoKey: "kiara-help" },
+      { year: "2019", dateLabel: "2019", memberIds: ["hitomi", "maika", "iori", "anna"], title: "探せ ダイヤモンドリリーで王道が強くなる", type: "楽曲史", description: "可憐さと切なさが交差し、ライブでの表情や歌の積み重ねが語られる代表的な入口に。", videoKey: "diamond-lily" },
+      { year: "2019", dateLabel: "2019", memberIds: ["maika", "sana", "risa", "hitomi"], title: "ズルいよ ズルいねで切なさの記憶が残る", type: "楽曲史", description: "歌声と表情の余韻で好きになる入口。静かな熱を見つけたい人にすすめたい年表ポイント。", videoKey: "zurui" },
+      { year: "2020", dateLabel: "2020", memberIds: ["hitomi", "maika", "iori", "anna", "nagisa"], title: "青春サブリミナルが王道の眩しさを更新", type: "楽曲史", description: "爽やかで強い王道感、センターの説得力、メンバーそれぞれの表情が見やすい入口。", videoKey: "seishun" },
+      { year: "2020", dateLabel: "2020", memberIds: ["iori", "maika", "sana", "risa"], title: "CAMEOで大人っぽい表現も見える", type: "楽曲史", description: "ダークで挑戦的な表情、ダンス、視線が並び、初見から一歩深く入りたい人に向く。", videoKey: "cameo" },
+      { year: "2020", dateLabel: "2020", memberIds: ["iori", "nonno", "nagisa", "anna"], title: "初期からの積み重ねがライブ映像で残る", type: "ライブ史", description: "『記憶のどこかで』など、今見返すと初期12人の物語を感じやすいライブ導線が増える。", videoKey: "kioku" },
+      { year: "2021", dateLabel: "2021", memberIds: ["nonno"], title: "佐竹のん乃が卒業", type: "メンバー史", description: "グループ初の卒業メンバーとして、初期の景色を語るうえで欠かせない節目になる。", videoKey: "want-you" },
+      { year: "2021", dateLabel: "2021", memberIds: ["hana", "emiri", "risa", "kiara", "nagisa"], title: "ラブロケで明るい入口が強くなる", type: "楽曲史", description: "ポップで楽しい入口として、初見にも家族にもすすめやすい華やかな魅力が前に出る。", videoKey: "love-rocket" },
+      { year: "2021", dateLabel: "2021", memberIds: ["emiri", "risa", "hana", "nagisa"], title: "Sweetest girlでかわいいの質感を楽しむ", type: "ユニット史", description: "ガーリーで細部までかわいい世界観。ビジュアルと表情管理を追う楽しさが濃い。", videoKey: "sweetest-girl" },
+      { year: "2022", dateLabel: "2022", memberIds: ["maika", "iori", "sana", "hana"], title: "あの子コンプレックスで歌と切なさが刺さる", type: "楽曲史", description: "歌声、表情、余白の強さがわかりやすく、=LOVEを深く好きになる人が増えた入口。", videoKey: "ano-con" },
+      { year: "2022", dateLabel: "2022", memberIds: ["iori", "maika"], title: "虹の素でいかりんぐの歌が刻まれる", type: "ユニット史", description: "ふたりの声の違いがそのまま物語になる、関係性マップでも必ず辿りたい重要ポイント。", videoKey: "niji-no-moto" },
+      { year: "2022", dateLabel: "2022", memberIds: ["hitomi", "iori", "maika", "anna"], title: "Be Selfishで自分らしさを掲げる", type: "楽曲史", description: "強いメッセージとダンスの見せ方で、王道以外の現代的なかっこよさも伝わる。", videoKey: "be-selfish" },
+      { year: "2023", dateLabel: "2023", memberIds: ["nagisa"], title: "齊藤なぎさが卒業", type: "メンバー史", description: "初期の王道アイドル感を支えた存在の卒業。12人版として見ると、かわいいの系譜がより鮮明になる。", videoKey: "princess" },
+      { year: "2023", dateLabel: "2023", memberIds: ["maika", "hitomi", "anna", "shoko"], title: "この空がトリガーでセンター感を辿る", type: "楽曲史", description: "爽やかさの中に歌と表情の強さがあり、現メンバーの輪郭をつかみやすい。", videoKey: "trigger" },
+      { year: "2023", dateLabel: "2023", memberIds: ["hana", "risa", "maika", "hitomi"], title: "ナツマトペでライブの多幸感を浴びる", type: "ライブ史", description: "夏の明るさ、会場の熱、メンバーの笑顔をまとめて受け取れるライブ導線。", videoKey: "natsumatope-live" },
+      { year: "2023", dateLabel: "2023", memberIds: ["maika"], title: "真夜中マーメイドでソロの強さを見る", type: "メンバー史", description: "舞香ちゃんの歌声と余韻が主役になる一本。メンバー別Archiveの深掘りにもつながる。", videoKey: "mayonaka" },
+      { year: "2024", dateLabel: "2024", memberIds: ["iori", "hana", "maika", "risa"], title: "呪って呪ってで表現の深さが前に出る", type: "楽曲史", description: "ダークな世界観、目線、指先まで見るべきポイントが多い。表現派を好きになる入口。", videoKey: "norotte" },
+      { year: "2024", dateLabel: "2024", memberIds: ["hana", "iori", "maika"], title: "狂想カタストロフィで物語性を浴びる", type: "ライブ史", description: "楽曲の主人公として立つ力が見える。演じる・歌う・魅せるが重なる年表ポイント。", videoKey: "kyoso-ariake" },
+      { year: "2024", dateLabel: "2024", memberIds: ["anna", "hana", "emiri", "shoko", "risa"], title: "笑顔のレシピで絆が見える", type: "楽曲史", description: "山本杏奈のセンター文脈も含め、グループを支える安心感と祝福感を受け取れる。", videoKey: "egao-recipe" },
+      { year: "2024", dateLabel: "2024", memberIds: ["maika", "iori", "hitomi", "kiara"], title: "絶対アイドル辞めないでが覚悟を残す", type: "楽曲史", description: "アイドルであることの強さ、かわいさ、切なさが同時に届く。ファン目線でも刺さる一本。", videoKey: "zettai" },
+      { year: "2025", dateLabel: "2025", memberIds: ["emiri", "hana", "kiara", "anna"], title: "とくべチュ、してで入口のかわいさを更新", type: "公開コンテンツ", description: "短くすすめやすいかわいい入口として、親子・初見モードにもつながる公開コンテンツ。", videoKey: "tokubechu" },
+      { year: "2025", dateLabel: "2025", memberIds: ["anna", "maika", "emiri"], title: "個人YouTubeや公開企画で素顔の導線が増える", type: "公開コンテンツ", description: "公式動画だけでなく、確認できる個人YouTubeや公開企画もプロフィールから辿れるように整理。", videoKey: "game-bu" }
+    ];
+
+    const FIRST_TIME_PICKS = {
+      emiri: ["sweetest-girl", "princess", "love-rocket"],
+      hana: ["love-rocket", "zuttomo", "egao-recipe"],
+      risa: ["natsumatope-live", "drive-date", "egao-recipe"],
+      kiara: ["kiara-help", "tokubechu", "love-rocket"],
+      nagisa: ["princess", "tokubechu", "sweetest-girl"],
+      maika: ["trigger", "seishun", "natsumatope-focus"],
+      nonno: ["want-you", "ship", "ai-kachitore"],
+      hitomi: ["want-you", "seishun", "trigger"],
+      shoko: ["drive-date", "trigger", "love-rocket"],
+      iori: ["kimi-watashi", "wakusei", "zettai-focus"],
+      sana: ["niji-no-moto", "egao-recipe", "want-you"],
+      anna: ["egao-recipe", "ship", "ai-kachitore"]
+    };
+
+    const BADGE_RULES = [
+      { id: "first-step", label: "はじめの一歩", condition: "どれか1本を見る", test: ({ watchedIds }) => watchedIds.length >= 1 },
+      { id: "all-members", label: "12人入口制覇", condition: "12人全員を1本以上見る", test: ({ watchedIds }) => MEMBERS.every((member) => VIDEO_DATA.some((video) => video.memberId === member.id && watchedIds.includes(video.id))) },
+      { id: "live-starter", label: "ライブ浴び始め", condition: "Liveを5本見る", test: ({ watchedIds }) => VIDEO_DATA.filter((video) => watchedIds.includes(video.id) && video.type === "Live").length >= 5 },
+      { id: "vocal-finder", label: "歌声に気づいた人", condition: "歌タグを10本見る", test: ({ watchedIds }) => VIDEO_DATA.filter((video) => watchedIds.includes(video.id) && video.tags.includes("歌")).length >= 10 },
+      { id: "unit-traveler", label: "ユニットを辿る人", condition: "Unitを3本見る", test: ({ watchedIds }) => VIDEO_DATA.filter((video) => watchedIds.includes(video.id) && video.type === "Unit").length >= 3 },
+      { id: "oshi-15", label: "推し15本", condition: "選択メンバーを15本見る", test: ({ watchedIds, memberId }) => memberProgress(memberId, watchedIds).watched >= 15 },
+      { id: "oshi-60", label: "推し60本", condition: "選択メンバーを60本見る", test: ({ watchedIds, memberId }) => memberProgress(memberId, watchedIds).watched >= 60 },
+      { id: "hundred", label: "全体100本", condition: "合計100本見る", test: ({ watchedIds }) => watchedIds.length >= 100 }
+    ];
+
     function memberGradient(member, deg = 90) {
       return `linear-gradient(${deg}deg, ${(member.colorStops || [member.hexColor, member.hexColor]).join(", ")})`;
+    }
+
+    function isMonoMember(memberOrId) {
+      const id = typeof memberOrId === "string" ? memberOrId : memberOrId?.id;
+      return id === "maika";
+    }
+
+    function memberAccent(member, deg = 90) {
+      return memberGradient(member, deg);
+    }
+
+    function memberColor(member) {
+      return member.hexColor;
+    }
+
+    function memberActionStyle(member, variant = "primary") {
+      if (variant === "secondary") {
+        return { borderColor: member.hexColor, background: "#fff", color: member.hexColor };
+      }
+      if (isMonoMember(member)) {
+        return { borderColor: "#2d2429", background: "#2d2429", color: "#fff" };
+      }
+      return { borderColor: member.hexColor, background: memberGradient(member, 135), color: "#fff" };
     }
 
     function iconPath(name) {
@@ -1037,6 +1615,8 @@
         play: "M8 5v14l11-7z",
         check: "M5 13l4 4L19 7",
         filter: "M4 6h16M7 12h10M10 18h4",
+        menu: "M4 6h16M4 12h16M4 18h16",
+        x: "M18 6L6 18M6 6l12 12",
         users: "M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75",
         heart: "M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78",
         external: "M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"
@@ -1158,6 +1738,38 @@
       return { total, watched, percent: total ? Math.round((watched / total) * 100) : 0 };
     }
 
+    function badgeStates(watchedIds, memberId) {
+      return BADGE_RULES.map((badge) => ({
+        ...badge,
+        unlocked: badge.test({ watchedIds, memberId })
+      }));
+    }
+
+    function videoSourceByKey(videoKey) {
+      if (!videoKey || !VIDEO_LIBRARY[videoKey]) return null;
+      const source = VIDEO_LIBRARY[videoKey];
+      return {
+        ...source,
+        libraryKey: videoKey,
+        url: `https://www.youtube.com/watch?v=${source.youtubeId}`
+      };
+    }
+
+    function firstMemberVideo(memberId, videoKey) {
+      return VIDEO_DATA.find((video) => video.memberId === memberId && video.libraryKey === videoKey) || VIDEO_DATA.find((video) => video.libraryKey === videoKey);
+    }
+
+    function BreakableTitle({ title, as: Tag = "span", className = "" }) {
+      const match = title.match(/^(.*?)([（(].*)$/);
+      if (!match) return <Tag className={className}>{title}</Tag>;
+      return (
+        <Tag className={className}>
+          <span className="block">{match[1].trim()}</span>
+          <span className="block">{match[2].trim()}</span>
+        </Tag>
+      );
+    }
+
     function Thumbnail({ video }) {
       const [src, setSrc] = useState(`https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg`);
       const [loaded, setLoaded] = useState(false);
@@ -1192,8 +1804,8 @@
             <button onClick={() => setActivePage("home")} className="flex min-w-0 items-center gap-3 text-left" aria-label="トップへ戻る">
               <span className="grid h-11 w-11 flex-none place-items-center rounded-full bg-primary text-lg font-black text-white shadow-lg shadow-purple-200">=L</span>
               <span className="min-w-0">
-                <span className="block truncate font-rounded text-[15px] font-extrabold leading-tight text-purple-950 md:text-lg">Tinterpan 10人沼ガイド</span>
-                <span className="block truncate text-[10px] font-bold tracking-wide text-gray-500">10人の沼入口</span>
+                <span className="block truncate font-rounded text-[15px] font-extrabold leading-tight text-purple-950 md:text-lg">=LOVE 初期メン12人沼ガイド</span>
+                <span className="block truncate text-[10px] font-bold tracking-wide text-gray-500">12人の沼入口</span>
               </span>
             </button>
 
@@ -1257,13 +1869,13 @@
           <div className="soft-card overflow-hidden p-5 md:p-8">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1.5 text-xs font-black text-purple-900">
               <Icon name="heart" className="h-3.5 w-3.5 text-primary" />
-              10人ぶんの入口、ここに集めました
+              12人ぶんの入口、ここに集めました
             </div>
             <h1 className="font-rounded text-3xl font-extrabold leading-tight text-purple-950 md:text-5xl">
               「ちょっと気になる」を、<br className="hidden sm:block" />今日の推し動画に変える。
             </h1>
             <p className="mt-5 max-w-2xl text-sm font-medium leading-7 text-gray-600 md:text-base">
-              元のTinterpanの熱量をそのままに、=LOVE現メンバー10人の魅力を公式動画への導線でたどる非公式ガイド。まずは5本、気になるメンバー、歌、ダンス、ライブ。好きの入口を軽やかに探せます。
+              元のTinterpanの熱量をそのままに、=LOVE12人の魅力を公式動画への導線でたどる非公式ガイド。まずは5本、気になるメンバー、歌、ダンス、ライブ。好きの入口を軽やかに探せます。
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <button onClick={() => setActivePage("archive")} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-black text-white shadow-lg shadow-purple-200 transition hover:bg-purple-800">
@@ -1551,7 +2163,7 @@
             <Icon name="external" className="h-5 w-5" />
           </a>
           <p className="mx-auto mt-5 max-w-2xl text-xs font-bold leading-6 text-white/45">
-            Tinterpanの熱を出発点に、=LOVE現メンバー10人の入口を集めた非公式ファンページです。
+            Tinterpanの熱を出発点に、=LOVE12人の入口を集めた非公式ファンページです。
           </p>
         </footer>
       );
@@ -1569,7 +2181,7 @@
       };
 
       return (
-        <main className="official-home page-transition relative min-h-screen overflow-hidden px-5 py-12 selection:bg-[#fb4968] selection:text-white md:px-10 md:py-16">
+        <main className="official-home page-transition relative min-h-screen overflow-hidden px-5 pb-12 pt-28 selection:bg-[#fb4968] selection:text-white md:px-10 md:pb-16 md:pt-32">
           <section className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl flex-col justify-center gap-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
@@ -1584,7 +2196,30 @@
                 ))}
               </div>
             </div>
-            <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="enterprise-section px-5 py-5">
+              <div className="mb-4 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <p className="fluid-label font-bold tracking-[0.18em] text-[#c86b88]">Fan Tools</p>
+                  <p className="mt-1 fluid-caption font-bold text-[#6f5b65]">関係性・年表・初見入口・称号で、12人の楽しみ方を立体化</p>
+                </div>
+                <p className="status-pill fluid-label font-bold">全66通りのケミ対応</p>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {[
+                  ["relations", "関係性マップ", "メンバーを1人選んで11通りのケミを辿る"],
+                  ["timeline", "推し年表", "活動史・楽曲史・メンバー史を年ごとに辿る"],
+                  ["firsttime", "親子・初見ガイド", "12人を30秒紹介と最初の1本で学ぶ"],
+                  ["badges", "称号", "視聴メモから今の沼落ち度を見る"]
+                ].map(([nextView, label, copy]) => (
+                  <button key={nextView} onClick={() => { runUiTransition(() => setView(nextView)); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="service-card">
+                    <span className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">{label}</span>
+                    <span className="mt-4 block fluid-caption font-bold leading-7 text-[#2d2429]">{copy}</span>
+                    <span className="mt-5 inline-flex self-start border-b border-[#f9769f] pb-1 fluid-label font-bold tracking-[0.12em] text-[#8f6f7c]">OPEN</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {MEMBERS.map((item, index) => {
                 const progress = memberProgress(item.id, watchedIds);
                 return (
@@ -1596,7 +2231,7 @@
                     data-index={String(index + 1).padStart(2, "0")}
                   >
                     <span className="mb-5 flex items-center justify-between gap-4">
-                      <span className="block h-1 w-12 rounded-full transition-all group-hover:w-20" style={{ background: memberGradient(item) }}></span>
+                      <span className="block h-1 w-12 rounded-full transition-all group-hover:w-20" style={{ background: memberAccent(item) }}></span>
                       <span className="rounded-full bg-white/80 px-2.5 py-1 fluid-label font-bold text-[#8f6f7c] shadow-[0_8px_22px_rgba(249,118,159,0.10)]">{progress.watched}/{progress.total}</span>
                     </span>
                     <FitTitle text={item.name.replace(" ", "")} as="span" max={42} min={18} className="font-serif font-bold text-[#2d2429]" />
@@ -1604,9 +2239,10 @@
                     <span className="mt-5 flex flex-wrap items-center gap-2">
                       <span className="soft-chip fluid-label font-bold">{item.colorName}</span>
                       <span className="soft-chip fluid-label font-bold">{item.place}</span>
+                      <span className="status-pill fluid-label font-bold">{item.status || "現メンバー"}</span>
                     </span>
                     <span className="mt-6 block h-1.5 overflow-hidden rounded-full bg-[#f8d7e2]">
-                      <span className="block h-full rounded-full transition-all duration-700" style={{ width: `${progress.percent}%`, background: memberGradient(item) }}></span>
+                      <span className="block h-full rounded-full transition-all duration-700" style={{ width: `${progress.percent}%`, background: memberAccent(item) }}></span>
                     </span>
                   </button>
                 );
@@ -1626,7 +2262,7 @@
             <div className="mt-12 space-y-10 text-sm font-normal leading-8 text-zinc-600 md:text-base md:leading-9">
               <section>
                 <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>このサイトについて</h2>
-                <p className="readable-ja">本ページは、=LOVEを応援する非公式ファンページです。初めての方にも長く好きな方にも、10人それぞれの魅力へ自然にたどり着ける入口を目指しています。</p>
+                <p className="readable-ja">本ページは、=LOVEを応援する非公式ファンページです。初めての方にも長く好きな方にも、12人それぞれの魅力へ自然にたどり着ける入口を目指しています。</p>
               </section>
               <section>
                 <h2 className="mb-3 border-l-4 pl-4 font-serif text-2xl font-bold text-zinc-900" style={{ borderColor: "#f9769f" }}>視聴メモについて</h2>
@@ -1655,39 +2291,136 @@
 
     function LegacyTopNav({ member, setMember, page, setPage, view, setView, resetFilters }) {
       const current = MEMBER_BY_ID[member];
+      const [menuOpen, setMenuOpen] = useState(false);
+      const viewLabel = {
+        home: "Top",
+        relations: "Relations",
+        timeline: "Timeline",
+        firsttime: "First Guide",
+        badges: "Badges",
+        privacy: "Policy"
+      };
+      const currentLocation = view === "member"
+        ? `${current.name.replace(" ", "")} / ${page === "about" ? "Profile" : "Archive"}`
+        : viewLabel[view] || "Guide";
+
+      useEffect(() => {
+        if (!menuOpen) return undefined;
+        const handleKeyDown = (event) => {
+          if (event.key === "Escape") setMenuOpen(false);
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+      }, [menuOpen]);
+
+      const closeAndScroll = () => {
+        setMenuOpen(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      const goHome = () => {
+        runUiTransition(() => setView("home"));
+        closeAndScroll();
+      };
+
+      const goMemberPage = (nextPage) => {
+        runUiTransition(() => {
+          setView("member");
+          setPage(nextPage);
+          if (nextPage === "works") resetFilters();
+        });
+        closeAndScroll();
+      };
+
+      const goTool = (nextView) => {
+        runUiTransition(() => setView(nextView));
+        closeAndScroll();
+      };
+
       const chooseMember = (id) => {
+        const nextPage = view === "member" ? page : "works";
         runUiTransition(() => {
           setMember(id);
           setView("member");
-          if (page === "works") resetFilters();
+          setPage(nextPage);
+          if (nextPage === "works") resetFilters();
         });
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        closeAndScroll();
       };
+
       return (
-        <nav className="glass-nav fixed top-0 z-[1000] flex w-full items-center justify-between gap-6 px-5 py-5 md:px-8">
-          <div className="scrollbar-hide flex min-w-0 items-center gap-7 overflow-x-auto">
-            {MEMBERS.map((item) => {
-              const active = member === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => chooseMember(item.id)}
-                  className={`shrink-0 font-display text-2xl font-black italic tracking-tight transition-all ${active ? "scale-110" : "opacity-35 hover:opacity-65"}`}
-                  style={{ color: active ? item.hexColor : undefined }}
-                  title={item.name}
-                >
-                  {item.short.toUpperCase()}.
-                </button>
-              );
-            })}
-          </div>
-          <div className="flex shrink-0 gap-4 text-[11px] font-black uppercase tracking-[0.24em] text-[#2d2429] md:gap-8 md:tracking-[0.28em]">
-            <button onClick={() => { runUiTransition(() => setView("home")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className={view === "home" ? "" : "opacity-30 hover:opacity-60"} style={{ color: view === "home" ? "#f9769f" : undefined }}>Top</button>
-            <button onClick={() => { runUiTransition(() => { setView("member"); setPage("about"); }); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ color: view === "member" && page === "about" ? current.hexColor : undefined }} className={view === "member" && page === "about" ? "" : "opacity-30 hover:opacity-60"}>Profile</button>
-            <button onClick={() => { runUiTransition(() => { setView("member"); setPage("works"); }); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ color: view === "member" && page === "works" ? current.hexColor : undefined }} className={view === "member" && page === "works" ? "" : "opacity-30 hover:opacity-60"}>Archive</button>
-            <button onClick={() => { runUiTransition(() => setView("privacy")); window.scrollTo({ top: 0, behavior: "smooth" }); }} className={view === "privacy" ? "" : "opacity-30 hover:opacity-60"} style={{ color: view === "privacy" ? "#f9769f" : undefined }}>Policy</button>
-          </div>
-        </nav>
+        <>
+          <nav className="glass-nav fixed top-0 z-[1000] flex w-full items-center justify-between gap-4 px-5 py-4 md:px-8">
+            <button onClick={goHome} className="min-w-0 text-left" aria-label="トップへ戻る">
+            <span className="block truncate font-serif text-xl font-bold text-[#2d2429] md:text-2xl">=LOVE</span>
+              <span className="block truncate fluid-label font-bold tracking-[0.16em] text-[#8f6f7c]">初期メン12人沼ガイド</span>
+            </button>
+            <div className="flex min-w-0 items-center gap-3">
+              <span className="hidden max-w-[42vw] truncate rounded-full bg-white/80 px-3 py-1 fluid-label font-bold tracking-[0.12em] text-[#8f6f7c] shadow-[0_8px_22px_rgba(249,118,159,0.10)] sm:block">{currentLocation}</span>
+              <button
+                type="button"
+                onClick={() => setMenuOpen((open) => !open)}
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#2d2429] text-white shadow-[0_16px_36px_rgba(45,36,41,0.18)] transition hover:-translate-y-0.5 hover:bg-[#f9769f]"
+                aria-label={menuOpen ? "ナビゲーションを閉じる" : "ナビゲーションを開く"}
+                aria-expanded={menuOpen}
+                aria-controls="global-menu"
+              >
+                <Icon name={menuOpen ? "x" : "menu"} className="h-5 w-5" />
+              </button>
+            </div>
+          </nav>
+
+          {menuOpen && (
+            <div className="fixed inset-0 z-[999] bg-[#2d2429]/35 px-4 pt-24 backdrop-blur-sm md:px-8" onClick={() => setMenuOpen(false)}>
+              <div id="global-menu" className="mx-auto max-h-[calc(100vh-7rem)] max-w-6xl overflow-y-auto rounded-[18px] border border-[#f6dce5] bg-white/95 p-5 shadow-[0_34px_95px_rgba(45,36,41,0.22)] md:p-7" onClick={(event) => event.stopPropagation()}>
+                <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <p className="fluid-label font-bold tracking-[0.18em] text-[#c86b88]">Navigation</p>
+                    <p className="mt-1 fluid-caption font-bold text-[#6f5b65]">{currentLocation}</p>
+                  </div>
+                  <button onClick={() => setMenuOpen(false)} className="rounded-full border border-[#f8d7e2] bg-white px-4 py-2 fluid-label font-bold tracking-[0.12em] text-[#2d2429]">閉じる</button>
+                </div>
+                <div className="grid gap-5 lg:grid-cols-[0.86fr_1.14fr]">
+                  <section className="rounded-[14px] border border-[#f8d7e2] bg-[#fffafb] p-4">
+                    <p className="mb-3 fluid-label font-bold tracking-[0.16em] text-[#c86b88]">Pages</p>
+                    <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-1">
+                      {[
+                        ["Top", goHome, view === "home"],
+                        ["Profile", () => goMemberPage("about"), view === "member" && page === "about"],
+                        ["Archive", () => goMemberPage("works"), view === "member" && page === "works"],
+                        ["Relations", () => goTool("relations"), view === "relations"],
+                        ["Timeline", () => goTool("timeline"), view === "timeline"],
+                        ["First Guide", () => goTool("firsttime"), view === "firsttime"],
+                        ["Badges", () => goTool("badges"), view === "badges"],
+                        ["Policy", () => goTool("privacy"), view === "privacy"]
+                      ].map(([label, action, active]) => (
+                        <button key={label} onClick={action} className={`flex items-center justify-between rounded-[10px] px-4 py-3 text-left text-sm font-bold tracking-[0.08em] transition ${active ? "bg-[#2d2429] text-white" : "bg-white text-[#2d2429] hover:bg-[#ffeef5]"}`}>
+                          <span>{label}</span>
+                          {active && <span className="text-[10px] tracking-[0.14em] text-white/65">NOW</span>}
+                        </button>
+                      ))}
+                    </div>
+                  </section>
+                  <section className="rounded-[14px] border border-[#f8d7e2] bg-[#fffafb] p-4">
+                    <p className="mb-3 fluid-label font-bold tracking-[0.16em] text-[#c86b88]">Members</p>
+                    <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
+                      {MEMBERS.map((item) => {
+                        const active = item.id === member;
+                        return (
+                          <button key={item.id} onClick={() => chooseMember(item.id)} className={`group rounded-[10px] border px-4 py-3 text-left transition hover:-translate-y-0.5 ${active ? "border-[#2d2429] bg-white shadow-[0_12px_28px_rgba(45,36,41,0.10)]" : "border-[#f8d7e2] bg-white/78 hover:bg-white"}`}>
+                            <span className="mb-2 block h-1 w-12 rounded-full transition-all group-hover:w-20" style={{ background: memberAccent(item) }}></span>
+                            <span className="block truncate font-serif text-xl font-bold text-[#2d2429]">{item.name.replace(" ", "")}</span>
+                            <span className="mt-1 block truncate fluid-label font-bold tracking-[0.08em] text-[#8f6f7c]">{item.en}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       );
     }
 
@@ -1695,10 +2428,10 @@
       if (page !== "works") return null;
       return (
         <div className="fixed bottom-12 left-12 z-[50] hidden animate-in md:block">
-          <div className="rounded-[8px] border-l-8 bg-white/95 p-6 shadow-[0_18px_50px_rgba(45,36,41,0.14)] backdrop-blur-md" style={{ borderColor: current.hexColor }}>
-            <div className="mb-2 text-[10px] font-bold tracking-[0.18em]" style={{ color: current.hexColor }}>{current.name} 視聴メモ</div>
+          <div className="rounded-[8px] border-l-8 bg-white/95 p-6 shadow-[0_18px_50px_rgba(45,36,41,0.14)] backdrop-blur-md" style={{ borderColor: memberColor(current) }}>
+            <div className="mb-2 text-[10px] font-bold tracking-[0.18em]" style={{ color: memberColor(current) }}>{current.name} 視聴メモ</div>
             <div className="h-1.5 w-52 overflow-hidden rounded-full bg-zinc-100">
-              <div className="h-full transition-all duration-1000" style={{ width: `${progress.percent}%`, background: memberGradient(current) }}></div>
+              <div className="h-full transition-all duration-1000" style={{ width: `${progress.percent}%`, background: memberAccent(current) }}></div>
             </div>
             <div className="mt-2 text-right text-sm font-bold text-[#2d2429]">{progress.percent}% 視聴済み</div>
           </div>
@@ -1706,19 +2439,44 @@
       );
     }
 
-    function MemberHero({ current, progress, memberVideos }) {
+    function BadgePanel({ badges }) {
+      const unlockedCount = badges.filter((badge) => badge.unlocked).length;
+      return (
+        <section className="mx-auto mb-16 max-w-6xl">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <p className="fluid-label font-bold tracking-[0.18em] text-[#c86b88]">沼落ち称号バッジ</p>
+            <p className="rounded-full bg-white/80 px-3 py-1 fluid-label font-bold text-[#8f6f7c] shadow-[0_8px_24px_rgba(249,118,159,0.10)]">{unlockedCount}/{badges.length} 達成</p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {badges.map((badge) => (
+              <div key={badge.id} className={`badge-card p-4 ${badge.unlocked ? "" : "is-locked"}`}>
+                <p className="fluid-label font-bold tracking-[0.14em]" style={{ color: badge.unlocked ? "#c86b88" : "#9ca3af" }}>{badge.unlocked ? "UNLOCKED" : "LOCKED"}</p>
+                <p className="mt-2 font-serif text-lg font-bold text-[#2d2429]">{badge.label}</p>
+                <p className="mt-2 text-xs font-bold leading-6 text-[#8f6f7c]">{badge.condition}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    function MemberHero({ current, progress, memberVideos, badges }) {
+      const unlockedCount = badges.filter((badge) => badge.unlocked).length;
       return (
         <header className="member-hero mx-auto mb-16 grid max-w-6xl gap-10 px-6 py-8 md:mb-24 md:grid-cols-[1.35fr_0.95fr] md:px-10 md:py-10" style={{ "--hero-soft": current.softColor }}>
           <div className="min-w-0">
             <span className="precision-line inline-flex items-center gap-3 fluid-label font-bold tracking-[0.18em] text-[#c86b88]">
-              <span className="block h-1 w-10 rounded-full" style={{ background: memberGradient(current) }}></span>
+              <span className="block h-1 w-10 rounded-full" style={{ background: memberAccent(current) }}></span>
               おすすめ動画
             </span>
             <FitTitle text={current.name.replace(" ", "")} as="h1" max={86} min={38} className="mt-7 font-serif font-bold text-[#2d2429]" />
             <p className="mt-3 fluid-caption font-bold text-[#8f6f7c]">{current.en}</p>
             <p className="readable-ja mt-8 max-w-2xl fluid-copy font-normal leading-9 text-[#5f4d56]">{current.catchcopy}</p>
             <div className="mt-7 flex flex-wrap gap-2">
+              <span className="status-pill fluid-label font-bold">{current.status || "現メンバー"}</span>
+              <span className="status-pill fluid-label font-bold"></span>
               {current.notes.map((note) => <span key={note} className="soft-chip fluid-label font-bold">#{note}</span>)}
+              <span className="soft-chip fluid-label font-bold">称号 {unlockedCount}/{badges.length}</span>
             </div>
           </div>
 
@@ -1730,13 +2488,13 @@
             </div>
             <div className="stat-tile p-4">
               <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">WATCHED</p>
-              <p className="mt-2 font-display text-4xl font-black italic leading-none" style={{ color: current.hexColor }}>{progress.percent}%</p>
+              <p className="mt-2 font-display text-4xl font-black italic leading-none" style={{ color: memberColor(current) }}>{progress.percent}%</p>
               <p className="mt-2 text-xs font-bold text-[#8f6f7c]">{progress.watched}本 視聴済み</p>
             </div>
             <div className="stat-tile p-4">
               <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">COLOR</p>
               <p className="mt-3 truncate text-sm font-bold text-[#2d2429]">{current.colorName}</p>
-              <span className="mt-3 block h-1.5 rounded-full" style={{ background: memberGradient(current) }}></span>
+              <span className="mt-3 block h-1.5 rounded-full" style={{ background: memberAccent(current) }}></span>
             </div>
             <div className="stat-tile p-4">
               <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">PROFILE</p>
@@ -1808,20 +2566,20 @@
                 <div className="relative mb-9">
                   <a href={video.url} target="_blank" rel="noreferrer" className="block" aria-label={`${video.title}をYouTubeで観る`}>
                     <Thumbnail video={video} />
-                    <span className="play-badge" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current, 135) }}>
+                    <span className="play-badge" style={{ background: memberAccent(current, 135) }}>
                       <Icon name="play" className="h-5 w-5 translate-x-0.5" />
                     </span>
                   </a>
-                  <div className="absolute -left-3 -top-3 rounded-[8px] px-4 py-2 text-[10px] font-black uppercase tracking-widest text-white shadow-lg" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current) }}>{video.type}</div>
+                  <div className="absolute -left-3 -top-3 rounded-[8px] px-4 py-2 text-[10px] font-black uppercase tracking-widest text-white shadow-lg" style={{ background: memberAccent(current) }}>{video.type}</div>
                   {watched && (
-                    <div className="absolute right-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-bold tracking-[0.12em] shadow-[0_10px_26px_rgba(45,36,41,0.12)]" style={{ color: current.hexColor }}>
+                    <div className="absolute right-3 top-3 rounded-full bg-white/92 px-3 py-1 text-[10px] font-bold tracking-[0.12em] shadow-[0_10px_26px_rgba(45,36,41,0.12)]" style={{ color: memberColor(current) }}>
                       視聴済み
                     </div>
                   )}
                   <button
                     onClick={() => toggleWatched(video.id)}
                     className={`absolute -bottom-5 -right-5 flex h-14 w-14 items-center justify-center rounded-full text-xl shadow-2xl ring-8 ring-white transition-all hover:scale-105 ${watched ? "text-white" : "bg-white text-zinc-300"}`}
-                    style={{ background: watched ? (current.id === "maika" ? "#2d2429" : memberGradient(current, 135)) : undefined }}
+                    style={{ background: watched ? memberAccent(current, 135) : undefined }}
                     title={watched ? "視聴済みを解除" : "視聴済みにする"}
                     aria-label={watched ? "視聴済みを解除" : "視聴済みにする"}
                   >
@@ -1833,12 +2591,12 @@
                     <span>{video.watchPoint}</span>
                     <span className="text-zinc-300">{video.date}</span>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold leading-snug text-[#2d2429] transition-colors md:text-3xl group-hover:text-[#c86b88]">{video.title}</h3>
+                  <BreakableTitle title={video.title} as="h3" className="font-serif text-2xl font-bold leading-snug text-[#2d2429] transition-colors md:text-3xl group-hover:text-[#c86b88]" />
                   <p className="line-clamp-3 text-[15px] font-normal leading-[2.1] text-zinc-500">{video.comment}</p>
                   <div className="flex flex-wrap gap-2 fluid-label font-bold tracking-[0.08em]">
                     {video.tags.slice(0, 3).map((tag) => <span key={tag} className="soft-chip">#{tag}</span>)}
                   </div>
-                  <a href={video.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-4 py-2 fluid-label font-bold tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(45,36,41,0.12)] transition hover:-translate-y-0.5 hover:opacity-90" style={{ background: current.id === "maika" ? "#2d2429" : memberGradient(current, 135), color: "#fff" }}>
+                  <a href={video.url} target="_blank" rel="noreferrer" className={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 fluid-label font-bold tracking-[0.14em] text-white shadow-[0_12px_28px_rgba(45,36,41,0.12)] transition hover:-translate-y-0.5 hover:opacity-90 ${isMonoMember(current) ? "mono-action-primary" : ""}`} style={memberActionStyle(current)} data-member-action={current.id}>
                     <Icon name="play" className="h-3.5 w-3.5" />
                     YouTubeで観る
                   </a>
@@ -1854,14 +2612,15 @@
       return (
         <div className="mx-auto max-w-6xl animate-in">
           <div className="section-card relative flex flex-col gap-16 overflow-hidden p-10 md:flex-row md:p-20">
-            <div className="absolute inset-x-0 top-0 h-1.5" style={{ background: memberGradient(current) }}></div>
+            <div className="absolute inset-x-0 top-0 h-1.5" style={{ background: memberAccent(current) }}></div>
             <div className="relative z-10 space-y-12 md:w-5/12">
               <div>
                 <p className="mb-4 text-[10px] font-bold tracking-[0.24em] text-[#c7a5b1]">プロフィール</p>
-                <FitTitle text={current.name.replace(" ", "")} as="h2" max={64} min={30} className="font-serif font-bold" style={{ color: current.hexColor }} />
+                <FitTitle text={current.name.replace(" ", "")} as="h2" max={64} min={30} className="font-serif font-bold" style={{ color: memberColor(current) }} />
                 <p className="mt-3 text-sm font-bold text-[#8f6f7c]">{current.en}</p>
               </div>
               <dl className="space-y-5 text-sm">
+                <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">ステータス</dt><dd className="text-right font-bold">{current.status || "現メンバー"} / </dd></div>
                 <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">メンバーカラー</dt><dd className="text-right font-bold">{current.colorName}</dd></div>
                 <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">誕生日</dt><dd className="text-right font-bold">{current.birth}</dd></div>
                 <div className="flex justify-between gap-4 border-b border-zinc-100 pb-4"><dt className="font-bold tracking-[0.12em] text-gold">血液型 / 星座</dt><dd className="text-right font-bold">{current.blood} / {current.sign}</dd></div>
@@ -1888,7 +2647,7 @@
                 </dl>
               </div>
               <div className="space-y-3">
-                <p className="font-serif text-xl font-bold" style={{ color: current.hexColor }}>好きポイント</p>
+                <p className="font-serif text-xl font-bold" style={{ color: memberColor(current) }}>好きポイント</p>
                 <div className="flex flex-wrap gap-2">
                   {current.notes.map((note) => (
                     <span key={note} className="soft-chip fluid-label font-bold">#{note}</span>
@@ -1896,10 +2655,10 @@
                 </div>
               </div>
               <div className="space-y-3 border-t border-zinc-100 pt-8">
-                <p className="font-serif text-xl font-bold" style={{ color: current.hexColor }}>公式SNS・公開コンテンツ</p>
+                <p className="font-serif text-xl font-bold" style={{ color: memberColor(current) }}>公式SNS・公開コンテンツ</p>
                 <div className="grid gap-3">
                   {current.socials.map((social) => (
-                    <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="rounded-[8px] border-2 px-6 py-3 text-center text-[11px] font-bold tracking-[0.16em] transition-all hover:text-white" style={{ borderColor: current.hexColor, color: current.hexColor }} onMouseEnter={(event) => { event.currentTarget.style.background = current.hexColor; event.currentTarget.style.color = "#fff"; }} onMouseLeave={(event) => { event.currentTarget.style.background = "transparent"; event.currentTarget.style.color = current.hexColor; }}>
+                    <a key={social.label} href={social.url} target="_blank" rel="noreferrer" className="rounded-[8px] border-2 px-6 py-3 text-center text-[11px] font-bold tracking-[0.16em] transition-all hover:text-white" style={{ borderColor: current.hexColor, color: current.hexColor }} onMouseEnter={(event) => { event.currentTarget.style.background = current.hexColor; event.currentTarget.style.color = "#fff"; }} onMouseLeave={(event) => { event.currentTarget.style.background = "transparent"; event.currentTarget.style.color = current.hexColor; event.currentTarget.style.borderColor = current.hexColor; }}>
                       {social.label} →
                     </a>
                   ))}
@@ -1907,7 +2666,7 @@
               </div>
             </div>
             <div className="relative z-10 md:w-7/12">
-              <p className="readable-ja mb-10 rounded-r-[8px] border-l-8 bg-[#fffafb] px-7 py-5 font-serif text-[clamp(1.35rem,1rem+1.15vw,1.9rem)] font-bold leading-relaxed text-[#2d2429]" style={{ borderColor: current.hexColor }}>
+              <p className="readable-ja mb-10 rounded-r-[8px] border-l-8 bg-[#fffafb] px-7 py-5 font-serif text-[clamp(1.35rem,1rem+1.15vw,1.9rem)] font-bold leading-relaxed text-[#2d2429]" style={{ borderColor: memberColor(current) }}>
                 {current.catchcopy}
               </p>
               <p className="readable-ja fluid-copy font-normal leading-[2.25] text-zinc-600">{current.profile}</p>
@@ -1915,7 +2674,7 @@
                 <p className="mb-1 fluid-label font-bold tracking-[0.16em] text-[#c86b88]">まず観たい3本</p>
                 {videos.slice(0, 3).map((video) => (
                   <a key={video.id} href={video.url} target="_blank" rel="noreferrer" className="flex items-center justify-between gap-4 border-b border-zinc-50 pb-3 text-sm transition-opacity hover:opacity-60">
-                    <span className="min-w-0 truncate font-bold text-[#2d2429]">{video.title}</span>
+                    <BreakableTitle title={video.title} className="min-w-0 font-bold leading-snug text-[#2d2429]" />
                     <span className="shrink-0 text-[10px] font-black uppercase tracking-widest text-zinc-300">{video.type}</span>
                   </a>
                 ))}
@@ -1923,6 +2682,446 @@
             </div>
           </div>
         </div>
+      );
+    }
+
+    function ToolHeader({ eyebrow, title, copy }) {
+      return (
+        <header className="mx-auto mb-12 max-w-5xl text-center">
+          <p className="mb-4 fluid-label font-bold tracking-[0.24em] text-[#c86b88]">{eyebrow}</p>
+          <FitTitle text={title} as="h1" max={72} min={32} className="mx-auto font-serif font-bold text-[#2d2429]" />
+          <p className="readable-ja mx-auto mt-5 max-w-2xl fluid-copy font-normal leading-8 text-[#6f5b65]">{copy}</p>
+        </header>
+      );
+    }
+
+    function RelationsView({ member, setMember, setPage, setView, resetFilters }) {
+      const [baseMemberId, setBaseMemberId] = useState(member || MEMBERS[0].id);
+
+      useEffect(() => {
+        if (member && MEMBER_BY_ID[member]) setBaseMemberId(member);
+      }, [member]);
+
+      const baseMember = MEMBER_BY_ID[baseMemberId] || MEMBERS[0];
+      const basePairs = CHEMISTRY_PAIRS
+        .filter((pair) => pair.members.includes(baseMember.id))
+        .sort((a, b) => {
+          const aOther = a.members.find((id) => id !== baseMember.id);
+          const bOther = b.members.find((id) => id !== baseMember.id);
+          return MEMBERS.findIndex((item) => item.id === aOther) - MEMBERS.findIndex((item) => item.id === bOther);
+        });
+
+      const openProfile = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("about");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      const openArchive = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("works");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      const renderPairCard = (pair, index) => {
+        const otherId = pair.members.find((id) => id !== baseMember.id);
+        const other = MEMBER_BY_ID[otherId];
+        const relationVideos = pair.videoKeys.map((videoKey) => videoSourceByKey(videoKey)).filter(Boolean).slice(0, 3);
+        return (
+          <article
+            key={pair.id}
+            data-chemistry-pair={pair.id}
+            className="chemistry-list-card p-5 md:p-6"
+            style={{
+              "--stagger": `${index * 28}ms`,
+              "--left-accent": memberColor(baseMember),
+              "--right-accent": memberColor(other)
+            }}
+          >
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="min-w-0">
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">{baseMember.short} × {other.short}</p>
+                <h2 className="mt-2 font-serif text-[clamp(1.45rem,1.05rem+0.9vw,2.15rem)] font-bold leading-tight text-[#2d2429]">{pair.label}</h2>
+              </div>
+              <span className="rounded-full bg-[#2d2429] px-3 py-1 fluid-label font-bold tracking-[0.12em] text-white">{pair.type}</span>
+            </div>
+            <p className="readable-ja mt-4 fluid-caption font-normal leading-7 text-[#6f5b65]">{pair.description}</p>
+            <div className="mt-5 rounded-[10px] border border-[#f8d7e2] bg-white/72 p-4">
+              <p className="fluid-label font-bold tracking-[0.14em] text-[#c86b88]">由来</p>
+              <p className="readable-ja mt-2 text-xs font-bold leading-6 text-[#6f5b65]">{pair.nameOrigin}</p>
+              {pair.nameSource !== "由来メモ" && (
+                <p className="mt-2 text-[10px] font-bold tracking-[0.12em] text-[#8f6f7c]">確認元: {pair.nameSource}</p>
+              )}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {pair.tags.map((tag) => <span key={tag} className="soft-chip fluid-label font-bold">#{tag}</span>)}
+            </div>
+            <div className="mt-6 grid gap-2">
+              <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">この関係性で見る場面</p>
+              {relationVideos.map((video) => (
+                <a key={video.libraryKey} href={video.url} target="_blank" rel="noreferrer" className="flex items-center justify-between gap-3 rounded-[8px] border border-[#f8d7e2] bg-white/78 px-4 py-3 text-sm font-bold text-[#2d2429] transition hover:-translate-y-0.5 hover:bg-white">
+                  <BreakableTitle title={video.title} className="min-w-0" />
+                  <span className="shrink-0 text-[10px] tracking-[0.14em] text-[#c86b88]">{video.type}</span>
+                </a>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => openProfile(other.id)}
+                className="rounded-full border-2 bg-white px-4 py-2 fluid-label font-bold tracking-[0.12em] transition hover:-translate-y-0.5"
+                style={{ borderColor: other.hexColor, color: other.hexColor }}
+              >
+                {other.short} Profile
+              </button>
+              <button
+                type="button"
+                onClick={() => openArchive(other.id)}
+                className={`rounded-full border-2 px-4 py-2 fluid-label font-bold tracking-[0.12em] transition hover:-translate-y-0.5 ${isMonoMember(other) ? "mono-action-primary" : ""}`}
+                style={memberActionStyle(other)}
+                data-member-action={other.id}
+              >
+                {other.short} Archive
+              </button>
+            </div>
+          </article>
+        );
+      };
+
+      return (
+        <main className="page-transition mx-auto max-w-[100vw] overflow-x-hidden px-6 pb-10 pt-40 md:max-w-7xl md:pt-44">
+          <ToolHeader eyebrow="Fan Tools / Relations" title="基軸メンバーで見る関係性" copy="メンバーを1人選ぶと、その人を起点にした11通りの関係性が並びます。表ではなく、相手ごとの温度と見どころで辿るケミ一覧です。" />
+          <section className="mb-8 grid gap-4 md:grid-cols-3">
+            {RELATION_GROUPS.slice(0, 3).map((group, index) => (
+              <div key={group.id} className="enterprise-section page-card p-5" style={{ "--stagger": `${index * 35}ms` }}>
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">{group.type}</p>
+                <h2 className="mt-2 font-serif text-2xl font-bold text-[#2d2429]">{group.label}</h2>
+                <p className="readable-ja mt-2 text-xs font-bold leading-6 text-[#8f6f7c]">{group.description}</p>
+              </div>
+            ))}
+          </section>
+          <section className="chemistry-shell p-4 md:p-6">
+            <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">基軸メンバー</p>
+                <p className="mt-1 fluid-caption font-bold text-[#6f5b65]">{baseMember.name.replace(" ", "")}から見る11通り</p>
+              </div>
+              <p className="status-pill fluid-label font-bold">66 PAIRS / 12 MEMBERS</p>
+            </div>
+            <div className="relation-member-picker">
+              {MEMBERS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setBaseMemberId(item.id)}
+                  className={`relation-member-button ${baseMember.id === item.id ? "is-selected" : ""}`}
+                  style={{ "--member-accent": memberColor(item) }}
+                  data-relation-base={item.id}
+                >
+                  <span className="block truncate font-serif text-xl font-bold text-[#2d2429]">{item.name.replace(" ", "")}</span>
+                  <span className="mt-1 block truncate fluid-label font-bold tracking-[0.08em] text-[#8f6f7c]">{item.en}</span>
+                </button>
+              ))}
+            </div>
+          </section>
+          <section className="mt-8 grid gap-5 lg:grid-cols-2">
+            {basePairs.map((pair, index) => renderPairCard(pair, index))}
+          </section>
+        </main>
+      );
+    }
+
+    function TimelineView({ setMember, setPage, setView, resetFilters }) {
+      const [timelineMember, setTimelineMember] = useState("all");
+      const [timelineYear, setTimelineYear] = useState("all");
+      const [timelineType, setTimelineType] = useState("all");
+      const years = ["all", ...Array.from(new Set(TIMELINE_EVENTS.map((event) => event.year))).sort()];
+      const types = ["all", ...Array.from(new Set(TIMELINE_EVENTS.map((event) => event.type))).sort()];
+      const events = TIMELINE_EVENTS.filter((event) => {
+        if (timelineMember !== "all" && !event.memberIds.includes(timelineMember)) return false;
+        if (timelineYear !== "all" && event.year !== timelineYear) return false;
+        if (timelineType !== "all" && event.type !== timelineType) return false;
+        return true;
+      });
+      const eventsByYear = events.reduce((groups, event) => {
+        groups[event.year] = groups[event.year] || [];
+        groups[event.year].push(event);
+        return groups;
+      }, {});
+      const groupedYears = Object.keys(eventsByYear).sort();
+      const openMember = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("about");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      return (
+        <main className="page-transition mx-auto max-w-6xl px-6 pb-10 pt-40 md:pt-44">
+          <ToolHeader eyebrow="Fan Tools / Timeline" title="濃い推し年表" copy="活動史・楽曲史・メンバー史を同じ粒度で整理し、初期12人の始まりから今につながる導線を辿ります。" />
+          <section className="filter-panel mb-10 grid gap-4 px-4 py-5 md:grid-cols-3">
+            <label>
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">メンバー</span>
+              <select value={timelineMember} onChange={(event) => setTimelineMember(event.target.value)} className="filter-control h-10 w-full text-sm font-bold">
+                <option value="all">すべて</option>
+                {MEMBERS.map((item) => <option key={item.id} value={item.id}>{item.name.replace(" ", "")}</option>)}
+              </select>
+            </label>
+            <label>
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">年</span>
+              <select value={timelineYear} onChange={(event) => setTimelineYear(event.target.value)} className="filter-control h-10 w-full text-sm font-bold">
+                {years.map((year) => <option key={year} value={year}>{year === "all" ? "すべて" : year}</option>)}
+              </select>
+            </label>
+            <label>
+              <span className="mb-1 block text-[10px] font-bold tracking-[0.18em] text-[#c86b88]">種類</span>
+              <select value={timelineType} onChange={(event) => setTimelineType(event.target.value)} className="filter-control h-10 w-full text-sm font-bold">
+                {types.map((type) => <option key={type} value={type}>{type === "all" ? "すべて" : type}</option>)}
+              </select>
+            </label>
+          </section>
+          <section className="timeline-board space-y-12 pl-6 md:pl-10">
+            {groupedYears.map((year) => (
+              <div key={year} className="relative">
+                <div className="timeline-year mb-5">
+                  <span className="font-display text-3xl font-black italic leading-none text-[#f9769f]">{year}</span>
+                  <span className="fluid-label font-bold tracking-[0.14em] text-[#8f6f7c]">{eventsByYear[year].length} EVENTS</span>
+                </div>
+                <div className="grid gap-4">
+                  {eventsByYear[year].map((event, index) => {
+                    const video = videoSourceByKey(event.videoKey);
+                    return (
+                      <article key={`${event.year}-${event.title}`} className="fan-tool-card page-card p-6 md:grid md:grid-cols-[9rem_1fr] md:gap-7 md:p-7" style={{ "--stagger": `${index * 35}ms` }}>
+                        <div className="flex flex-wrap items-center gap-2 md:block">
+                          <p className="status-pill fluid-label font-bold">{event.type}</p>
+                          <p className="mt-0 fluid-label font-bold tracking-[0.14em] text-[#8f6f7c] md:mt-4">{event.dateLabel || event.year}</p>
+                        </div>
+                        <div className="mt-5 md:mt-0">
+                          <h2 className="font-serif text-2xl font-bold text-[#2d2429]">{event.title}</h2>
+                          <p className="readable-ja mt-3 fluid-caption font-normal leading-8 text-[#6f5b65]">{event.description}</p>
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {event.memberIds.slice(0, 8).map((memberId) => {
+                              const item = MEMBER_BY_ID[memberId];
+                              return <button key={memberId} onClick={() => openMember(memberId)} className="soft-chip fluid-label font-bold" style={{ color: item.hexColor }}>{item.name.replace(" ", "")}</button>;
+                            })}
+                            {event.memberIds.length > 8 && <span className="soft-chip fluid-label font-bold">+{event.memberIds.length - 8}</span>}
+                          </div>
+                          {video && (
+                            <a href={video.url} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#2d2429] px-4 py-2 fluid-label font-bold tracking-[0.12em] text-white transition hover:-translate-y-0.5 hover:bg-[#f9769f]">
+                              <Icon name="play" className="h-3.5 w-3.5" />
+                              関連動画を見る
+                            </a>
+                          )}
+                        </div>
+                      </article>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </section>
+        </main>
+      );
+    }
+
+    const FIRST_GUIDE_NOTES = {
+      emiri: {
+        intro: "まず見てほしいのは、可愛いをちゃんと努力で作っているところ。表情、衣装の見せ方、画面に残る余韻まで、全部に美意識がある。",
+        points: ["表情の細かさを見ると一気に楽しい。", "甘い曲でも芯の強さが残る。", "SNSや個人YouTubeまで見ると人柄が近くなる。"]
+      },
+      hana: {
+        intro: "明るいだけじゃなくて、場面の空気を読んで表情を置ける人。花菜ちゃんが映ると、曲の中に小さな物語が増える。",
+        points: ["笑顔の明るさから入ると見やすい。", "演じる曲では目線と手先に注目。", "イラストや舞台好きの感性も魅力につながる。"]
+      },
+      risa: {
+        intro: "莉沙ちゃんは、派手に押してくるというより、あとからじわっと残るタイプ。しなやかな動きとやわらかい目線がきれい。",
+        points: ["ダンスの流れがなめらか。", "笑顔が出る瞬間の温度がいい。", "福岡愛やファンへの距離感も入口になる。"]
+      },
+      kiara: {
+        intro: "樹愛羅ちゃんは、成長を見ている時間ごと好きになる人。可愛いの瞬発力と、負けず嫌いな芯が同時に見える。",
+        points: ["まずは明るい曲で表情を見る。", "昔の映像と今を比べると伸び方が分かる。", "ゲームやメイク好きの親しみやすさも強い。"]
+      },
+      nagisa: {
+        intro: "なーたんは、王道アイドルの眩しさをまっすぐ届ける人。可愛いの密度が高くて、短いカットでも記憶に残る。",
+        points: ["目線と声の甘さが入口。", "王道曲でのヒロイン感が強い。", "初期の可愛さの系譜を知るうえで大事な存在。"]
+      },
+      maika: {
+        intro: "舞香ちゃんは、歌が入った瞬間に景色を変える人。静かな雰囲気から急に物語が立ち上がる、その落差が気持ちいい。",
+        points: ["まず声を聴くと掴みやすい。", "切ない曲では表情が深い。", "あんまい導線で素の空気も見られる。"]
+      },
+      nonno: {
+        intro: "のんのちゃんは、初期の空気を知るうえで外せない人。アイドルが好きな気持ちを、ステージの明るさに変えていた。",
+        points: ["初期曲と一緒に見ると存在感が分かる。", "笑顔のまっすぐさが入口。", "12人の始まりを辿る時に大切なピース。"]
+      },
+      hitomi: {
+        intro: "瞳ちゃんは、真ん中に立った時の説得力がすごい。笑顔で空気を開いて、曲全体を明るい方向へ連れていく。",
+        points: ["センター曲から入ると分かりやすい。", "ライブでは体の軸と表情を見る。", "王道の明るさと戻ってきた強さがある。"]
+      },
+      shoko: {
+        intro: "笙古ちゃんは、丁寧に積み重ねてきたものが見える人。派手な一撃より、何度も見返したくなる誠実さが残る。",
+        points: ["歌と立ち姿の丁寧さを見る。", "ライブ映像でじわっと効いてくる。", "料理や横浜好きの暮らし感も親しみやすい。"]
+      },
+      iori: {
+        intro: "衣織ちゃんは、表情だけで曲の奥へ連れていく人。可愛い、かっこいい、怖い、切ないを一瞬で切り替える。",
+        points: ["目線の強さから入ると早い。", "歌声の色が曲ごとに変わる。", "アニメや物語好きの感性が表現に出ている。"]
+      },
+      sana: {
+        intro: "沙夏ちゃんは、声が入ると曲が大人っぽくなる人。余裕のある表情と、ふっと熱くなる歌がクセになる。",
+        points: ["まず歌声の艶を聴く。", "ユニット曲での空気作りが上手い。", "ダンス由来のしなやかさも見どころ。"]
+      },
+      anna: {
+        intro: "杏奈ちゃんは、グループを見て支える力がそのまま魅力になっている人。小さな体から出るダンスの説得力も強い。",
+        points: ["リーダーとしての安心感を見る。", "ダンスは細かいリズムまで楽しい。", "あんまいでは素のやわらかさも見える。"]
+      }
+    };
+
+    function FirstTimeView({ setMember, setPage, setView, resetFilters }) {
+      const openArchive = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("works");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      const openProfile = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("about");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      return (
+        <main className="page-transition mx-auto max-w-7xl px-6 pb-10 pt-40 md:pt-44">
+          <ToolHeader eyebrow="Fan Tools / First Guide" title="親子・初見ガイド" copy="まず何を知れば好きになりやすいかを、12人それぞれ30秒で読める入門カードに整理しました。" />
+          <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {MEMBERS.map((item, index) => {
+              const picks = (FIRST_TIME_PICKS[item.id] || []).map((key) => firstMemberVideo(item.id, key)).filter(Boolean);
+              const firstPick = picks[0];
+              const nextPicks = picks.slice(1, 3);
+              const guide = FIRST_GUIDE_NOTES[item.id];
+              const guidePoints = guide?.points || [item.catchcopy, `${item.place}出身。まずは表情と声の温度を見る。`, `${item.notes.join(" / ")} を入口にすると魅力が掴みやすい。`];
+              return (
+                <article key={item.id} className="fan-tool-card page-card p-6" style={{ "--stagger": `${index * 35}ms` }}>
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="min-w-0">
+                      <h2 className="font-serif text-3xl font-bold text-[#2d2429]">{item.name.replace(" ", "")}</h2>
+                      <p className="mt-1 fluid-label font-bold tracking-[0.12em] text-[#8f6f7c]">{item.en}</p>
+                    </div>
+                    <span className="h-3 w-14 rounded-full" style={{ background: memberAccent(item) }}></span>
+                  </div>
+                  <div className="mt-5 rounded-[10px] border border-[#f8d7e2] bg-white/70 p-4">
+                    <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">30秒紹介</p>
+                    <p className="readable-ja mt-2 fluid-caption font-normal leading-7 text-[#6f5b65]">{guide?.intro || `${item.profile.split("。").slice(0, 2).join("。")}。`}</p>
+                  </div>
+                  <div className="mt-5">
+                    <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">まず知る3ポイント</p>
+                    <ol className="mt-3 grid gap-2">
+                      {guidePoints.map((point, pointIndex) => (
+                        <li key={point} className="flex gap-3 rounded-[8px] bg-white/70 px-3 py-2 text-sm font-bold leading-6 text-[#6f5b65]">
+                          <span className="shrink-0 text-[#c86b88]">{pointIndex + 1}</span>
+                          <span className="readable-ja">{point}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                  {firstPick && (
+                    <a href={firstPick.url} target="_blank" rel="noreferrer" className="mt-5 block rounded-[10px] border-2 bg-white px-4 py-4 text-sm font-bold text-[#2d2429] transition hover:-translate-y-0.5 hover:bg-white" style={{ borderColor: item.hexColor }}>
+                      <span className="fluid-label font-bold tracking-[0.16em]" style={{ color: item.hexColor }}>この子を知る最初の1本</span>
+                      <BreakableTitle title={firstPick.title} className="mt-2 block font-serif text-xl font-bold leading-snug" />
+                      <span className="mt-1 block text-[10px] tracking-[0.12em] text-[#8f6f7c]">{firstPick.type} / {firstPick.watchPoint}</span>
+                    </a>
+                  )}
+                  <div className="mt-4 grid gap-2">
+                    <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">場面を変えて見る2本</p>
+                    {nextPicks.map((video) => (
+                      <a key={video.id} href={video.url} target="_blank" rel="noreferrer" className="rounded-[8px] border border-[#f8d7e2] bg-white/72 px-4 py-3 text-sm font-bold text-[#2d2429] transition hover:bg-white">
+                        <BreakableTitle title={video.title} className="block leading-snug" />
+                        <span className="mt-1 block text-[10px] tracking-[0.12em] text-[#c86b88]">{video.type} / {video.watchPoint}</span>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    <button onClick={() => openProfile(item.id)} className="rounded-full bg-white px-4 py-2 fluid-label font-bold tracking-[0.12em] text-[#2d2429] shadow-[0_8px_20px_rgba(249,118,159,0.10)] transition hover:-translate-y-0.5">Profile</button>
+                    <button onClick={() => openArchive(item.id)} className={`rounded-full border-2 px-4 py-2 fluid-label font-bold tracking-[0.12em] transition hover:-translate-y-0.5 ${isMonoMember(item) ? "mono-action-primary" : ""}`} style={memberActionStyle(item)} data-member-action={item.id}>Archiveで深掘り</button>
+                  </div>
+                </article>
+              );
+            })}
+          </section>
+        </main>
+      );
+    }
+
+    function BadgesView({ watchedIds, member, setMember, setPage, setView, resetFilters }) {
+      const currentBadges = badgeStates(watchedIds, member);
+      const unlockedCount = currentBadges.filter((badge) => badge.unlocked).length;
+      const topMembers = MEMBERS
+        .map((item) => ({ ...item, progress: memberProgress(item.id, watchedIds) }))
+        .sort((a, b) => b.progress.watched - a.progress.watched)
+        .slice(0, 4);
+
+      const openArchive = (id) => {
+        runUiTransition(() => {
+          setMember(id);
+          setPage("works");
+          setView("member");
+          resetFilters();
+        });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      return (
+        <main className="page-transition mx-auto max-w-7xl px-6 pb-10 pt-40 md:pt-44">
+          <ToolHeader eyebrow="Fan Tools / Badges" title="沼落ち称号" copy="視聴メモから今の到達度を計算します。追加保存はせず、この端末のチェック状況だけで称号が変わります。" />
+          <section className="mb-8 grid gap-5 lg:grid-cols-[0.82fr_1.18fr]">
+            <div className="enterprise-section p-7">
+              <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">Achievement</p>
+              <p className="mt-4 font-display text-7xl font-black italic leading-none text-[#f9769f]">{unlockedCount}/{currentBadges.length}</p>
+              <p className="readable-ja mt-4 fluid-caption font-bold leading-7 text-[#6f5b65]">称号は選択中メンバーの進捗も反映します。推し15本、推し60本はArchiveでチェックを進めると開きます。</p>
+            </div>
+            <div className="enterprise-section p-7">
+              <p className="fluid-label font-bold tracking-[0.16em] text-[#c86b88]">Progress Focus</p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {topMembers.map((item) => (
+                  <button key={item.id} onClick={() => openArchive(item.id)} className="rounded-[12px] border border-[#f8d7e2] bg-white/78 p-4 text-left transition hover:-translate-y-1 hover:bg-white">
+                    <span className="flex items-center justify-between gap-3">
+                      <span className="font-serif text-xl font-bold text-[#2d2429]">{item.name.replace(" ", "")}</span>
+                      <span className="fluid-label font-bold text-[#8f6f7c]">{item.progress.watched}/{item.progress.total}</span>
+                    </span>
+                    <span className="mt-3 block h-1.5 overflow-hidden rounded-full bg-[#f8d7e2]">
+                      <span className="block h-full rounded-full" style={{ width: `${item.progress.percent}%`, background: memberAccent(item) }}></span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {currentBadges.map((badge, index) => (
+              <div key={badge.id} className={`badge-card page-card p-5 ${badge.unlocked ? "" : "is-locked"}`} style={{ "--stagger": `${index * 35}ms` }}>
+                <p className="fluid-label font-bold tracking-[0.14em]" style={{ color: badge.unlocked ? "#c86b88" : "#9ca3af" }}>{badge.unlocked ? "UNLOCKED" : "LOCKED"}</p>
+                <p className="mt-2 font-serif text-xl font-bold text-[#2d2429]">{badge.label}</p>
+                <p className="mt-2 text-xs font-bold leading-6 text-[#8f6f7c]">{badge.condition}</p>
+              </div>
+            ))}
+          </section>
+        </main>
       );
     }
 
@@ -1970,6 +3169,7 @@
       const current = MEMBER_BY_ID[member];
       const memberVideos = useMemo(() => VIDEO_DATA.filter((video) => video.memberId === member), [member]);
       const progress = memberProgress(member, watchedIds);
+      const badges = useMemo(() => badgeStates(watchedIds, member), [watchedIds, member]);
 
       const filteredVideos = useMemo(() => {
         const normalized = searchQuery.trim().toLowerCase();
@@ -1996,17 +3196,15 @@
 
       return (
         <div className="app-shell dual-bg selection:bg-deep selection:text-white">
-          {view !== "home" && (
-            <LegacyTopNav
-              member={member}
-              setMember={setMember}
-              page={page}
-              setPage={setPage}
-              view={view}
-              setView={setView}
-              resetFilters={resetFilters}
-            />
-          )}
+          <LegacyTopNav
+            member={member}
+            setMember={setMember}
+            page={page}
+            setPage={setPage}
+            view={view}
+            setView={setView}
+            resetFilters={resetFilters}
+          />
           {view === "member" && <LegacyProgress current={current} progress={progress} page={page} />}
 
           {view === "home" && (
@@ -2017,11 +3215,28 @@
             <PrivacyPolicy setView={setView} />
           )}
 
+          {view === "relations" && (
+            <RelationsView member={member} setMember={setMember} setPage={setPage} setView={setView} resetFilters={resetFilters} />
+          )}
+
+          {view === "timeline" && (
+            <TimelineView setMember={setMember} setPage={setPage} setView={setView} resetFilters={resetFilters} />
+          )}
+
+          {view === "firsttime" && (
+            <FirstTimeView setMember={setMember} setPage={setPage} setView={setView} resetFilters={resetFilters} />
+          )}
+
+          {view === "badges" && (
+            <BadgesView watchedIds={watchedIds} member={member} setMember={setMember} setPage={setPage} setView={setView} resetFilters={resetFilters} />
+          )}
+
           {view === "member" && (
           <main className="page-transition mx-auto max-w-7xl px-6 pb-8 pt-40 md:pt-44">
             {page === "works" && (
               <div key={`${member}-works`} className="animate-in">
-                <MemberHero current={current} progress={progress} memberVideos={memberVideos} />
+                <MemberHero current={current} progress={progress} memberVideos={memberVideos} badges={badges} />
+                <BadgePanel badges={badges} />
                 <LegacyFilterBar
                   searchQuery={searchQuery}
                   setSearchQuery={setSearchQuery}
